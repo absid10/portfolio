@@ -1,0 +1,10 @@
+# Reference & temporary folders
+_reference_portfolio/
+_shan_assets_temp/
+antigravity-awesome-skills/
+
+# Scratch & build scripts
+_extract_resume.py
+_parse_repos.py
+_resume_text.txt
+*.pdf
