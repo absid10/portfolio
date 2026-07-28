@@ -44,13 +44,15 @@
       .font-space { font-family: 'Space Grotesk', sans-serif; }
       .font-inter { font-family: 'Inter', sans-serif; }
 
-      /* ===== Hero Title Fix ===== */
+      /* ===== Hero Title Centering Fix ===== */
       .banner-three-title {
         font-size: clamp(3rem, 13.5vw, 220px) !important;
         white-space: nowrap !important;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: center !important;
+        display: block !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
       }
 
       /* ===== Hero Center Subtitle Text Color Fix ===== */
@@ -71,27 +73,39 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-      }
-
-      /* ===== Tech Stack Logo Pills ===== */
+      /* ===== Tech Stack Logo Pills (Animated & Crisp) ===== */
       .tech-logo-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 16px;
-        border-radius: 30px;
-        background: rgba(255,255,255,0.04);
-        border: 1px solid rgba(255,255,255,0.1);
-        color: rgba(255,255,255,0.85);
-        font-size: 0.85rem;
-        font-weight: 500;
-        transition: all 0.3s ease;
+        display: inline-flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+        padding: 10px 18px !important;
+        border-radius: 30px !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        color: #ffffff !important;
+        font-size: 0.88rem !important;
+        font-weight: 600 !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1) !important;
+      }
+      .tech-logo-pill img {
+        height: 22px !important;
+        width: 22px !important;
+        object-fit: contain !important;
+        flex-shrink: 0 !important;
+        transition: transform 0.3s ease !important;
       }
       .tech-logo-pill:hover {
-        border-color: var(--accent);
-        background: rgba(232,85,58,0.1);
-        color: #fff;
-        transform: translateY(-2px);
+        border-color: var(--accent) !important;
+        background: rgba(232, 85, 58, 0.15) !important;
+        color: #ffffff !important;
+        transform: translateY(-3px) scale(1.03) !important;
+        box-shadow: 0 8px 24px rgba(232, 85, 58, 0.25) !important;
+      }
+      .tech-logo-pill:hover img {
+        transform: rotate(8deg) scale(1.2) !important;
       }
       .skill-card-modern {
         transition: all 0.4s ease;
@@ -1439,31 +1453,111 @@
           </div>
         </section>
 
-        <!-- ==================== GITHUB STATS ==================== -->
-        <section id="github" class="section-padding" style="background: #f5f5f0;">
+        <!-- ==================== GITHUB OPEN SOURCE SECTION ==================== -->
+        <section id="github" class="section-padding bg-black position-relative z-1" style="border-top: 1px solid rgba(255,255,255,0.06);">
           <div class="container tw-container-1800-px">
             <div class="text-center tw-mb-21">
               <span class="section-label d-inline-flex">Open Source</span>
-              <h2 class="tw-text-15 text-heading tw-itm-title tw-itm-anim">GitHub Activity</h2>
+              <h2 class="tw-text-15 text-white tw-itm-title tw-itm-anim">GitHub Activity & Impact</h2>
             </div>
-            <div class="row g-4 justify-content-center">
-              <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-duration="1000">
-                <img src="https://github-readme-stats.vercel.app/api?username=absid10&show_icons=true&theme=default&hide_border=true&bg_color=f5f5f0&title_color=E8553A&icon_color=E8553A&text_color=333" alt="GitHub Stats" class="w-100" style="max-width: 520px; border-radius: 16px;" />
+
+            <!-- GitHub Metrics Row -->
+            <div class="row g-4 mb-5">
+              <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
+                <div class="p-4 rounded-4 text-center h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <div class="d-inline-flex align-items-center justify-content-center p-3 mb-3 rounded-circle" style="background: rgba(232,85,58,0.12); color: var(--accent); font-size: 1.5rem;">
+                    <i class="ph ph-git-commit"></i>
+                  </div>
+                  <h3 class="tw-text-101 fw-bold text-white mb-1">2,164+</h3>
+                  <p class="mb-0 text-white-50" style="font-size: 0.9rem;">Total Contributions (2024 – Present)</p>
+                </div>
               </div>
-              <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=absid10&layout=compact&hide_border=true&bg_color=f5f5f0&title_color=E8553A&text_color=333" alt="Top Languages" class="w-100" style="max-width: 350px; border-radius: 16px;" />
+
+              <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="p-4 rounded-4 text-center h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <div class="d-inline-flex align-items-center justify-content-center p-3 mb-3 rounded-circle" style="background: rgba(232,85,58,0.12); color: var(--accent); font-size: 1.5rem;">
+                    <i class="ph ph-fire"></i>
+                  </div>
+                  <h3 class="tw-text-101 fw-bold text-white mb-1">47 Days</h3>
+                  <p class="mb-0 text-white-50" style="font-size: 0.9rem;">Longest Commit Streak</p>
+                </div>
+              </div>
+
+              <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="p-4 rounded-4 text-center h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <div class="d-inline-flex align-items-center justify-content-center p-3 mb-3 rounded-circle" style="background: rgba(232,85,58,0.12); color: var(--accent); font-size: 1.5rem;">
+                    <i class="ph ph-folder-git"></i>
+                  </div>
+                  <h3 class="tw-text-101 fw-bold text-white mb-1">10 Repos</h3>
+                  <p class="mb-0 text-white-50" style="font-size: 0.9rem;">Public Open Source Codebases</p>
+                </div>
               </div>
             </div>
-            <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-              <img src="https://github-readme-streak-stats.herokuapp.com/?user=absid10&theme=default&hide_border=true&background=f5f5f0&ring=E8553A&fire=E8553A&currStreakLabel=E8553A" alt="GitHub Streak" class="w-100" style="max-width: 520px; border-radius: 16px;" loading="lazy" />
+
+            <!-- Top Languages & Contribution Chart -->
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-5" data-aos="fade-up" data-aos-duration="1000">
+                <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <h4 class="text-white fw-bold mb-4" style="font-family: 'Space Grotesk', sans-serif;">Most Used Languages</h4>
+
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between text-white-50 mb-1" style="font-size: 0.85rem;">
+                      <span>Python</span>
+                      <span class="fw-semibold text-white">48%</span>
+                    </div>
+                    <div class="progress" style="height: 8px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                      <div class="progress-bar" style="width: 48%; background: #3572A5; border-radius: 10px;"></div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between text-white-50 mb-1" style="font-size: 0.85rem;">
+                      <span>TypeScript / React</span>
+                      <span class="fw-semibold text-white">32%</span>
+                    </div>
+                    <div class="progress" style="height: 8px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                      <div class="progress-bar" style="width: 32%; background: #3178C6; border-radius: 10px;"></div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between text-white-50 mb-1" style="font-size: 0.85rem;">
+                      <span>JavaScript & Node.js</span>
+                      <span class="fw-semibold text-white">12%</span>
+                    </div>
+                    <div class="progress" style="height: 8px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                      <div class="progress-bar" style="width: 12%; background: #F7DF1E; border-radius: 10px;"></div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="d-flex justify-content-between text-white-50 mb-1" style="font-size: 0.85rem;">
+                      <span>HTML / CSS / SQL</span>
+                      <span class="fw-semibold text-white">8%</span>
+                    </div>
+                    <div class="progress" style="height: 8px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                      <div class="progress-bar" style="width: 8%; background: var(--accent); border-radius: 10px;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="p-4 rounded-4 overflow-hidden" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <h4 class="text-white fw-bold mb-3 text-start" style="font-family: 'Space Grotesk', sans-serif;">Contribution Matrix</h4>
+                  <div class="table-responsive">
+                    <img src="https://ghchart.rshah.org/E8553A/absid10" alt="GitHub Contribution Graph" class="w-100" style="max-width: 750px; filter: drop-shadow(0 4px 12px rgba(232,85,58,0.15));" loading="lazy" />
+                  </div>
+                  <p class="mt-3 text-white-50 mb-0" style="font-size: 0.8rem;">Live 52-week commit activity for @absid10 on GitHub</p>
+                </div>
+              </div>
             </div>
-            <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-              <img src="https://ghchart.rshah.org/E8553A/absid10" alt="GitHub Contribution Graph" class="w-100" style="max-width: 800px; border-radius: 16px;" loading="lazy" />
-            </div>
-            <div class="text-center mt-4">
-              <a href="https://github.com/absid10" target="_blank" class="tw-hover-btn bg-black text-white fw-bold tw-py-3 tw-px-8 d-inline-block text-uppercase tw-rounded-md" style="text-decoration: none; font-size: 0.85rem;">
-                View GitHub Profile
-                <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
+
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="1000">
+              <a href="https://github.com/absid10" target="_blank" class="tw-hover-btn bg-main-two-600 text-white fw-bold tw-py-4 tw-px-10 d-inline-block text-uppercase tw-rounded-lg text-decoration-none">
+                Visit GitHub Profile (@absid10)
+                <span class="tw-hover-btn-circle-dot bg-white"></span>
+              </a>
             </div>
           </div>
         </section>
