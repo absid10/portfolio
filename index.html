@@ -48,23 +48,26 @@
       .banner-three-title {
         font-size: clamp(3rem, 13.5vw, 220px) !important;
         white-space: nowrap !important;
-        text-align: center;
-        letter-spacing: -0.03em;
-        line-height: 0.9 !important;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
       }
 
-      /* ===== Hero Subtitle Stroke Fix ===== */
-      .banner-three-center-title {
+      /* ===== Hero Center Subtitle Text Color Fix ===== */
+      .banner-three-center-title,
+      .banner-three-center-title *,
+      .banner-three-center-title span,
+      .banner-three-center-title div {
+        color: #111111 !important;
+        -webkit-text-fill-color: #111111 !important;
+        -webkit-text-stroke: 0px transparent !important;
         -webkit-text-stroke-width: 0px !important;
-        -webkit-text-stroke: none !important;
+        font-weight: 800 !important;
+        opacity: 1 !important;
       }
 
       /* ===== Gradient Text ===== */
       .gradient-text {
-        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 50%, #FFB347 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -371,38 +374,49 @@
         margin: 2px;
       }
 
-      /* ===== Floating Social Sidebar ===== */
+      /* ===== Floating Social Sidebar (Glassmorphism Pill Fix) ===== */
       .social-sidebar {
         position: fixed;
-        right: 30px;
+        right: 24px;
         top: 50%;
         transform: translateY(-50%);
-        z-index: 50;
+        z-index: 999;
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 12px;
+        padding: 10px;
+        background: rgba(10, 10, 10, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
       }
       .social-sidebar a {
-        width: 42px; height: 42px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #ffffff !important;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 50%;
-        border: 1px solid rgba(255,255,255,0.12);
-        color: rgba(255,255,255,0.5);
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
+        font-size: 1.25rem;
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
         text-decoration: none;
       }
       .social-sidebar a:hover {
-        border-color: var(--accent);
-        color: var(--accent);
+        background: var(--accent) !important;
+        border-color: var(--accent) !important;
+        color: #ffffff !important;
         transform: scale(1.1);
-        box-shadow: 0 0 20px rgba(232,85,58,0.2);
+        box-shadow: 0 8px 24px rgba(232, 85, 58, 0.4);
       }
       @media (max-width: 992px) {
         .social-sidebar { display: none; }
       }
+
 
       /* ===== Flagship Project ===== */
       .portfolio-three-item.flagship-project {
@@ -1529,6 +1543,7 @@
         </section>
 
         <!-- ==================== CONTACT SECTION ==================== -->
+        <section id="contact" class="section-padding bg-black position-relative z-1" style="background: #0a0a0a !important;">
           <div class="container tw-container-1800-px">
             <div class="row">
               <div class="col-xl-6">
