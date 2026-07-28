@@ -44,6 +44,18 @@
       .font-space { font-family: 'Space Grotesk', sans-serif; }
       .font-inter { font-family: 'Inter', sans-serif; }
 
+      /* ===== Hero Title Fix (no trailing letter wrap) ===== */
+      .banner-three-title {
+        font-size: clamp(3rem, 13vw, 220px) !important;
+        white-space: nowrap !important;
+        text-align: center;
+        letter-spacing: -0.03em;
+        line-height: 0.9 !important;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       /* ===== Gradient Text ===== */
       .gradient-text {
         background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 50%, #FFB347 100%);
