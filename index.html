@@ -60,8 +60,6 @@
       .banner-three-center-title {
         -webkit-text-stroke-width: 0px !important;
         -webkit-text-stroke: none !important;
-        color: #1a1a1a !important;
-        font-weight: 700 !important;
       }
 
       /* ===== Gradient Text ===== */
@@ -72,8 +70,46 @@
         background-clip: text;
       }
 
+      /* ===== Tech Stack Logo Pills ===== */
+      .tech-logo-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        border-radius: 30px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.85);
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      .tech-logo-pill:hover {
+        border-color: var(--accent);
+        background: rgba(232,85,58,0.1);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+      .skill-card-modern {
+        transition: all 0.4s ease;
+      }
+      .skill-card-modern:hover {
+        border-color: rgba(232,85,58,0.3) !important;
+        box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+      }
+
+      /* ===== Mobile Responsiveness Improvements ===== */
+      @media (max-width: 768px) {
+        .banner-three-area { padding-block: 80px 40px !important; }
+        .banner-three-left, .banner-three-right { max-width: 100% !important; margin-bottom: 20px; }
+        .about-three-title { font-size: 1.35rem !important; }
+        .portfolio-three-item { margin-bottom: 40px !important; }
+        .tech-logo-pill { padding: 6px 12px; font-size: 0.78rem; }
+        .banner-three-center-title { font-size: 1.15rem !important; }
+        body { overflow-x: hidden; }
+      }
+
       /* ===== Skills Grid ===== */
-      .skill-card {
         background: rgba(255,255,255,0.03);
         border-radius: 16px;
         padding: 32px 28px;
@@ -869,115 +905,92 @@
         <!-- ==================== SKILLS SECTION ==================== -->
         <section id="skills" class="service-three-area bg-black pt-120 tw-pb-15">
           <div class="container tw-container-1800-px">
-            <div class="row">
-              <div class="col-12">
-                <div class="service-three-wrapper">
-                  <!-- Skill 1: Full Stack Development -->
-                  <div class="service-three-single" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
-                    <div class="service-three-item d-flex justify-content-between align-items-center">
-                      <div class="service-three-content d-flex tw-gap-14">
-                        <div>
-                          <span class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3">01
-                            <img class="tw-transition-3" src="assets/images/icons/service-three-arrow.svg" alt="arrow" /></span>
-                        </div>
-                        <div>
-                          <h2 class="service-three-title tw-text-15 text-white tw-mb-4">Full Stack Development</h2>
-                          <div class="portfolio-list portfolio-two-list">
-                            <ul class="d-flex tw-gap-205 flex-wrap">
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Python</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">React</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">TypeScript</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Vite</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Tailwind CSS</span></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="service-three-thumb">
-                        <img src="assets/images/thumbs/service-three-thumb1.png" alt="Full Stack Development" />
-                      </div>
+            <div class="text-center tw-mb-21">
+              <span class="section-label d-inline-flex">Expertise</span>
+              <h2 class="tw-text-15 text-white tw-itm-title tw-itm-anim">Tech Stack & Core Skills</h2>
+            </div>
+
+            <div class="row g-4">
+              <!-- Full Stack -->
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                <div class="skill-card-modern p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <div class="d-flex align-items-center gap-3 mb-4">
+                    <span class="skill-category-icon" style="font-size: 1.8rem; color: var(--accent);"><i class="ph ph-code"></i></span>
+                    <div>
+                      <h3 class="text-white fw-bold mb-1" style="font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif;">Full Stack Development</h3>
+                      <p class="mb-0 text-white-50" style="font-size: 0.85rem;">Frontend UIs & Modern Web Applications</p>
                     </div>
                   </div>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="20" alt="Python" /> Python</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="20" alt="React" /> React</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="20" alt="TypeScript" /> TypeScript</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="20" alt="JavaScript" /> JavaScript</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="20" alt="HTML5" /> HTML5</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="20" alt="CSS3" /> CSS3</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" height="20" alt="Tailwind CSS" /> Tailwind CSS</span>
+                  </div>
+                </div>
+              </div>
 
-                  <!-- Skill 2: AI & Machine Learning -->
-                  <div class="service-three-single ms-auto" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300">
-                    <div class="service-three-item d-flex justify-content-between align-items-center">
-                      <div class="service-three-content d-flex tw-gap-14">
-                        <div>
-                          <span class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3">02
-                            <img class="tw-transition-3" src="assets/images/icons/service-three-arrow.svg" alt="arrow" /></span>
-                        </div>
-                        <div>
-                          <h2 class="service-three-title tw-text-15 text-white tw-mb-4">Backend & APIs</h2>
-                          <div class="portfolio-list portfolio-two-list">
-                            <ul class="d-flex tw-gap-205 flex-wrap">
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">FastAPI</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Flask</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Node.js</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Express</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">JWT</span></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="service-three-thumb">
-                        <img src="assets/images/thumbs/service-three-thumb2.png" alt="AI & ML" />
-                      </div>
+              <!-- Backend & APIs -->
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="skill-card-modern p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <div class="d-flex align-items-center gap-3 mb-4">
+                    <span class="skill-category-icon" style="font-size: 1.8rem; color: var(--accent);"><i class="ph ph-cpu"></i></span>
+                    <div>
+                      <h3 class="text-white fw-bold mb-1" style="font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif;">Backend & REST APIs</h3>
+                      <p class="mb-0 text-white-50" style="font-size: 0.85rem;">Fast, Secure & Scalable Server Architecture</p>
                     </div>
                   </div>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" height="20" alt="FastAPI" /> FastAPI</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" height="20" alt="Flask" /> Flask</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="20" alt="Node.js" /> Node.js</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="20" alt="Express" /> Express</span>
+                    <span class="tech-logo-pill"><i class="ph ph-shield-check" style="color: #34D399;"></i> JWT Auth</span>
+                    <span class="tech-logo-pill"><i class="ph ph-brackets-curly" style="color: #FFB347;"></i> REST APIs</span>
+                  </div>
+                </div>
+              </div>
 
-                  <!-- Skill 3: Database Architecture -->
-                  <div class="service-three-single" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="400">
-                    <div class="service-three-item d-flex justify-content-between align-items-center">
-                      <div class="service-three-content d-flex tw-gap-14">
-                        <div>
-                          <span class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3">03
-                            <img class="tw-transition-3" src="assets/images/icons/service-three-arrow.svg" alt="arrow" /></span>
-                        </div>
-                        <div>
-                          <h2 class="service-three-title tw-text-15 text-white tw-mb-4">Databases & Data</h2>
-                          <div class="portfolio-list portfolio-two-list">
-                            <ul class="d-flex tw-gap-205 flex-wrap">
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">PostgreSQL</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">MySQL</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">MongoDB</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">SQLite</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">SQLAlchemy</span></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="service-three-thumb">
-                        <img src="assets/images/thumbs/service-three-thumb3.png" alt="Database" />
-                      </div>
+              <!-- Databases & Storage -->
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="skill-card-modern p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <div class="d-flex align-items-center gap-3 mb-4">
+                    <span class="skill-category-icon" style="font-size: 1.8rem; color: var(--accent);"><i class="ph ph-database"></i></span>
+                    <div>
+                      <h3 class="text-white fw-bold mb-1" style="font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif;">Databases & Storage</h3>
+                      <p class="mb-0 text-white-50" style="font-size: 0.85rem;">Relational, NoSQL & Data Modeling</p>
                     </div>
                   </div>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="20" alt="PostgreSQL" /> PostgreSQL</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="20" alt="MySQL" /> MySQL</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="20" alt="MongoDB" /> MongoDB</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" height="20" alt="SQLite" /> SQLite</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" height="20" alt="SQLAlchemy" /> SQLAlchemy</span>
+                  </div>
+                </div>
+              </div>
 
-                  <!-- Skill 4: APIs & Automation -->
-                  <div class="service-three-single ms-auto" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="500">
-                    <div class="service-three-item d-flex justify-content-between align-items-center">
-                      <div class="service-three-content d-flex tw-gap-14">
-                        <div>
-                          <span class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3">04
-                            <img class="tw-transition-3" src="assets/images/icons/service-three-arrow.svg" alt="arrow" /></span>
-                        </div>
-                        <div>
-                          <h2 class="service-three-title tw-text-15 text-white tw-mb-4">DevOps, AI & Tools</h2>
-                          <div class="portfolio-list portfolio-two-list">
-                            <ul class="d-flex tw-gap-205 flex-wrap">
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Git & GitHub</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">GitHub Actions</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">OpenCV</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">pytest</span></li>
-                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Postman</span></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="service-three-thumb">
-                        <img src="assets/images/thumbs/service-three-thumb4.png" alt="APIs" />
-                      </div>
+              <!-- Tools & AI -->
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="skill-card-modern p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                  <div class="d-flex align-items-center gap-3 mb-4">
+                    <span class="skill-category-icon" style="font-size: 1.8rem; color: var(--accent);"><i class="ph ph-wrench"></i></span>
+                    <div>
+                      <h3 class="text-white fw-bold mb-1" style="font-size: 1.3rem; font-family: 'Space Grotesk', sans-serif;">DevOps, AI & Tools</h3>
+                      <p class="mb-0 text-white-50" style="font-size: 0.85rem;">CI/CD Pipelines, Computer Vision & Testing</p>
                     </div>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="20" alt="Git" /> Git & GitHub</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" height="20" alt="GitHub Actions" /> GitHub Actions</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" height="20" alt="OpenCV" /> OpenCV</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytest/pytest-original.svg" height="20" alt="pytest" /> pytest</span>
+                    <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" height="20" alt="Postman" /> Postman</span>
+                    <span class="tech-logo-pill"><i class="ph ph-tree-structure" style="color: var(--accent);"></i> A* Pathfinding</span>
                   </div>
                 </div>
               </div>
