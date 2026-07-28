@@ -526,7 +526,6 @@
                     </svg>
                   </span>
                 </span>
-              </button>
             </div>
           </div>
           <div class="tw-main-menu-mobile menu-hover-active counter-row">
@@ -539,6 +538,7 @@
                 <li><a href="projects.html">All Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#github">GitHub</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
@@ -1428,7 +1428,7 @@
               </div>
             </div>
             <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-              <img src="https://github-readme-streak-stats.herokuapp.com/?user=absid10&theme=default&hide_border=true&background=f5f5f0&ring=E8553A&fire=E8553A&currStreakLabel=E8553A" alt="GitHub Streak" class="w-100" style="max-width: 520px; border-radius: 16px;" />
+              <img src="https://github-readme-streak-stats.herokuapp.com/?user=absid10&theme=default&hide_border=true&background=f5f5f0&ring=E8553A&fire=E8553A&currStreakLabel=E8553A" alt="GitHub Streak" class="w-100" style="max-width: 520px; border-radius: 16px;" loading="lazy" />
             </div>
             <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
               <img src="https://ghchart.rshah.org/E8553A/absid10" alt="GitHub Contribution Graph" class="w-100" style="max-width: 800px; border-radius: 16px;" loading="lazy" />
@@ -1437,13 +1437,85 @@
               <a href="https://github.com/absid10" target="_blank" class="tw-hover-btn bg-black text-white fw-bold tw-py-3 tw-px-8 d-inline-block text-uppercase tw-rounded-md" style="text-decoration: none; font-size: 0.85rem;">
                 View GitHub Profile
                 <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
-              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== BLOG / ARTICLES SECTION ==================== -->
+        <section id="blog" class="section-padding bg-black position-relative z-1" style="border-top: 1px solid rgba(255,255,255,0.06);">
+          <div class="container tw-container-1800-px">
+            <div class="text-center tw-mb-21">
+              <span class="section-label d-inline-flex">Technical Writings</span>
+              <h2 class="tw-text-15 text-white tw-itm-title tw-itm-anim">Engineering Insights & Blog</h2>
+            </div>
+            <div class="row g-4">
+              <!-- Blog 1 -->
+              <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
+                <div class="blog-card p-4 tw-rounded-lg" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); transition: all 0.4s ease; height: 100%;">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <span class="skill-tag" style="background: rgba(232,85,58,0.12); color: var(--accent); border-color: rgba(232,85,58,0.3);">Algorithms</span>
+                    <span style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">5 min read</span>
+                  </div>
+                  <h3 class="text-white fw-bold mb-3" style="font-size: 1.25rem; font-family: 'Space Grotesk', sans-serif;">
+                    <a href="https://github.com/absid10/multi-building-pathfinder" target="_blank" style="color: #fff; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#E8553A'" onmouseout="this.style.color='#fff'">
+                      Building Indoor Hospital Navigation with A* Algorithm & Leaflet.js
+                    </a>
+                  </h3>
+                  <p style="color: rgba(255,255,255,0.55); font-size: 0.9rem; line-height: 1.7;">
+                    Exploring graph modeling across multi-floor buildings, floor-switch connectors (elevators/stairs), and interactive SVG map rendering.
+                  </p>
+                  <a href="https://github.com/absid10/multi-building-pathfinder" target="_blank" class="d-inline-flex align-items-center gap-2 mt-3" style="color: var(--accent); font-weight: 600; font-size: 0.85rem; text-decoration: none;">
+                    Read Article <i class="ph ph-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Blog 2 -->
+              <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="blog-card p-4 tw-rounded-lg" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); transition: all 0.4s ease; height: 100%;">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <span class="skill-tag" style="background: rgba(232,85,58,0.12); color: var(--accent); border-color: rgba(232,85,58,0.3);">Computer Vision</span>
+                    <span style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">6 min read</span>
+                  </div>
+                  <h3 class="text-white fw-bold mb-3" style="font-size: 1.25rem; font-family: 'Space Grotesk', sans-serif;">
+                    <a href="https://github.com/absid10/FaceID-Attendance-App" target="_blank" style="color: #fff; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#E8553A'" onmouseout="this.style.color='#fff'">
+                      Real-Time Facial Recognition Attendance Systems with OpenCV
+                    </a>
+                  </h3>
+                  <p style="color: rgba(255,255,255,0.55); font-size: 0.9rem; line-height: 1.7;">
+                    A deep dive into Haar Cascade face detection, LBPH facial feature extraction, SQLite logging pipelines, and automated EXE releases.
+                  </p>
+                  <a href="https://github.com/absid10/FaceID-Attendance-App" target="_blank" class="d-inline-flex align-items-center gap-2 mt-3" style="color: var(--accent); font-weight: 600; font-size: 0.85rem; text-decoration: none;">
+                    Read Article <i class="ph ph-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Blog 3 -->
+              <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="blog-card p-4 tw-rounded-lg" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); transition: all 0.4s ease; height: 100%;">
+                  <div class="d-flex align-items-center gap-2 mb-3">
+                    <span class="skill-tag" style="background: rgba(232,85,58,0.12); color: var(--accent); border-color: rgba(232,85,58,0.3);">System Design</span>
+                    <span style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">4 min read</span>
+                  </div>
+                  <h3 class="text-white fw-bold mb-3" style="font-size: 1.25rem; font-family: 'Space Grotesk', sans-serif;">
+                    <a href="https://github.com/absid10/secure-notes" target="_blank" style="color: #fff; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#E8553A'" onmouseout="this.style.color='#fff'">
+                      Building Secure REST APIs with FastAPI, JWT Auth & RBAC
+                    </a>
+                  </h3>
+                  <p style="color: rgba(255,255,255,0.55); font-size: 0.9rem; line-height: 1.7;">
+                    Best practices for password hashing with bcrypt, stateless JWT token validation, Pydantic schemas, and automated testing with pytest.
+                  </p>
+                  <a href="https://github.com/absid10/secure-notes" target="_blank" class="d-inline-flex align-items-center gap-2 mt-3" style="color: var(--accent); font-weight: 600; font-size: 0.85rem; text-decoration: none;">
+                    Read Article <i class="ph ph-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <!-- ==================== CONTACT SECTION ==================== -->
-        <section id="contact" class="section-padding bg-black">
           <div class="container tw-container-1800-px">
             <div class="row">
               <div class="col-xl-6">
