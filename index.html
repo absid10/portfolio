@@ -1,0 +1,1583 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Abdullah Ahmed Siddiqui — Python Full Stack Developer building AI-powered products, scalable APIs, and modern web experiences."
+    />
+    <meta
+      name="keywords"
+      content="Abdullah Ahmed Siddiqui, Python Developer, Full Stack Developer, Portfolio, Software Engineer, AI, REST APIs"
+    />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Abdullah Ahmed Siddiqui — Python Full Stack Developer</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo/favicon.png" type="image/png" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- Swiper Bundle -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+    <!-- aos -->
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Custom Overrides -->
+    <style>
+      :root {
+        --accent: #E8553A;
+        --accent-light: #FF7A5C;
+        --dark: #0a0a0a;
+        --light: #f5f5f0;
+      }
+
+      /* ===== Custom Typography Overrides ===== */
+      .font-space { font-family: 'Space Grotesk', sans-serif; }
+      .font-inter { font-family: 'Inter', sans-serif; }
+
+      /* ===== Gradient Text ===== */
+      .gradient-text {
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 50%, #FFB347 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* ===== Skills Grid ===== */
+      .skill-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 32px 28px;
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        position: relative;
+        overflow: hidden;
+      }
+      .skill-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: linear-gradient(135deg, rgba(232,85,58,0.08) 0%, transparent 60%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      .skill-card:hover {
+        border-color: rgba(232,85,58,0.3);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 60px rgba(232,85,58,0.1);
+      }
+      .skill-card:hover::before { opacity: 1; }
+      .skill-card .skill-icon {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        display: block;
+        transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .skill-card:hover .skill-icon { transform: scale(1.15) rotate(-5deg); }
+      .skill-card h4 { font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: #fff; position: relative; z-index: 1; }
+      .skill-card p { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.6; position: relative; z-index: 1; }
+      .skill-tag {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        margin: 3px;
+        border: 1px solid rgba(255,255,255,0.12);
+        color: rgba(255,255,255,0.7);
+        transition: all 0.3s ease;
+        position: relative; z-index: 1;
+      }
+      .skill-tag:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: rgba(232,85,58,0.08);
+      }
+
+      /* ===== Project Cards Enhanced ===== */
+      .project-live-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        background: rgba(52, 211, 153, 0.12);
+        border: 1px solid rgba(52, 211, 153, 0.3);
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #34D399;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .project-live-badge::before {
+        content: '';
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: #34D399;
+        animation: livePulse 2s ease-in-out infinite;
+      }
+      @keyframes livePulse {
+        0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4); }
+        50% { opacity: 0.6; box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+      }
+      .project-github-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: rgba(255,255,255,0.7);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+      .project-github-link:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: rgba(232,85,58,0.08);
+      }
+
+      /* ===== Timeline ===== */
+      .timeline-section { position: relative; }
+      .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: linear-gradient(to bottom, transparent, rgba(232,85,58,0.3), rgba(232,85,58,0.3), transparent);
+        transform: translateX(-50%);
+      }
+      @media (max-width: 768px) {
+        .timeline-line { left: 20px; }
+      }
+      .timeline-item {
+        position: relative;
+        padding: 30px 0;
+      }
+      .timeline-dot {
+        width: 14px; height: 14px;
+        border-radius: 50%;
+        background: var(--accent);
+        border: 3px solid var(--dark);
+        position: absolute;
+        left: 50%;
+        top: 40px;
+        transform: translateX(-50%);
+        z-index: 2;
+        box-shadow: 0 0 20px rgba(232,85,58,0.3);
+      }
+      @media (max-width: 768px) {
+        .timeline-dot { left: 20px; }
+      }
+      .timeline-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 32px;
+        transition: all 0.4s ease;
+      }
+      .timeline-card:hover {
+        border-color: rgba(232,85,58,0.2);
+        transform: translateY(-2px);
+      }
+      .timeline-year {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--accent);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      /* ===== GitHub Stats ===== */
+      .github-stat-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 36px 28px;
+        text-align: center;
+        transition: all 0.4s ease;
+      }
+      .github-stat-card:hover {
+        border-color: rgba(232,85,58,0.25);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      }
+      .github-stat-number {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+      .github-stat-label {
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 500;
+      }
+
+      /* ===== Contact Form ===== */
+      .contact-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+        padding: 16px 0;
+        font-size: 1.1rem;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        transition: border-color 0.3s ease;
+        outline: none;
+      }
+      .contact-input:focus {
+        border-color: var(--accent);
+      }
+      .contact-input::placeholder {
+        color: rgba(255,255,255,0.3);
+      }
+      textarea.contact-input {
+        resize: none;
+        min-height: 120px;
+      }
+
+      /* ===== Section Subtitle ===== */
+      .section-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--accent);
+        margin-bottom: 24px;
+      }
+      .section-label::before {
+        content: '';
+        width: 30px;
+        height: 1px;
+        background: var(--accent);
+      }
+
+      /* ===== All Projects Grid ===== */
+      .all-projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 24px;
+      }
+      .project-mini-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 28px;
+        transition: all 0.4s ease;
+      }
+      .project-mini-card:hover {
+        border-color: rgba(232,85,58,0.25);
+        transform: translateY(-3px);
+      }
+      .project-mini-card h4 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #fff;
+      }
+      .project-mini-card p {
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.5);
+        line-height: 1.5;
+        margin-bottom: 16px;
+      }
+      .project-mini-card .tech-badge {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 12px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        border: 1px solid rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.6);
+        margin: 2px;
+      }
+
+      /* ===== Floating Social Sidebar ===== */
+      .social-sidebar {
+        position: fixed;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .social-sidebar a {
+        width: 42px; height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,0.12);
+        color: rgba(255,255,255,0.5);
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+      .social-sidebar a:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(232,85,58,0.2);
+      }
+      @media (max-width: 992px) {
+        .social-sidebar { display: none; }
+      }
+
+      /* ===== Flagship Project ===== */
+      .portfolio-three-item.flagship-project {
+        border: 1px solid rgba(232,85,58,0.25);
+        background: linear-gradient(135deg, rgba(232,85,58,0.06) 0%, rgba(255,255,255,0.02) 100%);
+        padding: 8px;
+      }
+      .flagship-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-light));
+        border-radius: 24px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 16px;
+      }
+
+      /* ===== Certifications ===== */
+      .cert-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 16px;
+        padding: 32px;
+        height: 100%;
+        transition: all 0.4s ease;
+      }
+      .cert-card:hover {
+        border-color: rgba(232,85,58,0.3);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 60px rgba(232,85,58,0.08);
+      }
+      .cert-card .cert-icon {
+        width: 48px; height: 48px;
+        border-radius: 12px;
+        background: rgba(232,85,58,0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+      }
+
+      /* ===== Achievements ===== */
+      .achievement-card {
+        text-align: center;
+        padding: 40px 24px;
+        border-radius: 16px;
+        background: rgba(0,0,0,0.02);
+        border: 1px solid rgba(0,0,0,0.06);
+        transition: all 0.4s ease;
+      }
+      .achievement-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+      }
+      .achievement-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--accent);
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+
+      /* ===== Smooth Section Padding ===== */
+      .section-padding { padding: 120px 0; }
+      @media (max-width: 768px) {
+        .section-padding { padding: 80px 0; }
+      }
+    </style>
+  </head>
+
+  <body class="tw-magic-cursor">
+    <!--==================== Preloader Start ====================-->
+    <div class="preloader">
+      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+        <path
+          id="preloaderSvg"
+          d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"
+        ></path>
+      </svg>
+      <div class="preloader-heading">
+        <div class="load-text">
+          <span>A</span>
+          <span>B</span>
+          <span>D</span>
+          <span>U</span>
+          <span>L</span>
+          <span>L</span>
+          <span>A</span>
+          <span>H</span>
+        </div>
+      </div>
+    </div>
+    <!--==================== Preloader End ====================-->
+
+    <!--==================== Overlay Start ====================-->
+    <div class="overlay"></div>
+    <!--==================== Overlay End ====================-->
+
+    <!--==================== Sidebar Overlay ====================-->
+    <div class="side-overlay"></div>
+
+    <!--==================== Magic Cursor ====================-->
+    <div id="magic-cursor">
+      <div id="ball"></div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Scroll to Top -->
+    <div class="back-to-top-wrapper">
+      <button id="back_to_top" type="button" class="back-to-top-btn">
+        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- ==================== Floating Social Sidebar ==================== -->
+    <div class="social-sidebar">
+      <a href="https://github.com/absid10" target="_blank" aria-label="GitHub">
+        <i class="ph-bold ph-github-logo"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/absid10/" target="_blank" aria-label="LinkedIn">
+        <i class="ph-bold ph-linkedin-logo"></i>
+      </a>
+      <a href="mailto:siddiquiabdullahahmed75@gmail.com" aria-label="Email">
+        <i class="ph-bold ph-envelope"></i>
+      </a>
+    </div>
+
+    <!-- ==================== Offcanvas Mobile Menu Start ==================== -->
+    <div class="tw-offcanvas-2-area p-relative">
+      <div class="tw-offcanvas-2-bg is-left left-box"></div>
+      <div class="tw-offcanvas-2-bg is-right right-box d-none d-md-block"></div>
+      <div class="tw-offcanvas-2-wrapper">
+        <div class="tw-offcanvas-2-left left-box">
+          <div class="tw-offcanvas-2-left-wrap d-flex justify-content-between align-items-center">
+            <div class="twoffcanvas__logo">
+              <a class="logo-1" href="#" style="font-size: 1.8rem; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Space Grotesk', sans-serif;">Abdullah<span style="color: var(--accent);">.</span></a>
+            </div>
+            <div class="tw-offcanvas-2-close d-md-none text-end">
+              <button class="tw-offcanvas-2-close-btn">
+                <span class="text"><span class="text-white">close</span></span>
+                <span class="d-inline-block">
+                  <span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="32.621" height="1.009" transform="matrix(0.705 0.709 -0.705 0.709 1.006 0)" fill="currentcolor"/>
+                      <rect width="32.621" height="1.009" transform="matrix(0.705 -0.709 0.705 0.709 0 23.284)" fill="currentcolor"/>
+                    </svg>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="tw-main-menu-mobile menu-hover-active counter-row">
+            <nav>
+              <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="projects.html">All Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="tw-offcanvas-2-right right-box d-none d-md-block p-relative">
+          <div class="tw-offcanvas-2-close text-end">
+            <button class="tw-offcanvas-2-close-btn">
+              <span class="text"><span>close</span></span>
+              <span class="d-inline-block">
+                <span>
+                  <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.809 9.808L28.193 28.192" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.809 28.192L28.193 9.808" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </span>
+            </button>
+          </div>
+          <div class="tw-offcanvas-2-right-inner d-flex flex-column justify-content-between h-100">
+            <div class="twoffcanvas__contact-info">
+              <div class="twoffcanvas__contact-title">
+                <h5 class="text-white">Get In Touch</h5>
+              </div>
+              <ul>
+                <li>
+                  <span class="text-main-two-600 tw-text-xl"><i class="ph ph-map-pin-line"></i></span>
+                  <span class="text-white">Chh. Sambhajinagar, Maharashtra, India</span>
+                </li>
+                <li>
+                  <span class="text-main-two-600 tw-text-xl"><i class="ph ph-envelope"></i></span>
+                  <a class="text-white" href="mailto:siddiquiabdullahahmed75@gmail.com">siddiquiabdullahahmed75@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-social" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <ul class="tw-gap-2">
+                <li>
+                  <a href="https://github.com/absid10" target="_blank">
+                    <span class="active-media d-flex align-items-center tw-gap-1">GitHub <i class="ph ph-arrow-bend-up-right"></i></span>
+                    <span class="hover-media"><i class="ph ph-github-logo"></i></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/absid10/" target="_blank">
+                    <span class="active-media d-flex align-items-center tw-gap-1">LinkedIn <i class="ph ph-arrow-bend-up-right"></i></span>
+                    <span class="hover-media"><i class="ph ph-linkedin-logo"></i></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:siddiquiabdullahahmed75@gmail.com">
+                    <span class="active-media d-flex align-items-center tw-gap-1">Email <i class="ph ph-arrow-bend-up-right"></i></span>
+                    <span class="hover-media"><i class="ph ph-envelope"></i></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ==================== Offcanvas Mobile Menu End ==================== -->
+
+    <!-- ==================== Header Start ==================== -->
+    <header class="header header-two header-three tw-transition-all tw-z-99 position-relative">
+      <div class="container tw-container-1800-px">
+        <nav class="d-flex align-items-center justify-content-between position-relative">
+          <!-- Logo -->
+          <div class="header-three-logo tw-rounded-md">
+            <a href="#hero" class="link" style="font-size: 1.6rem; font-weight: 800; color: #1a1a1a; text-decoration: none; font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em;">
+              Abdullah<span style="color: var(--accent);">.</span>
+            </a>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="header-three-social d-none d-lg-block">
+            <ul class="d-flex tw-gap-205">
+              <li>
+                <a class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md" href="https://github.com/absid10" target="_blank" aria-label="GitHub">
+                  <i class="ph-bold ph-github-logo"></i>
+                </a>
+              </li>
+              <li>
+                <a class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md" href="https://www.linkedin.com/in/absid10/" target="_blank" aria-label="LinkedIn">
+                  <i class="ph-bold ph-linkedin-logo"></i>
+                </a>
+              </li>
+              <li>
+                <a class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md" href="mailto:siddiquiabdullahahmed75@gmail.com" aria-label="Email">
+                  <i class="ph-bold ph-envelope"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Hidden Menu for mobile -->
+          <div class="header-menu d-none">
+            <div class="main-menu">
+              <nav class="tw-main-menu-content">
+                <ul>
+                  <li><a href="#hero">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="projects.html">All Projects</a></li>
+                  <li><a href="#experience">Experience</a></li>
+                  <li><a href="#certifications">Certifications</a></li>
+                  <li><a href="#github">GitHub</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Header Right -->
+          <div class="header-right d-flex align-items-center tw-gap-705">
+            <div class="header-three-menu">
+              <button class="tw-offcanvas-open-btn tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center tw-transition-3 tw-rounded-md">
+                <span><img class="tw-transition-3" src="assets/images/icons/header-three-toggle.svg" alt="toggle" /></span>
+              </button>
+            </div>
+            <div class="header-three-button d-none d-md-block">
+              <a class="tw-hover-btn bg-black text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-white text-uppercase tw-rounded-md" href="https://drive.google.com/file/d/1-O7s7Wk81TYTWUoMmTNA2dQlYqtRxGAj/view?usp=sharing" target="_blank">
+                download cv
+                <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- ==================== Header End ==================== -->
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+
+        <!-- ==================== HERO SECTION ==================== -->
+        <section id="hero" class="banner-three-area">
+          <div class="container tw-container-1800-px">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="banner-three-wrapper position-relative z-1">
+
+                  <h1 class="banner-three-title text-black tw-mb-30">
+                    developer
+                  </h1>
+                  <div class="banner-three-wrap d-flex justify-content-between align-items-end position-relative z-1">
+                    <!-- Left Info -->
+                    <div class="banner-three-left tw-rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                      <h2 class="banner-three-left-title tw-text-3xl tw-mb-6">
+                        Hello! I'm Abdullah <br />
+                        a Python full-stack developer & software engineer.
+                      </h2>
+                      <div class="banner-three-list">
+                        <ul>
+                          <li class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4">
+                            <span><img src="assets/images/icons/banner-three-pluse.svg" alt="plus" /></span>
+                            Full Stack Development
+                          </li>
+                          <li class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4">
+                            <span><img src="assets/images/icons/banner-three-pluse.svg" alt="plus" /></span>
+                            AI & Machine Learning
+                          </li>
+                          <li class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4">
+                            <span><img src="assets/images/icons/banner-three-pluse.svg" alt="plus" /></span>
+                            REST API Design
+                          </li>
+                          <li class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4">
+                            <span><img src="assets/images/icons/banner-three-pluse.svg" alt="plus" /></span>
+                            Database Architecture
+                          </li>
+                          <li class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4">
+                            <span><img src="assets/images/icons/banner-three-pluse.svg" alt="plus" /></span>
+                            Automation & Tooling
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Center CTA -->
+                    <div class="banner-three-center text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                      <h3 class="banner-three-center-title tw-text-120">
+                        Building production-ready apps, AI products & modern web experiences.
+                      </h3>
+                      <div class="banner-three-button">
+                        <a class="tw-hover-btn bg-black text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-white text-uppercase tw-rounded-lg" href="#projects">
+                          view projects
+                          <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Right Counters -->
+                    <div class="banner-three-right tw-rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                      <div class="banner-three-counter-item tw-rounded-md tw-mb-4 position-relative">
+                        <h4 class="banner-three-counter-title tw-text-101 fw-semibold font-heading text-heading tw-mb-2 lh-1">
+                          <span class="purecounter font-heading" data-purecounter-duration="2" data-purecounter-end="10"></span>+
+                        </h4>
+                        <p class="banner-three-counter-paragraph tw-text-lg fw-medium text-heading">
+                          Projects Built
+                        </p>
+                      </div>
+                      <div class="banner-three-counter-item tw-rounded-md tw-mb-4 ms-auto bg-black">
+                        <h4 class="banner-three-counter-title tw-text-101 fw-semibold font-heading text-white tw-mb-2 lh-1">
+                          <span class="purecounter font-heading" data-purecounter-duration="4" data-purecounter-end="5"></span>+
+                        </h4>
+                        <p class="banner-three-counter-paragraph tw-text-lg fw-medium text-white">
+                          Live Deployments
+                        </p>
+                      </div>
+                      <div class="banner-three-counter-item tw-rounded-md tw-mb-4">
+                        <h4 class="banner-three-counter-title tw-text-101 fw-semibold font-heading text-heading tw-mb-2 lh-1">
+                          <span class="purecounter font-heading" data-purecounter-duration="3" data-purecounter-end="8"></span>+
+                        </h4>
+                        <p class="banner-three-counter-paragraph tw-text-lg fw-medium text-heading">
+                          Technologies Mastered
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Background Shape -->
+                    <div class="banner-three-line-shape position-absolute start-50 translate-middle-x z-n1">
+                      <img src="assets/images/shapes/banner-three-shape.png" alt="shape" />
+                      <div class="banner-three-carcel-shape">
+                        <div><span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <section id="about" class="about-three-area py-120 position-relative z-1">
+          <div class="container tw-container-1800-px">
+            <div class="about-three-top position-relative z-1">
+              <div class="row justify-content-center tw-mb-21">
+                <div class="col-xl-9">
+                  <div class="text-center">
+                    <h2 class="about-three-title text-heading tw-text-15 tw-itm-title tw-itm-anim">
+                      I'm passionate about transforming ideas into scalable, production-ready software — from AI-powered systems and real-time applications to clean REST APIs and beautiful web interfaces.
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row align-items-center mb-5">
+                <div class="col-xl-6 tw-mb-10">
+                  <!-- Code Terminal Graphic -->
+                  <div class="about-code-window tw-rounded-lg p-4" style="background: #0d1117; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.5); font-family: 'Courier New', monospace; font-size: 0.9rem;">
+                    <div class="d-flex align-items-center gap-2 mb-4 pb-3" style="border-bottom: 1px solid rgba(255,255,255,0.08);">
+                      <span style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
+                      <span style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
+                      <span style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
+                      <span class="ms-2 text-white-50" style="font-size: 0.8rem;">abdullah_engineer.py</span>
+                    </div>
+                    <pre class="m-0" style="color: #c9d1d9; line-height: 1.7; overflow-x: auto;"><span style="color: #ff7b72;">class</span> <span style="color: #ffa657;">FullStackDeveloper</span>:
+    <span style="color: #ff7b72;">def</span> <span style="color: #d2a8ff;">__init__</span>(<span style="color: #79c0ff;">self</span>):
+        <span style="color: #79c0ff;">self</span>.name = <span style="color: #a5d6ff;">"Abdullah Ahmed Siddiqui"</span>
+        <span style="color: #79c0ff;">self</span>.role = <span style="color: #a5d6ff;">"Python Full Stack Developer"</span>
+        <span style="color: #79c0ff;">self</span>.location = <span style="color: #a5d6ff;">"Chh. Sambhajinagar, MH"</span>
+        <span style="color: #79c0ff;">self</span>.education = <span style="color: #a5d6ff;">"B.Tech CSE @ GECA"</span>
+        <span style="color: #79c0ff;">self</span>.core_stack = [<span style="color: #a5d6ff;">"Python"</span>, <span style="color: #a5d6ff;">"FastAPI"</span>, <span style="color: #a5d6ff;">"React"</span>, <span style="color: #a5d6ff;">"TypeScript"</span>]
+
+    <span style="color: #ff7b72;">def</span> <span style="color: #d2a8ff;">build_system</span>(<span style="color: #79c0ff;">self</span>, requirement):
+        architecture = <span style="color: #79c0ff;">self</span>.design_architecture(requirement)
+        backend = <span style="color: #79c0ff;">self</span>.build_python_api(architecture)
+        frontend = <span style="color: #79c0ff;">self</span>.craft_responsive_ui(backend)
+        <span style="color: #ff7b72;">return</span> <span style="color: #79c0ff;">self</span>.deploy_production(frontend)
+
+<span style="color: #8b949e;"># Output: Scalable, high-performance web applications</span>
+<span style="color: #79c0ff;">dev</span> = FullStackDeveloper()
+<span style="color: #79c0ff;">dev</span>.build_system(<span style="color: #a5d6ff;">"Full-Stack Production Applications"</span>)</pre>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="about-three-right" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div>
+                      <p class="tw-text-xl tw-mb-10">
+                        I'm Abdullah Ahmed Siddiqui — a Python full-stack developer and aspiring software engineer currently pursuing my B.Tech in Computer Science & Engineering at Government College of Engineering (GECA), Chh. Sambhajinagar.
+                      </p>
+                      <p class="tw-text-xl tw-mb-10">
+                        I build things that matter. From an AI-powered ERP suite and facial recognition attendance systems to real-time indoor navigation using A* pathfinding — my work spans Python backends, React frontends, REST APIs, and AI integrations.
+                      </p>
+                      <p class="tw-text-xl tw-mb-10">
+                        I believe great software is purposeful — every line of code should solve a real problem. My approach combines solid OOP foundations, clean architecture, and modern DevOps practices to deliver applications that are fast, maintainable, and production-ready.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="about-three-wrap-shape d-flex justify-content-between">
+                <div class="banner-three-counter-item tw-rounded-md position-relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                  <h2 class="banner-three-counter-title tw-text-101 fw-semibold font-heading text-heading tw-mb-2 lh-1">
+                    <span class="purecounter font-heading" data-purecounter-duration="4" data-purecounter-end="10"></span>+
+                  </h2>
+                  <p class="banner-three-counter-paragraph tw-text-lg fw-medium text-heading">
+                    GitHub Repositories
+                  </p>
+                </div>
+                <div class="banner-three-counter-item tw-rounded-md position-relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                  <h2 class="banner-three-counter-title tw-text-101 fw-semibold font-heading text-heading tw-mb-2 lh-1">
+                    <span class="purecounter font-heading" data-purecounter-duration="2" data-purecounter-end="5"></span>+
+                  </h2>
+                  <p class="banner-three-counter-paragraph tw-text-lg fw-medium text-heading">
+                    Technologies & Frameworks
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img class="about-three-shape position-absolute start-0 w-100" src="assets/images/shapes/about-three-shape.png" alt="shape" />
+          </div>
+        </section>
+
+        <!-- ==================== SKILLS MARQUEE ==================== -->
+        <div class="marquee tw-pt-17 bg-black">
+          <div class="marquee_left d-flex align-items-center justify-content-between tw-gap-16 overflow-hidden">
+            <div><h2 class="marquee-two-title marquee-three-title text-uppercase text-white">Skills <span class="text-white">-</span></h2></div>
+            <div><h2 class="marquee-two-title marquee-three-title text-uppercase text-stroke">Skills <span class="text-white">-</span></h2></div>
+            <div><h2 class="marquee-two-title marquee-three-title text-uppercase text-white">Skills <span class="text-white">-</span></h2></div>
+            <div><h2 class="marquee-two-title marquee-three-title text-uppercase text-stroke">Skills <span class="text-white">-</span></h2></div>
+            <div><h2 class="marquee-two-title marquee-three-title text-uppercase text-white">Skills <span class="text-white">-</span></h2></div>
+          </div>
+        </div>
+
+        <!-- ==================== SKILLS SECTION ==================== -->
+        <section id="skills" class="service-three-area bg-black pt-120 tw-pb-15">
+          <div class="container tw-container-1800-px">
+            <div class="row">
+              <div class="col-12">
+                <div class="service-three-wrapper">
+                  <!-- Skill 1: Full Stack Development -->
+                  <div class="service-three-single" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
+                    <div class="service-three-item d-flex justify-content-between align-items-center">
+                      <div class="service-three-content d-flex tw-gap-14">
+                        <div>
+                          <span class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3">01
+                            <img class="tw-transition-3" src="assets/images/icons/service-three-arrow.svg" alt="arrow" /></span>
+                        </div>
+                        <div>
+                          <h2 class="service-three-title tw-text-15 text-white tw-mb-4">Full Stack Development</h2>
+                          <div class="portfolio-list portfolio-two-list">
+                            <ul class="d-flex tw-gap-205 flex-wrap">
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Python</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">React</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">TypeScript</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Vite</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Tailwind CSS</span></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="service-three-thumb">
+                        <img src="assets/images/thumbs/service-three-thumb1.png" alt="Full Stack Development" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Skill 2: AI & Machine Learning -->
+                  <div class="service-three-single ms-auto" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300">
+                    <div class="service-three-item d-flex justify-content-between align-items-center">
+                      <div class="service-three-content d-flex tw-gap-14">
+                        <div>
+                          <span class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3">02
+                            <img class="tw-transition-3" src="assets/images/icons/service-three-arrow.svg" alt="arrow" /></span>
+                        </div>
+                        <div>
+                          <h2 class="service-three-title tw-text-15 text-white tw-mb-4">Backend & APIs</h2>
+                          <div class="portfolio-list portfolio-two-list">
+                            <ul class="d-flex tw-gap-205 flex-wrap">
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">FastAPI</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Flask</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Node.js</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Express</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">JWT</span></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="service-three-thumb">
+                        <img src="assets/images/thumbs/service-three-thumb2.png" alt="AI & ML" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Skill 3: Database Architecture -->
+                  <div class="service-three-single" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="400">
+                    <div class="service-three-item d-flex justify-content-between align-items-center">
+                      <div class="service-three-content d-flex tw-gap-14">
+                        <div>
+                          <span class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3">03
+                            <img class="tw-transition-3" src="assets/images/icons/service-three-arrow.svg" alt="arrow" /></span>
+                        </div>
+                        <div>
+                          <h2 class="service-three-title tw-text-15 text-white tw-mb-4">Databases & Data</h2>
+                          <div class="portfolio-list portfolio-two-list">
+                            <ul class="d-flex tw-gap-205 flex-wrap">
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">PostgreSQL</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">MySQL</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">MongoDB</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">SQLite</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">SQLAlchemy</span></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="service-three-thumb">
+                        <img src="assets/images/thumbs/service-three-thumb3.png" alt="Database" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Skill 4: APIs & Automation -->
+                  <div class="service-three-single ms-auto" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="500">
+                    <div class="service-three-item d-flex justify-content-between align-items-center">
+                      <div class="service-three-content d-flex tw-gap-14">
+                        <div>
+                          <span class="service-three-number text-white tw-text-xl d-inline-flex align-items-center tw-gap-3 lh-1 tw-mt-5 tw-transition-3">04
+                            <img class="tw-transition-3" src="assets/images/icons/service-three-arrow.svg" alt="arrow" /></span>
+                        </div>
+                        <div>
+                          <h2 class="service-three-title tw-text-15 text-white tw-mb-4">DevOps, AI & Tools</h2>
+                          <div class="portfolio-list portfolio-two-list">
+                            <ul class="d-flex tw-gap-205 flex-wrap">
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Git & GitHub</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">GitHub Actions</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">OpenCV</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">pytest</span></li>
+                              <li><span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1">Postman</span></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="service-three-thumb">
+                        <img src="assets/images/thumbs/service-three-thumb4.png" alt="APIs" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== FEATURED PROJECTS ==================== -->
+        <section id="projects" class="portfolio-three-area py-120 position-relative z-1">
+          <div class="portfolio-three-shape position-absolute top-0 z-n1">
+            <h3 class="portfolio-three-shape-title">works</h3>
+          </div>
+          <div class="container tw-container-1800-px">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="portfolio-three-wrapper d-flex justify-content-between flex-wrap align-items-start position-relative z-1">
+
+                  <!-- Project 1: Multi-Building Pathfinder -->
+                  <div class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper">
+                    <div class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2">
+                      <div class="tw-mb-6">
+                        <h2 class="tw-text-605 fw-medium tw-mb-4">
+                          <a class="hover-text-main-two-600" href="https://multi-building-pathfinder.vercel.app" target="_blank">Multi-Building Pathfinder</a>
+                        </h2>
+                        <div class="portfolio-three-list portfolio-list">
+                          <ul class="d-flex tw-gap-205 flex-wrap">
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">React</span></li>
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">TypeScript</span></li>
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">A* Algorithm</span></li>
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">Leaflet.js</span></li>
+                          </ul>
+                        </div>
+                        <p class="tw-text-sm mt-2" style="color: rgba(0,0,0,0.5); max-width: 500px;">Hospital indoor navigation using SVG maps, multi-floor pathfinding, and real-time route visualization.</p>
+                        <div class="d-flex align-items-center gap-2 mt-3">
+                          <span class="project-live-badge">Live Demo</span>
+                          <a href="https://github.com/absid10/multi-building-pathfinder" target="_blank" class="project-github-link" style="color: #333; border-color: rgba(0,0,0,0.15);">
+                            <i class="ph ph-github-logo"></i> Source
+                          </a>
+                        </div>
+                      </div>
+                      <div class="portfolio-three-button">
+                        <a class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white" href="https://multi-building-pathfinder.vercel.app" target="_blank">
+                          <i class="ph ph-arrow-up-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg" data-cursor="View">
+                      <a class="d-block cursor-hide tw-rounded-lg" href="https://multi-building-pathfinder.vercel.app" target="_blank">
+                        <img class="w-100 tw-rounded-lg" src="assets/images/thumbs/portfolio-three-thumb1.jpg" alt="Multi-Building Pathfinder" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Project 2: FaceID Attendance App -->
+                  <div class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper">
+                    <div class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2">
+                      <div class="tw-mb-6">
+                        <h2 class="tw-text-605 fw-medium tw-mb-4">
+                          <a class="hover-text-main-two-600" href="https://github.com/absid10/FaceID-Attendance-App" target="_blank">FaceID Attendance App</a>
+                        </h2>
+                        <div class="portfolio-three-list portfolio-list">
+                          <ul class="d-flex tw-gap-205 flex-wrap">
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">Python</span></li>
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">OpenCV</span></li>
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">Facial Recognition</span></li>
+                          </ul>
+                        </div>
+                        <p class="tw-text-sm mt-2" style="color: rgba(0,0,0,0.5); max-width: 500px;">Face ID-based attendance system with webcam capture, real-time face matching, check-in/out logging, and report export.</p>
+                        <div class="d-flex align-items-center gap-2 mt-3">
+                          <a href="https://github.com/absid10/FaceID-Attendance-App" target="_blank" class="project-github-link" style="color: #333; border-color: rgba(0,0,0,0.15);">
+                            <i class="ph ph-github-logo"></i> Source Code
+                          </a>
+                        </div>
+                      </div>
+                      <div class="portfolio-three-button">
+                        <a class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white" href="https://github.com/absid10/FaceID-Attendance-App" target="_blank">
+                          <i class="ph ph-arrow-up-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg" data-cursor="View">
+                      <a class="d-block cursor-hide tw-rounded-lg" href="https://github.com/absid10/FaceID-Attendance-App" target="_blank">
+                        <img class="w-100 tw-rounded-lg" src="assets/images/thumbs/portfolio-three-thumb2.jpg" alt="FaceID Attendance" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Project 3: BuildFlow ERP -->
+                  <div class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper">
+                    <div class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2">
+                      <div class="tw-mb-6">
+                        <h2 class="tw-text-605 fw-medium tw-mb-4">
+                          <a class="hover-text-main-two-600" href="https://buildflow-erp.vercel.app" target="_blank">BuildFlow ERP</a>
+                        </h2>
+                        <div class="portfolio-three-list portfolio-list">
+                          <ul class="d-flex tw-gap-205 flex-wrap">
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">TypeScript</span></li>
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">Full Stack</span></li>
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">ERP System</span></li>
+                          </ul>
+                        </div>
+                        <p class="tw-text-sm mt-2" style="color: rgba(0,0,0,0.5); max-width: 500px;">Enterprise resource planning system for construction project management with full CRUD operations.</p>
+                        <div class="d-flex align-items-center gap-2 mt-3">
+                          <span class="project-live-badge">Live Demo</span>
+                          <a href="https://github.com/absid10/BuildFlow-ERP" target="_blank" class="project-github-link" style="color: #333; border-color: rgba(0,0,0,0.15);">
+                            <i class="ph ph-github-logo"></i> Source
+                          </a>
+                        </div>
+                      </div>
+                      <div class="portfolio-three-button">
+                        <a class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white" href="https://buildflow-erp.vercel.app" target="_blank">
+                          <i class="ph ph-arrow-up-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg" data-cursor="View">
+                      <a class="d-block cursor-hide tw-rounded-lg" href="https://buildflow-erp.vercel.app" target="_blank">
+                        <img class="w-100 tw-rounded-lg" src="assets/images/thumbs/portfolio-three-thumb3.jpg" alt="BuildFlow ERP" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Project 4: Benevo -->
+                  <div class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper">
+                    <div class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2">
+                      <div class="tw-mb-6">
+                        <h2 class="tw-text-605 fw-medium tw-mb-4">
+                          <a class="hover-text-main-two-600" href="https://benevo-bice.vercel.app" target="_blank">Benevo</a>
+                        </h2>
+                        <div class="portfolio-three-list portfolio-list">
+                          <ul class="d-flex tw-gap-205 flex-wrap">
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">TypeScript</span></li>
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">Full Stack</span></li>
+                            <li><span class="text-uppercase text-heading fw-medium position-relative z-1">Charity Tech</span></li>
+                          </ul>
+                        </div>
+                        <p class="tw-text-sm mt-2" style="color: rgba(0,0,0,0.5); max-width: 500px;">Where Performance Meets Purpose — combining competitive golf scoring with charitable giving and monthly draws.</p>
+                        <div class="d-flex align-items-center gap-2 mt-3">
+                          <span class="project-live-badge">Live Demo</span>
+                          <a href="https://github.com/absid10/benevo" target="_blank" class="project-github-link" style="color: #333; border-color: rgba(0,0,0,0.15);">
+                            <i class="ph ph-github-logo"></i> Source
+                          </a>
+                        </div>
+                      </div>
+                      <div class="portfolio-three-button">
+                        <a class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white" href="https://benevo-bice.vercel.app" target="_blank">
+                          <i class="ph ph-arrow-up-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg" data-cursor="View">
+                      <a class="d-block cursor-hide tw-rounded-lg" href="https://benevo-bice.vercel.app" target="_blank">
+                        <img class="w-100 tw-rounded-lg" src="assets/images/thumbs/portfolio-three-thumb4.jpg" alt="Benevo" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Discover More Button -->
+                  <div class="about-three-counter portfolio-three-counter d-inline-block position-absolute bottom-0 start-0">
+                    <div class="tw-hover-btn-wrapper d-inline-block">
+                      <a class="tw-btn-circle tw-hover-btn-item tw-hover-btn tw-w-160-px tw-h-160-px lh-1 d-inline-flex justify-content-center align-items-center rounded-circle position-relative overflow-hidden" href="projects.html">
+                        <span class="d-flex flex-column justify-content-center">
+                          <span class="text-heading fw-bold tw-transition-3 tw-text-2xl fw-semibold">
+                            All <br /> Projects <i class="ph ph-arrow-up-right"></i>
+                          </span>
+                        </span>
+                        <i class="tw-btn-circle-dot bg-main-two-600"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== EXPERIENCE & EDUCATION ==================== -->
+        <section id="experience" class="feature-three-area py-120 position-relative z-1">
+          <div class="container tw-container-1800-px">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="text-center tw-mb-21">
+                  <span class="section-label d-inline-flex" style="color: var(--accent);">Experience & Education</span>
+                  <h2 class="tw-text-15 text-heading tw-itm-title tw-itm-anim">My Journey</h2>
+                </div>
+                <div class="feature-three-wrapper hover__widget">
+                  <!-- Education -->
+                  <div class="feature-three-single current hover__reveal-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="feature-three-item d-flex justify-content-between align-items-center">
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20">🎓</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px">GECA</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">B.Tech in Computer Science & Engineering</span></div>
+                      </div>
+                      <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">2022 — 2026</span></div>
+                    </div>
+                    <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb1.jpg"></div>
+                  </div>
+
+                  <!-- Pathfinder Project -->
+                  <div class="feature-three-single hover__reveal-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="feature-three-item d-flex justify-content-between align-items-center">
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20">🗺️</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px">Project</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">Multi-Building Hospital Pathfinder — React + A*</span></div>
+                      </div>
+                      <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">2025</span></div>
+                    </div>
+                    <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb2.jpg"></div>
+                  </div>
+
+                  <!-- FaceID Project -->
+                  <div class="feature-three-single hover__reveal-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="feature-three-item d-flex justify-content-between align-items-center">
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20">🤖</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px">AI Project</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">FaceID Attendance System — Python + OpenCV</span></div>
+                      </div>
+                      <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">2025</span></div>
+                    </div>
+                    <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb3.jpg"></div>
+                  </div>
+
+                  <!-- Secure Notes -->
+                  <div class="feature-three-single hover__reveal-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="feature-three-item d-flex justify-content-between align-items-center">
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20">🔐</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px">Full Stack</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">Secure Notes — FastAPI + React + JWT + RBAC</span></div>
+                      </div>
+                      <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">2025</span></div>
+                    </div>
+                    <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb4.jpg"></div>
+                  </div>
+
+                  <!-- HSC -->
+                  <div class="feature-three-single hover__reveal-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="feature-three-item d-flex justify-content-between align-items-center">
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20">📚</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px">Sarosh Jr. College</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">Higher Secondary Certificate — 81%</span></div>
+                      </div>
+                      <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">2022</span></div>
+                    </div>
+                    <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb1.jpg"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== ALL PROJECTS SECTION ==================== -->
+        <section id="all-projects" class="section-padding bg-black">
+          <div class="container tw-container-1800-px">
+            <div class="text-center tw-mb-21">
+              <span class="section-label d-inline-flex">All Repositories</span>
+              <h2 class="tw-text-15 text-white tw-itm-title tw-itm-anim">Complete Portfolio</h2>
+              <a href="projects.html" class="d-inline-block mt-4 text-uppercase fw-bold" style="color: var(--accent); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em;">View ranked project page →</a>
+            </div>
+            <div class="all-projects-grid" data-aos="fade-up" data-aos-duration="1000">
+
+              <div class="project-mini-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h4>Multi-Building Pathfinder</h4>
+                  <a href="https://multi-building-pathfinder.vercel.app" target="_blank" style="color: var(--accent); font-size: 1.2rem;"><i class="ph ph-arrow-up-right"></i></a>
+                </div>
+                <p>Hospital indoor navigation with A* pathfinding, React, TypeScript, Leaflet.js & SVG maps.</p>
+                <div class="mb-2"><span class="project-live-badge" style="font-size: 0.65rem;">Live</span></div>
+                <div><span class="tech-badge">React</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Leaflet.js</span><span class="tech-badge">A*</span></div>
+              </div>
+
+              <div class="project-mini-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h4>FaceID Attendance App</h4>
+                  <a href="https://github.com/absid10/FaceID-Attendance-App" target="_blank" style="color: var(--accent); font-size: 1.2rem;"><i class="ph ph-arrow-up-right"></i></a>
+                </div>
+                <p>Python-based facial recognition attendance system with webcam, check-in/out & report export.</p>
+                <div><span class="tech-badge">Python</span><span class="tech-badge">OpenCV</span><span class="tech-badge">Face Recognition</span></div>
+              </div>
+
+              <div class="project-mini-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h4>BuildFlow ERP</h4>
+                  <a href="https://buildflow-erp.vercel.app" target="_blank" style="color: var(--accent); font-size: 1.2rem;"><i class="ph ph-arrow-up-right"></i></a>
+                </div>
+                <p>Enterprise resource planning system for construction project management.</p>
+                <div class="mb-2"><span class="project-live-badge" style="font-size: 0.65rem;">Live</span></div>
+                <div><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span><span class="tech-badge">ERP</span></div>
+              </div>
+
+              <div class="project-mini-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h4>Benevo</h4>
+                  <a href="https://benevo-bice.vercel.app" target="_blank" style="color: var(--accent); font-size: 1.2rem;"><i class="ph ph-arrow-up-right"></i></a>
+                </div>
+                <p>Where Performance Meets Purpose — competitive golf scoring with charitable giving.</p>
+                <div class="mb-2"><span class="project-live-badge" style="font-size: 0.65rem;">Live</span></div>
+                <div><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span><span class="tech-badge">Charity</span></div>
+              </div>
+
+              <div class="project-mini-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h4>AI-Powered Cloud ERP Suite</h4>
+                  <a href="https://github.com/absid10/AI-Powered-Cloud-ERP-Suite" target="_blank" style="color: var(--accent); font-size: 1.2rem;"><i class="ph ph-arrow-up-right"></i></a>
+                </div>
+                <p>Enterprise AI-powered cloud ERP — Python backend and intelligent automation.</p>
+                <div><span class="tech-badge">Python</span><span class="tech-badge">AI</span><span class="tech-badge">Cloud ERP</span></div>
+              </div>
+
+              <div class="project-mini-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h4>Secure Notes</h4>
+                  <a href="https://github.com/absid10/secure-notes" target="_blank" style="color: var(--accent); font-size: 1.2rem;"><i class="ph ph-arrow-up-right"></i></a>
+                </div>
+                <p>FastAPI + React notes API with JWT auth, bcrypt, RBAC, and pytest test coverage.</p>
+                <div><span class="tech-badge">FastAPI</span><span class="tech-badge">React</span><span class="tech-badge">JWT</span><span class="tech-badge">pytest</span></div>
+              </div>
+
+              <div class="project-mini-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h4>VitalFlow</h4>
+                  <a href="https://vital-flow-rust.vercel.app" target="_blank" style="color: var(--accent); font-size: 1.2rem;"><i class="ph ph-arrow-up-right"></i></a>
+                </div>
+                <p>Health vitals monitoring and flow tracking system.</p>
+                <div class="mb-2"><span class="project-live-badge" style="font-size: 0.65rem;">Live</span></div>
+                <div><span class="tech-badge">Web App</span><span class="tech-badge">Health Tech</span></div>
+              </div>
+
+              <div class="project-mini-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h4>RateMatrix</h4>
+                  <a href="https://github.com/absid10/RateMatrix" target="_blank" style="color: var(--accent); font-size: 1.2rem;"><i class="ph ph-arrow-up-right"></i></a>
+                </div>
+                <p>Rating and review matrix system built with TypeScript.</p>
+                <div><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span></div>
+              </div>
+
+              <div class="project-mini-card">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h4>Task Manager</h4>
+                  <a href="https://github.com/absid10/task-manager" target="_blank" style="color: var(--accent); font-size: 1.2rem;"><i class="ph ph-arrow-up-right"></i></a>
+                </div>
+                <p>Full-featured task management application with JavaScript.</p>
+                <div><span class="tech-badge">JavaScript</span><span class="tech-badge">CRUD</span></div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== ACHIEVEMENTS ==================== -->
+        <section id="achievements" class="section-padding" style="background: #f5f5f0;">
+          <div class="container tw-container-1800-px">
+            <div class="text-center tw-mb-21">
+              <span class="section-label d-inline-flex">Highlights</span>
+              <h2 class="tw-text-15 text-heading tw-itm-title tw-itm-anim">Achievements</h2>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
+                <div class="achievement-card">
+                  <div class="achievement-number"><span class="purecounter" data-purecounter-duration="2" data-purecounter-end="10"></span>+</div>
+                  <p class="mb-0 fw-semibold text-heading">GitHub Repositories</p>
+                  <p class="mb-0 mt-2" style="opacity: 0.5; font-size: 0.85rem;">Production-grade projects shipped</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="achievement-card">
+                  <div class="achievement-number"><span class="purecounter" data-purecounter-duration="2" data-purecounter-end="5"></span>+</div>
+                  <p class="mb-0 fw-semibold text-heading">Live Deployments</p>
+                  <p class="mb-0 mt-2" style="opacity: 0.5; font-size: 0.85rem;">Apps deployed on Vercel & Render</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="achievement-card">
+                  <div class="achievement-number"><span class="purecounter" data-purecounter-duration="2" data-purecounter-end="3"></span></div>
+                  <p class="mb-0 fw-semibold text-heading">Certifications</p>
+                  <p class="mb-0 mt-2" style="opacity: 0.5; font-size: 0.85rem;">NPTEL & micro1 AI certified</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="achievement-card">
+                  <div class="achievement-number">81%</div>
+                  <p class="mb-0 fw-semibold text-heading">HSC Score</p>
+                  <p class="mb-0 mt-2" style="opacity: 0.5; font-size: 0.85rem;">Sarosh Junior College, 2022</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== CERTIFICATIONS ==================== -->
+        <section id="certifications" class="section-padding bg-black">
+          <div class="container tw-container-1800-px">
+            <div class="text-center tw-mb-21">
+              <span class="section-label d-inline-flex">Credentials</span>
+              <h2 class="tw-text-15 text-white tw-itm-title tw-itm-anim">Certifications</h2>
+            </div>
+            <div class="row g-4">
+              <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
+                <div class="cert-card">
+                  <div class="cert-icon"><i class="ph ph-robot"></i></div>
+                  <h4 class="text-white fw-semibold mb-3">micro1 AI Interview Certified</h4>
+                  <p class="mb-3" style="color: rgba(255,255,255,0.5); line-height: 1.7;">Passed AI-conducted technical interview; certified by micro1 for demonstrating strong engineering fundamentals.</p>
+                  <span class="skill-tag">April 2026</span>
+                  <span class="skill-tag">AI Verified</span>
+                </div>
+              </div>
+              <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="cert-card">
+                  <div class="cert-icon"><i class="ph ph-user-focus"></i></div>
+                  <h4 class="text-white fw-semibold mb-3">Enhancing Soft Skills and Personality</h4>
+                  <p class="mb-3" style="color: rgba(255,255,255,0.5); line-height: 1.7;">NPTEL certification covering communication, interpersonal skills, and professional personality development.</p>
+                  <span class="skill-tag">NPTEL</span>
+                  <span class="skill-tag">Soft Skills</span>
+                </div>
+              </div>
+              <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="cert-card">
+                  <div class="cert-icon"><i class="ph ph-lightbulb"></i></div>
+                  <h4 class="text-white fw-semibold mb-3">Entrepreneurship Essentials</h4>
+                  <p class="mb-3" style="color: rgba(255,255,255,0.5); line-height: 1.7;">NPTEL course on entrepreneurship fundamentals — business models, innovation, and startup mindset.</p>
+                  <span class="skill-tag">NPTEL</span>
+                  <span class="skill-tag">Entrepreneurship</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== GITHUB STATS ==================== -->
+        <section id="github" class="section-padding" style="background: #f5f5f0;">
+          <div class="container tw-container-1800-px">
+            <div class="text-center tw-mb-21">
+              <span class="section-label d-inline-flex">Open Source</span>
+              <h2 class="tw-text-15 text-heading tw-itm-title tw-itm-anim">GitHub Activity</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+              <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-duration="1000">
+                <img src="https://github-readme-stats.vercel.app/api?username=absid10&show_icons=true&theme=default&hide_border=true&bg_color=f5f5f0&title_color=E8553A&icon_color=E8553A&text_color=333" alt="GitHub Stats" class="w-100" style="max-width: 520px; border-radius: 16px;" />
+              </div>
+              <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=absid10&layout=compact&hide_border=true&bg_color=f5f5f0&title_color=E8553A&text_color=333" alt="Top Languages" class="w-100" style="max-width: 350px; border-radius: 16px;" />
+              </div>
+            </div>
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <img src="https://github-readme-streak-stats.herokuapp.com/?user=absid10&theme=default&hide_border=true&background=f5f5f0&ring=E8553A&fire=E8553A&currStreakLabel=E8553A" alt="GitHub Streak" class="w-100" style="max-width: 520px; border-radius: 16px;" />
+            </div>
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+              <img src="https://ghchart.rshah.org/E8553A/absid10" alt="GitHub Contribution Graph" class="w-100" style="max-width: 800px; border-radius: 16px;" loading="lazy" />
+            </div>
+            <div class="text-center mt-4">
+              <a href="https://github.com/absid10" target="_blank" class="tw-hover-btn bg-black text-white fw-bold tw-py-3 tw-px-8 d-inline-block text-uppercase tw-rounded-md" style="text-decoration: none; font-size: 0.85rem;">
+                View GitHub Profile
+                <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== CONTACT SECTION ==================== -->
+        <section id="contact" class="section-padding bg-black">
+          <div class="container tw-container-1800-px">
+            <div class="row">
+              <div class="col-xl-6">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                  <span class="section-label d-inline-flex">Get In Touch</span>
+                  <h2 class="tw-text-15 text-white tw-mb-10 tw-itm-title tw-itm-anim">
+                    Let's Build<br>Something Great.
+                  </h2>
+                  <p class="tw-text-xl text-white" style="opacity: 0.6; max-width: 500px; line-height: 1.7;">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to collaborate. Whether you have a question or just want to say hi — reach out!
+                  </p>
+                  <div class="mt-5">
+                    <div class="d-flex align-items-center tw-gap-4 tw-mb-6">
+                      <span class="text-main-two-600" style="font-size: 1.5rem;"><i class="ph ph-envelope"></i></span>
+                      <a href="mailto:siddiquiabdullahahmed75@gmail.com" class="text-white tw-text-xl" style="text-decoration: none; opacity: 0.8;">siddiquiabdullahahmed75@gmail.com</a>
+                    </div>
+                    <div class="d-flex align-items-center tw-gap-4 tw-mb-6">
+                      <span class="text-main-two-600" style="font-size: 1.5rem;"><i class="ph ph-phone"></i></span>
+                      <a href="tel:+917420940665" class="text-white tw-text-xl" style="text-decoration: none; opacity: 0.8;">+91 74209 40665</a>
+                    </div>
+                    <div class="d-flex align-items-center tw-gap-4 tw-mb-6">
+                      <span class="text-main-two-600" style="font-size: 1.5rem;"><i class="ph ph-map-pin-line"></i></span>
+                      <span class="text-white tw-text-xl" style="opacity: 0.8;">Chh. Sambhajinagar, Maharashtra, India</span>
+                    </div>
+                  </div>
+                  <div class="footer-social mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <ul class="tw-gap-2">
+                      <li>
+                        <a href="https://github.com/absid10" target="_blank">
+                          <span class="active-media d-flex align-items-center tw-gap-1">GitHub <i class="ph ph-arrow-bend-up-right"></i></span>
+                          <span class="hover-media"><i class="ph ph-github-logo"></i></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/in/absid10/" target="_blank">
+                          <span class="active-media d-flex align-items-center tw-gap-1">LinkedIn <i class="ph ph-arrow-bend-up-right"></i></span>
+                          <span class="hover-media"><i class="ph ph-linkedin-logo"></i></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="mailto:siddiquiabdullahahmed75@gmail.com">
+                          <span class="active-media d-flex align-items-center tw-gap-1">Email <i class="ph ph-arrow-bend-up-right"></i></span>
+                          <span class="hover-media"><i class="ph ph-envelope"></i></span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                  <form id="contact-form" class="mt-5 mt-xl-0">
+                    <div class="tw-mb-8">
+                      <input type="text" class="contact-input" placeholder="Your Name" required id="contact-name" />
+                    </div>
+                    <div class="tw-mb-8">
+                      <input type="email" class="contact-input" placeholder="Your Email" required id="contact-email" />
+                    </div>
+                    <div class="tw-mb-8">
+                      <input type="text" class="contact-input" placeholder="Subject" id="contact-subject" />
+                    </div>
+                    <div class="tw-mb-8">
+                      <textarea class="contact-input" placeholder="Your Message" required id="contact-message"></textarea>
+                    </div>
+                    <button type="submit" class="tw-hover-btn bg-main-two-600 text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-white text-uppercase tw-rounded-lg border-0" style="cursor: pointer;">
+                      Send Message
+                      <span class="tw-hover-btn-circle-dot bg-white"></span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="py-5" style="background: #050505;">
+          <div class="container tw-container-1800-px">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+              <div>
+                <a href="#hero" style="font-size: 1.6rem; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Space Grotesk', sans-serif;">
+                  Abdullah<span style="color: var(--accent);">.</span>
+                </a>
+              </div>
+              <div>
+                <p class="text-white mb-0" style="opacity: 0.4; font-size: 0.85rem;">
+                  &copy; 2026 Abdullah Ahmed Siddiqui. All rights reserved.
+                </p>
+              </div>
+              <div class="d-flex gap-3">
+                <a href="https://github.com/absid10" target="_blank" style="color: rgba(255,255,255,0.4); font-size: 1.2rem; transition: color 0.3s;" onmouseover="this.style.color='#E8553A'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
+                  <i class="ph ph-github-logo"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/absid10/" target="_blank" style="color: rgba(255,255,255,0.4); font-size: 1.2rem; transition: color 0.3s;" onmouseover="this.style.color='#E8553A'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
+                  <i class="ph ph-linkedin-logo"></i>
+                </a>
+                <a href="mailto:siddiquiabdullahahmed75@gmail.com" style="color: rgba(255,255,255,0.4); font-size: 1.2rem; transition: color 0.3s;" onmouseover="this.style.color='#E8553A'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
+                  <i class="ph ph-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+
+    <!-- ==================== Scripts ==================== -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/boostrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/magnific-popup.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/purecounter.js"></script>
+    <script src="assets/js/jquery.marquee.min.js"></script>
+    <script src="assets/js/phosphor-icon.js"></script>
+    <!-- GSAP -->
+    <script src="assets/js/gsap/gsap.js"></script>
+    <script src="assets/js/gsap/gsap-scroll-to-plugin.js"></script>
+    <script src="assets/js/gsap/gsap-scroll-smoother.js"></script>
+    <script src="assets/js/gsap/gsap-scroll-trigger.js"></script>
+    <script src="assets/js/gsap/gsap-split-text.js"></script>
+    <script src="assets/js/gsap/chroma.min.js"></script>
+    <!-- Custom GSAP -->
+    <script src="assets/js/custom-gsap.js"></script>
+    <!-- Cursor -->
+    <script src="assets/js/tw-cursor.js"></script>
+    <!-- Main js -->
+    <script src="assets/js/main.js"></script>
+    <!-- Slider -->
+    <script src="assets/js/slider-active.js"></script>
+
+    <!-- Contact Form Handler -->
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('contact-name').value;
+        const email = document.getElementById('contact-email').value;
+        const subject = document.getElementById('contact-subject').value;
+        const message = document.getElementById('contact-message').value;
+        
+        // Create mailto link
+        const mailtoLink = `mailto:siddiquiabdullahahmed75@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Contact: ' + name)}&body=${encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
+        window.location.href = mailtoLink;
+        
+        // Show toast
+        const toast = document.createElement('div');
+        toast.innerHTML = '<div style="position:fixed;bottom:30px;right:30px;background:#E8553A;color:#fff;padding:16px 28px;border-radius:12px;font-weight:600;z-index:9999;animation:fadeIn 0.3s ease;">Opening email client...</div>';
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+      });
+    </script>
+  </body>
+</html>

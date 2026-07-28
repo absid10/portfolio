@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="All projects by Abdullah Ahmed Siddiqui — Python Full Stack Developer. Ranked portfolio of 10 GitHub repositories." />
+    <title>All Projects — Abdullah Ahmed Siddiqui</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      :root { --accent: #E8553A; --accent-light: #FF7A5C; }
+      body { background: #0a0a0a; color: #fff; font-family: 'Inter', sans-serif; }
+      .page-hero { padding: 140px 0 80px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .page-hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800; line-height: 1.05; }
+      .gradient-text { background: linear-gradient(135deg, var(--accent), var(--accent-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+      .back-link { color: rgba(255,255,255,0.6); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s; }
+      .back-link:hover { color: var(--accent); }
+      .rank-badge { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; display: block; }
+      .project-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 36px; height: 100%; transition: all 0.4s ease; }
+      .project-card:hover { border-color: rgba(232,85,58,0.3); transform: translateY(-4px); box-shadow: 0 24px 64px rgba(0,0,0,0.4); }
+      .project-card.flagship { border-color: rgba(232,85,58,0.35); background: linear-gradient(135deg, rgba(232,85,58,0.08), rgba(255,255,255,0.02)); grid-column: 1 / -1; }
+      .project-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; }
+      .project-card h3 a { color: #fff; text-decoration: none; }
+      .project-card h3 a:hover { color: var(--accent); }
+      .project-card p { color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 20px; font-size: 0.95rem; }
+      .tech-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.72rem; font-weight: 500; border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); margin: 3px; }
+      .live-badge { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); border-radius: 20px; font-size: 0.7rem; font-weight: 600; color: #34D399; margin-right: 8px; }
+      .live-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #34D399; }
+      .project-link { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; margin-right: 16px; transition: color 0.3s; }
+      .project-link:hover { color: var(--accent); }
+      .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 24px; padding: 80px 0 120px; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+      .meta-row span { display: inline-flex; align-items: center; gap: 6px; }
+    </style>
+  </head>
+  <body>
+    <header class="position-fixed top-0 start-0 end-0 py-4" style="z-index: 100; background: rgba(10,10,10,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06);">
+      <div class="container tw-container-1800-px d-flex justify-content-between align-items-center">
+        <a href="index.html" style="font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Space Grotesk', sans-serif;">Abdullah<span style="color: var(--accent);">.</span></a>
+        <a href="index.html#contact" class="tw-hover-btn bg-main-two-600 text-white fw-bold tw-py-3 tw-px-8 d-inline-block text-uppercase tw-rounded-md text-decoration-none" style="font-size: 0.85rem;">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container tw-container-1800-px">
+          <a href="index.html" class="back-link mb-4"><i class="ph ph-arrow-left"></i> Back to Home</a>
+          <p class="text-uppercase fw-semibold mb-3" style="color: var(--accent); letter-spacing: 0.15em; font-size: 0.8rem;">Ranked Portfolio</p>
+          <h1>All <span class="gradient-text">Projects</span></h1>
+          <p class="mt-4 mb-0" style="max-width: 640px; color: rgba(255,255,255,0.55); font-size: 1.15rem; line-height: 1.7;">
+            Every repository from my GitHub profile, ranked by technical complexity, real-world impact, and overall polish. 10 projects — 5 live deployments.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container tw-container-1800-px">
+          <div class="projects-grid">
+
+            <article class="project-card" data-aos="fade-up">
+              <span class="rank-badge">#1</span>
+              <h3><a href="https://multi-building-pathfinder.vercel.app" target="_blank">Multi-Building Pathfinder</a></h3>
+              <div class="meta-row">
+                <span><i class="ph ph-calendar"></i> 2025</span>
+                <span><i class="ph ph-code"></i> TypeScript</span>
+                <span><i class="ph ph-tag"></i> Navigation / Algorithms</span>
+              </div>
+              <p>Multi-building hospital indoor navigation with Leaflet + SVG maps, A* pathfinding on weighted graphs, Flask REST API, JWT auth, and Redis background jobs.</p>
+              <div class="mb-3"><span class="live-badge">Live</span><span class="tech-badge">React</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Flask</span><span class="tech-badge">A*</span><span class="tech-badge">Leaflet.js</span></div>
+              <a href="https://multi-building-pathfinder.vercel.app" target="_blank" class="project-link"><i class="ph ph-globe"></i> Live Demo</a>
+              <a href="https://github.com/absid10/multi-building-pathfinder" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
+            </article>
+
+            <article class="project-card" data-aos="fade-up">
+              <span class="rank-badge">#2</span>
+              <h3><a href="https://github.com/absid10/FaceID-Attendance-App" target="_blank">FaceID Attendance App</a></h3>
+              <div class="meta-row">
+                <span><i class="ph ph-calendar"></i> 2025</span>
+                <span><i class="ph ph-code"></i> Python</span>
+                <span><i class="ph ph-tag"></i> AI / Computer Vision</span>
+              </div>
+              <p>Desktop attendance automation with OpenCV Haar Cascade + LBPH recognition, SQLite storage, CSV export, Windows EXE packaging, and GitHub Actions CI/CD.</p>
+              <div class="mb-3"><span class="tech-badge">Python</span><span class="tech-badge">OpenCV</span><span class="tech-badge">SQLite</span><span class="tech-badge">GitHub Actions</span></div>
+              <a href="https://github.com/absid10/FaceID-Attendance-App" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
+            </article>
+
+            <article class="project-card" data-aos="fade-up">
+              <span class="rank-badge">#3</span>
+              <h3><a href="https://buildflow-erp.vercel.app" target="_blank">BuildFlow ERP</a></h3>
+              <div class="meta-row">
+                <span><i class="ph ph-calendar"></i> 2026</span>
+                <span><i class="ph ph-code"></i> TypeScript</span>
+                <span><i class="ph ph-tag"></i> ERP / Full Stack</span>
+              </div>
+              <p>Construction project management ERP with full CRUD operations, deployed live on Vercel.</p>
+              <div class="mb-3"><span class="live-badge">Live</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span><span class="tech-badge">ERP</span></div>
+              <a href="https://buildflow-erp.vercel.app" target="_blank" class="project-link"><i class="ph ph-globe"></i> Live Demo</a>
+              <a href="https://github.com/absid10/BuildFlow-ERP" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
+            </article>
+
+            <article class="project-card" data-aos="fade-up">
+              <span class="rank-badge">#4</span>
+              <h3><a href="https://benevo-bice.vercel.app" target="_blank">Benevo</a></h3>
+              <div class="meta-row">
+                <span><i class="ph ph-calendar"></i> 2025</span>
+                <span><i class="ph ph-code"></i> TypeScript</span>
+                <span><i class="ph ph-tag"></i> Charity / Full Stack</span>
+              </div>
+              <p>Competitive golf scoring combined with charitable giving — monthly score entry, draws, and automatic charity support.</p>
+              <div class="mb-3"><span class="live-badge">Live</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span></div>
+              <a href="https://benevo-bice.vercel.app" target="_blank" class="project-link"><i class="ph ph-globe"></i> Live Demo</a>
+              <a href="https://github.com/absid10/benevo" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
+            </article>
+
+            <article class="project-card" data-aos="fade-up">
+              <span class="rank-badge">#5</span>
+              <h3><a href="https://github.com/absid10/AI-Powered-Cloud-ERP-Suite" target="_blank">AI-Powered Cloud ERP Suite</a></h3>
+              <div class="meta-row">
+                <span><i class="ph ph-calendar"></i> 2026</span>
+                <span><i class="ph ph-code"></i> Python</span>
+                <span><i class="ph ph-tag"></i> Enterprise / AI</span>
+              </div>
+              <p>Cloud ERP system with AI-powered workflows, backend architecture, and data modeling.</p>
+              <div class="mb-3"><span class="tech-badge">Python</span><span class="tech-badge">AI</span><span class="tech-badge">Cloud ERP</span><span class="tech-badge">Enterprise</span></div>
+              <a href="https://github.com/absid10/AI-Powered-Cloud-ERP-Suite" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
+            </article>
+
+            <article class="project-card" data-aos="fade-up">
+              <span class="rank-badge">#6</span>
+              <h3><a href="https://benevo-bice.vercel.app" target="_blank">Benevo</a></h3>
+              <div class="meta-row">
+                <span><i class="ph ph-calendar"></i> 2025</span>
+                <span><i class="ph ph-code"></i> TypeScript</span>
+                <span><i class="ph ph-tag"></i> Charity / Full Stack</span>
+              </div>
+              <p>Competitive golf scoring combined with charitable giving — monthly score entry, draws, and automatic charity support.</p>
+              <div class="mb-3"><span class="live-badge">Live</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span></div>
+              <a href="https://benevo-bice.vercel.app" target="_blank" class="project-link"><i class="ph ph-globe"></i> Live Demo</a>
+              <a href="https://github.com/absid10/benevo" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
+            </article>
+
+            <article class="project-card" data-aos="fade-up">
+              <span class="rank-badge">#7</span>
+              <h3><a href="https://vital-flow-rust.vercel.app" target="_blank">VitalFlow</a></h3>
+              <div class="meta-row">
+                <span><i class="ph ph-calendar"></i> 2025</span>
+                <span><i class="ph ph-code"></i> Web App</span>
+                <span><i class="ph ph-tag"></i> Health Tech</span>
+              </div>
+              <p>Health vitals monitoring and flow tracking system with live deployment.</p>
+              <div class="mb-3"><span class="live-badge">Live</span><span class="tech-badge">Health Tech</span><span class="tech-badge">Web App</span></div>
+              <a href="https://vital-flow-rust.vercel.app" target="_blank" class="project-link"><i class="ph ph-globe"></i> Live Demo</a>
+              <a href="https://github.com/absid10/VitalFlow" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
+            </article>
+
+            <article class="project-card" data-aos="fade-up">
+              <span class="rank-badge">#8</span>
+              <h3><a href="https://github.com/absid10/RateMatrix" target="_blank">RateMatrix</a></h3>
+              <div class="meta-row">
+                <span><i class="ph ph-calendar"></i> 2025</span>
+                <span><i class="ph ph-code"></i> TypeScript</span>
+                <span><i class="ph ph-tag"></i> Full Stack</span>
+              </div>
+              <p>Rating and review matrix system built with TypeScript.</p>
+              <div class="mb-3"><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span></div>
+              <a href="https://github.com/absid10/RateMatrix" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
+            </article>
+
+            <article class="project-card" data-aos="fade-up">
+              <span class="rank-badge">#9</span>
+              <h3><a href="https://github.com/absid10/task-manager" target="_blank">Task Manager</a></h3>
+              <div class="meta-row">
+                <span><i class="ph ph-calendar"></i> 2024</span>
+                <span><i class="ph ph-code"></i> JavaScript</span>
+                <span><i class="ph ph-tag"></i> CRUD / Productivity</span>
+              </div>
+              <p>Full-featured task management application with JavaScript.</p>
+              <div class="mb-3"><span class="tech-badge">JavaScript</span><span class="tech-badge">CRUD</span></div>
+              <a href="https://github.com/absid10/task-manager" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
+            </article>
+
+            <article class="project-card" data-aos="fade-up">
+              <span class="rank-badge">#10</span>
+              <h3><a href="https://github.com/absid10/absid10" target="_blank">GitHub Profile</a></h3>
+              <div class="meta-row">
+                <span><i class="ph ph-calendar"></i> Ongoing</span>
+                <span><i class="ph ph-code"></i> Markdown</span>
+                <span><i class="ph ph-tag"></i> Profile</span>
+              </div>
+              <p>GitHub profile README showcasing skills, stats, and developer identity.</p>
+              <div class="mb-3"><span class="tech-badge">GitHub</span><span class="tech-badge">Markdown</span></div>
+              <a href="https://github.com/absid10/absid10" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-5 text-center" style="border-top: 1px solid rgba(255,255,255,0.08);">
+      <p class="mb-0" style="opacity: 0.4; font-size: 0.85rem;">&copy; 2026 Abdullah Ahmed Siddiqui</p>
+    </footer>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/phosphor-icon.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+  </body>
+</html>
