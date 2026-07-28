@@ -44,9 +44,9 @@
       .font-space { font-family: 'Space Grotesk', sans-serif; }
       .font-inter { font-family: 'Inter', sans-serif; }
 
-      /* ===== Hero Title Fix (no trailing letter wrap) ===== */
+      /* ===== Hero Title Fix ===== */
       .banner-three-title {
-        font-size: clamp(3rem, 13vw, 220px) !important;
+        font-size: clamp(3rem, 13.5vw, 220px) !important;
         white-space: nowrap !important;
         text-align: center;
         letter-spacing: -0.03em;
@@ -54,6 +54,14 @@
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      /* ===== Hero Subtitle Stroke Fix ===== */
+      .banner-three-center-title {
+        -webkit-text-stroke-width: 0px !important;
+        -webkit-text-stroke: none !important;
+        color: #1a1a1a !important;
+        font-weight: 700 !important;
       }
 
       /* ===== Gradient Text ===== */
@@ -67,7 +75,6 @@
       /* ===== Skills Grid ===== */
       .skill-card {
         background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(255,255,255,0.08);
         border-radius: 16px;
         padding: 32px 28px;
         transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
@@ -550,7 +557,6 @@
                   </svg>
                 </span>
               </span>
-            </button>
           </div>
           <div class="tw-offcanvas-2-right-inner d-flex flex-column justify-content-between h-100">
             <div class="twoffcanvas__contact-info">
@@ -559,8 +565,8 @@
               </div>
               <ul>
                 <li>
-                  <span class="text-main-two-600 tw-text-xl"><i class="ph ph-map-pin-line"></i></span>
-                  <span class="text-white">Chh. Sambhajinagar, Maharashtra, India</span>
+                  <span class="text-main-two-600 tw-text-xl"><i class="ph ph-phone-call"></i></span>
+                  <a class="text-white" href="tel:+917420940665">+91 74209 40665</a>
                 </li>
                 <li>
                   <span class="text-main-two-600 tw-text-xl"><i class="ph ph-envelope"></i></span>
@@ -569,7 +575,6 @@
               </ul>
             </div>
             <div class="footer-social" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-              <ul class="tw-gap-2">
                 <li>
                   <a href="https://github.com/absid10" target="_blank">
                     <span class="active-media d-flex align-items-center tw-gap-1">GitHub <i class="ph ph-arrow-bend-up-right"></i></span>
@@ -1456,15 +1461,10 @@
                       <a href="mailto:siddiquiabdullahahmed75@gmail.com" class="text-white tw-text-xl" style="text-decoration: none; opacity: 0.8;">siddiquiabdullahahmed75@gmail.com</a>
                     </div>
                     <div class="d-flex align-items-center tw-gap-4 tw-mb-6">
-                      <span class="text-main-two-600" style="font-size: 1.5rem;"><i class="ph ph-phone"></i></span>
+                      <span class="text-main-two-600" style="font-size: 1.5rem;"><i class="ph ph-phone-call"></i></span>
                       <a href="tel:+917420940665" class="text-white tw-text-xl" style="text-decoration: none; opacity: 0.8;">+91 74209 40665</a>
                     </div>
-                    <div class="d-flex align-items-center tw-gap-4 tw-mb-6">
-                      <span class="text-main-two-600" style="font-size: 1.5rem;"><i class="ph ph-map-pin-line"></i></span>
-                      <span class="text-white tw-text-xl" style="opacity: 0.8;">Chh. Sambhajinagar, Maharashtra, India</span>
-                    </div>
                   </div>
-                  <div class="footer-social mt-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <ul class="tw-gap-2">
                       <li>
                         <a href="https://github.com/absid10" target="_blank">
