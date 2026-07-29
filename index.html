@@ -504,6 +504,92 @@
       @media (max-width: 768px) {
         .section-padding { padding: 80px 0; }
       }
+
+      /* ===== Side Floating Index Navigator ===== */
+      .side-index-container {
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+      }
+      .side-index-container.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+      .side-index-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 6px;
+        padding: 10px 8px;
+        background: rgba(12, 12, 12, 0.75);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 18px;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        cursor: pointer;
+      }
+      .side-index-bar:hover {
+        background: rgba(18, 18, 18, 0.96);
+        border-color: rgba(232, 85, 58, 0.35);
+        padding: 14px 16px;
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7), 0 0 24px rgba(232, 85, 58, 0.18);
+      }
+      .side-index-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        width: 100%;
+        padding: 5px 0;
+        color: rgba(255, 255, 255, 0.45);
+        text-decoration: none;
+        font-size: 0.82rem;
+        font-weight: 500;
+        transition: all 0.25s ease;
+        white-space: nowrap;
+      }
+      .indicator-dash {
+        width: 14px;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+      .side-index-bar:hover .indicator-dash {
+        width: 8px;
+      }
+      .index-label {
+        display: none;
+        align-items: center;
+        gap: 6px;
+        color: rgba(255, 255, 255, 0.7);
+        transition: color 0.2s ease;
+      }
+      .side-index-bar:hover .index-label {
+        display: inline-flex;
+      }
+      .side-index-item:hover,
+      .side-index-item.active {
+        color: var(--accent) !important;
+      }
+      .side-index-item:hover .indicator-dash,
+      .side-index-item.active .indicator-dash {
+        width: 20px;
+        background: var(--accent);
+        box-shadow: 0 0 8px rgba(232, 85, 58, 0.6);
+      }
+      .side-index-item:hover .index-label,
+      .side-index-item.active .index-label {
+        color: #ffffff;
+        font-weight: 600;
+      }
     </style>
   </head>
 
@@ -1206,74 +1292,50 @@
             <div class="row">
               <div class="col-xl-12">
                 <div class="text-center tw-mb-21">
-                  <span class="section-label d-inline-flex" style="color: var(--accent);">Experience & Education</span>
-                  <h2 class="tw-text-15 text-heading tw-itm-title tw-itm-anim">My Journey</h2>
+                  <span class="section-label d-inline-flex" style="color: var(--accent);">Academic Background</span>
+                  <h2 class="tw-text-15 text-heading tw-itm-title tw-itm-anim">Education & Qualifications</h2>
                 </div>
                 <div class="feature-three-wrapper hover__widget">
-                  <!-- Education -->
+
+                  <!-- 1. B.Tech -->
                   <div class="feature-three-single current hover__reveal-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div class="feature-three-item d-flex justify-content-between align-items-center">
                       <div class="feature-three-left d-flex align-items-center">
                         <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20">🎓</span></div>
                         <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px">GECA</span></div>
-                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">B.Tech in Computer Science & Engineering</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">B.Tech in Computer Science & Engineering — Govt. College of Engg. Aurangabad</span></div>
                       </div>
                       <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">2022 — 2026</span></div>
                     </div>
                     <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb1.jpg"></div>
                   </div>
 
-                  <!-- Pathfinder Project -->
+                  <!-- 2. Class 12th HSC + MHT CET -->
                   <div class="feature-three-single hover__reveal-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                    <div class="feature-three-item d-flex justify-content-between align-items-center">
-                      <div class="feature-three-left d-flex align-items-center">
-                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20">🗺️</span></div>
-                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px">Project</span></div>
-                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">Multi-Building Hospital Pathfinder — React + A*</span></div>
-                      </div>
-                      <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">2025</span></div>
-                    </div>
-                    <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb2.jpg"></div>
-                  </div>
-
-                  <!-- FaceID Project -->
-                  <div class="feature-three-single hover__reveal-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="feature-three-item d-flex justify-content-between align-items-center">
-                      <div class="feature-three-left d-flex align-items-center">
-                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20">🤖</span></div>
-                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px">AI Project</span></div>
-                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">FaceID Attendance System — Python + OpenCV</span></div>
-                      </div>
-                      <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">2025</span></div>
-                    </div>
-                    <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb3.jpg"></div>
-                  </div>
-
-                  <!-- Secure Notes -->
-                  <div class="feature-three-single hover__reveal-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-                    <div class="feature-three-item d-flex justify-content-between align-items-center">
-                      <div class="feature-three-left d-flex align-items-center">
-                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20">🔐</span></div>
-                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px">Full Stack</span></div>
-                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">Secure Notes — FastAPI + React + JWT + RBAC</span></div>
-                      </div>
-                      <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">2025</span></div>
-                    </div>
-                    <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb4.jpg"></div>
-                  </div>
-
-                  <!-- HSC -->
-                  <div class="feature-three-single hover__reveal-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                     <div class="feature-three-item d-flex justify-content-between align-items-center">
                       <div class="feature-three-left d-flex align-items-center">
                         <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20">📚</span></div>
                         <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px">Sarosh Jr. College</span></div>
-                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">Higher Secondary Certificate — 81%</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">Class 12th HSC (81%) &bull; MHT-CET 97.78 Percentile (PCM 2022)</span></div>
                       </div>
                       <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">2022</span></div>
                     </div>
-                    <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb1.jpg"></div>
+                    <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb2.jpg"></div>
                   </div>
+
+                  <!-- 3. Class 10th SSC -->
+                  <div class="feature-three-single hover__reveal-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="feature-three-item d-flex justify-content-between align-items-center">
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20">🏫</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px">Everest Schools</span></div>
+                        <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">Class 10th SSC — 88.4% (Everest Group of Schools, CBSE)</span></div>
+                      </div>
+                      <div><span class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block">2020</span></div>
+                    </div>
+                    <div class="hover__reveal-bg bg-img" data-background-image="assets/images/thumbs/feature-three-thumb3.jpg"></div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -1789,5 +1851,42 @@
         setTimeout(() => toast.remove(), 3000);
       });
     </script>
+    <!-- ==================== Side Floating Index Navigator ==================== -->
+    <div id="side-index-nav" class="side-index-container d-none d-md-flex">
+      <div class="side-index-bar">
+        <div class="side-index-item active" data-target="#hero">
+          <span class="indicator-dash"></span>
+          <span class="index-label"><i class="ph ph-house"></i> Home</span>
+        </div>
+        <div class="side-index-item" data-target="#about">
+          <span class="indicator-dash"></span>
+          <span class="index-label"><i class="ph ph-user"></i> About</span>
+        </div>
+        <div class="side-index-item" data-target="#skills">
+          <span class="indicator-dash"></span>
+          <span class="index-label"><i class="ph ph-code"></i> Skills</span>
+        </div>
+        <div class="side-index-item" data-target="#projects">
+          <span class="indicator-dash"></span>
+          <span class="index-label"><i class="ph ph-folder-simple"></i> Projects</span>
+        </div>
+        <div class="side-index-item" data-target="#experience">
+          <span class="indicator-dash"></span>
+          <span class="index-label"><i class="ph ph-graduation-cap"></i> Education</span>
+        </div>
+        <div class="side-index-item" data-target="#certifications">
+          <span class="indicator-dash"></span>
+          <span class="index-label"><i class="ph ph-certificate"></i> Certifications</span>
+        </div>
+        <div class="side-index-item" data-target="#github">
+          <span class="indicator-dash"></span>
+          <span class="index-label"><i class="ph ph-github-logo"></i> GitHub</span>
+        </div>
+        <div class="side-index-item" data-target="#contact">
+          <span class="indicator-dash"></span>
+          <span class="index-label"><i class="ph ph-envelope-simple"></i> Contact</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -339,4 +339,55 @@
 
     initRipples();
   });
+
+  // 15. Side Floating Index Navigator JS
+  $(document).ready(function () {
+    var $sideNav = $("#side-index-nav");
+    if (!$sideNav.length) return;
+
+    var sections = ["#hero", "#about", "#skills", "#projects", "#experience", "#certifications", "#github", "#contact"];
+
+    function updateSideNav() {
+      var scrollPos = $(window).scrollTop();
+
+      // Show side index when scrolled down past 250px
+      if (scrollPos > 250) {
+        $sideNav.addClass("visible");
+      } else {
+        $sideNav.removeClass("visible");
+      }
+
+      // Determine active section
+      var currentSection = "#hero";
+      sections.forEach(function (secId) {
+        var $sec = $(secId);
+        if ($sec.length) {
+          var top = $sec.offset().top - 150;
+          var bottom = top + $sec.outerHeight();
+          if (scrollPos >= top && scrollPos < bottom) {
+            currentSection = secId;
+          }
+        }
+      });
+
+      // Update active class on side index items
+      $(".side-index-item").removeClass("active");
+      $(".side-index-item[data-target='" + currentSection + "']").addClass("active");
+    }
+
+    $(window).on("scroll resize", updateSideNav);
+    updateSideNav();
+
+    // Click to scroll to target section
+    $(".side-index-item").on("click", function (e) {
+      e.preventDefault();
+      var targetId = $(this).data("target");
+      var $target = $(targetId);
+      if ($target.length) {
+        $("html, body").stop().animate({
+          scrollTop: $target.offset().top - 80
+        }, 700);
+      }
+    });
+  });
 })(jQuery);
