@@ -528,9 +528,9 @@
         align-items: flex-end;
         gap: 8px;
         padding: 12px 10px;
-        background: rgba(10, 10, 10, 0.78);
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
+        background: rgba(10, 10, 10, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.12);
         border-radius: 20px;
         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -538,11 +538,12 @@
         cursor: pointer;
       }
       .side-index-bar:hover {
-        background: rgba(15, 15, 15, 0.95);
+        background: rgba(14, 14, 14, 0.96);
         border-color: rgba(232, 85, 58, 0.4);
         padding: 16px 20px;
         box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 30px rgba(232, 85, 58, 0.2);
         transform: translateY(-2px);
+        align-items: flex-start;
       }
       .side-index-item {
         display: flex;
@@ -558,15 +559,21 @@
         transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         white-space: nowrap;
       }
+      .side-index-bar:hover .side-index-item {
+        justify-content: flex-start;
+      }
       .indicator-dash {
         width: 16px;
+        min-width: 16px;
         height: 3px;
         background: rgba(255, 255, 255, 0.25);
         border-radius: 4px;
         transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        flex-shrink: 0;
       }
       .side-index-bar:hover .indicator-dash {
-        width: 10px;
+        width: 16px;
+        min-width: 16px;
       }
       .index-label {
         display: none;
@@ -574,6 +581,7 @@
         gap: 8px;
         color: rgba(255, 255, 255, 0.75);
         transition: color 0.25s ease;
+        text-align: left;
       }
       .side-index-bar:hover .index-label {
         display: inline-flex;
@@ -584,7 +592,8 @@
       }
       .side-index-item:hover .indicator-dash,
       .side-index-item.active .indicator-dash {
-        width: 24px;
+        width: 16px;
+        min-width: 16px;
         background: var(--accent);
         box-shadow: 0 0 10px rgba(232, 85, 58, 0.7);
       }
@@ -592,6 +601,45 @@
       .side-index-item.active .index-label {
         color: #ffffff;
         font-weight: 600;
+      }
+
+      /* ===== Mobile Visual Parity & Desktop Aesthetic Matching ===== */
+      @media (max-width: 991px) {
+        .portfolio-three-shape-title {
+          font-size: clamp(100px, 20vw, 240px) !important;
+          opacity: 0.15 !important;
+          display: block !important;
+        }
+        .portfolio-three-item {
+          max-width: 100% !important;
+          margin-bottom: 50px !important;
+          border-radius: 20px !important;
+        }
+        .portfolio-three-item:nth-child(odd) {
+          border-left: 3px solid var(--accent) !important;
+        }
+        .portfolio-three-item:nth-child(even) {
+          margin-top: 40px !important;
+          border-right: 3px solid var(--accent) !important;
+        }
+        .portfolio-thumb {
+          display: block !important;
+          margin-top: 24px !important;
+        }
+        .portfolio-thumb img {
+          display: block !important;
+          width: 100% !important;
+          height: auto !important;
+          border-radius: 16px !important;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .side-index-container {
+          right: 12px !important;
+          transform: translateY(-50%) scale(0.9) !important;
+        }
       }
     </style>
   </head>
@@ -1556,7 +1604,7 @@
               <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="p-4 rounded-4 text-center h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
                   <div class="d-inline-flex align-items-center justify-content-center p-3 mb-3 rounded-circle" style="background: rgba(232,85,58,0.12); color: var(--accent); font-size: 1.5rem;">
-                    <i class="ph ph-folder-git"></i>
+                    <i class="ph-bold ph-git-branch" style="color: var(--accent) !important;"></i>
                   </div>
                   <h3 class="tw-text-101 fw-bold text-white mb-1">10 Repos</h3>
                   <p class="mb-0 text-white-50" style="font-size: 0.9rem;">Public Open Source Codebases</p>
@@ -1616,7 +1664,7 @@
                 <div class="p-4 rounded-4 overflow-hidden" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
                   <h4 class="text-white fw-bold mb-3 text-start" style="font-family: 'Space Grotesk', sans-serif;">Contribution Matrix</h4>
                   <div class="table-responsive">
-                    <img src="https://ghchart.rshah.org/E8553A/absid10" alt="GitHub Contribution Graph" class="w-100" style="max-width: 750px; filter: drop-shadow(0 4px 12px rgba(232,85,58,0.15));" loading="lazy" />
+                    <img src="assets/images/github-contributions.svg" alt="GitHub Contribution Graph" class="w-100" style="max-width: 750px; filter: drop-shadow(0 4px 12px rgba(232,85,58,0.15));" />
                   </div>
                   <p class="mt-3 text-white-50 mb-0" style="font-size: 0.8rem;">Live 52-week commit activity for @absid10 on GitHub</p>
                 </div>
