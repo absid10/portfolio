@@ -131,6 +131,50 @@
     $(".body-overlay").removeClass("opened");
   });
 
+  // Auto-close offcanvas overlay and smooth scroll on link click
+  $(".tw-offcanvas-2-area a, .tw-main-menu-mobile a").on("click", function (e) {
+    var href = $(this).attr("href");
+    
+    // Close offcanvas overlay immediately
+    $(".tw-offcanvas-2-area").removeClass("opened");
+    $(".body-overlay").removeClass("opened");
+    $(".tw-text-hover-effect-word").removeClass("animated-text");
+
+    // If anchor link on current page, smooth scroll to target section
+    if (href && href.startsWith("#") && href.length > 1) {
+      var target = $(href);
+      if (target.length) {
+        e.preventDefault();
+        $("html, body").stop().animate({
+          scrollTop: target.offset().top - 80
+        }, 800);
+      }
+    }
+  });
+
+  // Smooth scroll for all hash links on page
+  $(document).on("click", "a[href^='#']", function (e) {
+    var targetId = $(this).attr("href");
+    if (targetId && targetId !== "#" && $(targetId).length) {
+      e.preventDefault();
+      $("html, body").stop().animate({
+        scrollTop: $(targetId).offset().top - 80
+      }, 800);
+    }
+  });
+
+  // Initial page load hash navigation (e.g., coming from projects.html to index.html#contact)
+  if (window.location.hash) {
+    var hashTarget = $(window.location.hash);
+    if (hashTarget.length) {
+      setTimeout(function () {
+        $("html, body").stop().animate({
+          scrollTop: hashTarget.offset().top - 80
+        }, 600);
+      }, 500);
+    }
+  }
+
   ////////////////////////////////////////////////////
   // 06. Sidebar Js
   $(".tw-menu-bar").on("click", function () {
