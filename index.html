@@ -528,19 +528,19 @@
         align-items: flex-end;
         gap: 8px;
         padding: 12px 10px;
-        background: rgba(10, 10, 10, 0.85);
+        background: rgba(10, 10, 10, 0.88);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.12);
         border-radius: 20px;
         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         cursor: pointer;
       }
       .side-index-bar:hover {
         background: rgba(14, 14, 14, 0.96);
         border-color: rgba(232, 85, 58, 0.4);
-        padding: 16px 20px;
+        padding: 16px 18px;
         box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 30px rgba(232, 85, 58, 0.2);
         transform: translateY(-2px);
         align-items: flex-start;
@@ -549,38 +549,41 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: 12px;
+        gap: 10px;
         width: 100%;
-        padding: 6px 0;
+        padding: 5px 0;
         color: rgba(255, 255, 255, 0.5);
         text-decoration: none;
         font-size: 0.85rem;
         font-weight: 500;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         white-space: nowrap;
       }
       .side-index-bar:hover .side-index-item {
         justify-content: flex-start;
+        text-align: left;
       }
       .indicator-dash {
-        width: 16px;
-        min-width: 16px;
+        width: 14px;
+        min-width: 14px;
+        max-width: 14px;
         height: 3px;
         background: rgba(255, 255, 255, 0.25);
         border-radius: 4px;
-        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: background 0.25s ease, box-shadow 0.25s ease;
         flex-shrink: 0;
       }
       .side-index-bar:hover .indicator-dash {
-        width: 16px;
-        min-width: 16px;
+        width: 14px;
+        min-width: 14px;
+        max-width: 14px;
       }
       .index-label {
         display: none;
         align-items: center;
         gap: 8px;
         color: rgba(255, 255, 255, 0.75);
-        transition: color 0.25s ease;
+        transition: color 0.2s ease;
         text-align: left;
       }
       .side-index-bar:hover .index-label {
@@ -592,9 +595,10 @@
       }
       .side-index-item:hover .indicator-dash,
       .side-index-item.active .indicator-dash {
-        width: 16px;
-        min-width: 16px;
-        background: var(--accent);
+        width: 14px;
+        min-width: 14px;
+        max-width: 14px;
+        background: var(--accent) !important;
         box-shadow: 0 0 10px rgba(232, 85, 58, 0.7);
       }
       .side-index-item:hover .index-label,
