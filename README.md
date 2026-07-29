@@ -1,54 +1,111 @@
 <div align="center">
-  <h1>🚀 Hi 👋, I'm Abdullah</h1>
-  <h3>A passionate software engineer in the making — full-stack, data structures, and system design enthusiast</h3>
 
-  <p>
-    <img src="https://komarev.com/ghpvc/?username=absid10&label=Profile%20Views&color=blueviolet&style=flat" alt="profile views" />
-    <a href="https://www.linkedin.com/in/absid10/">
-      <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
-    </a>
-    <a href="https://github.com/absid10">
-      <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub" />
-    </a>
-  </p>
+# ✨ Abdullah Ahmed Siddiqui — Portfolio Website
+
+### Personal portfolio website showcasing my projects, skills, education, GitHub activity & more.
+
+[![Live Site](https://img.shields.io/badge/Live-absid10.vercel.app-E8553A?style=for-the-badge&logo=vercel&logoColor=white)](https://absid10.vercel.app)
+[![GitHub Profile](https://img.shields.io/badge/GitHub-@absid10-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/absid10)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-absid10-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/absid10/)
+
 </div>
 
 ---
 
-## 🧭 About Me
-Aspiring **Software Engineer** with strong foundations in **OOP**, **data structures**, **full‑stack development**, and **database systems**. I enjoy building scalable applications, troubleshooting system issues, and working with **APIs**, **SQL**, and modern web technologies across the full software development lifecycle.
+## 🌐 Live Website
 
-- 📍 Based in **Chh. Sambhajinagar (Aurangabad), Maharashtra – 431002**
-- 🎓 **B.Tech in Computer Science & Engineering**, Government College of Engineering (GECA), Chh. Sambhajinagar  
-  - CGPA: **~6.6**  
-  - Expected Graduation: **May 2026**
-- 📫 Email: **siddiquiabdullahahmed75@gmail.com**
-- 🔗 LinkedIn: [absid10](https://www.linkedin.com/in/absid10)
-- 💻 GitHub: [absid10](https://github.com/absid10)
+**[https://absid10.vercel.app](https://absid10.vercel.app)** — Deployed on Vercel with automatic CI/CD from this repository.
 
 ---
 
-## 🛠️ Technical Skills
-**Languages:** `Python` · `Java` · `JavaScript / TypeScript` · `SQL` · `C++`  
-**Frameworks & Libraries:** `React` · `Node.js` · `Express` · `OpenCV` · `Leaflet.js` · `Pandas` · `NumPy` · `Tkinter`  
-**Databases:** `MySQL` · `MongoDB` · `PostgreSQL (basic)`  
-**Tools:** `Git` · `GitHub` · `Postman` · `VS Code` · `Jupyter Notebook` · `MySQL Workbench`  
-**Core Concepts:** `REST APIs` · `SDLC` · `Debugging` · `Data Modeling` · `A* Algorithm` · `Graph Structures` · `JSON / CSV / XML`
+## 📸 Preview
+
+| Hero & About | Projects & GitHub |
+| :---: | :---: |
+| Professional intro, skills terminal, animated hero section | Staggered project cards, live contribution matrix, language stats |
 
 ---
 
-## 🧰 Tech Stack
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="34" alt="CSS3" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" height="34" alt="Express" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="34" alt="Figma" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="34" alt="Git" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="34" alt="HTML5" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="34" alt="Java" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="34" alt="JavaScript" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="34" alt="MongoDB" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="34" alt="MySQL" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="34" alt="Node.js" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="34" alt="Python" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="34" alt="React" />
-</p>
+## 🛠️ Built With
+
+| Category | Technology |
+| :--- | :--- |
+| **Structure** | `HTML5` — Semantic markup |
+| **Styling** | `CSS3` `Bootstrap 5` — Custom dark theme with glassmorphism |
+| **Animations** | `GSAP` `ScrollTrigger` — Smooth scroll-based animations & parallax |
+| **Interactivity** | `jQuery` `Vanilla JavaScript` — Cursor effects, modals, side-nav |
+| **Icons** | `Phosphor Icons` — Consistent icon system |
+| **Fonts** | `Space Grotesk` `Inter` — Modern, clean typography |
+| **Deployment** | `Vercel` — Automatic deployments from `main` branch |
+| **Version Control** | `Git` `GitHub` |
+
+---
+
+## ✨ Key Features
+
+- 🎨 **Dark premium UI** with glassmorphism cards and accent color system
+- 🖱️ **Custom cursor** with magnetic hover effects (GSAP-powered)
+- 📊 **Live GitHub Contribution Matrix** — auto-generated SVG heatmap from real commit data
+- 🔗 **Google-style profile avatar** with interactive account card modal
+- 📱 **Fully responsive** — optimized for mobile, tablet, laptop & desktop
+- 📌 **Floating side navigator** — ChatGPT-style section index for quick navigation
+- 💼 **Staggered project showcase** — alternating left-right layout with live links
+- 📄 **Downloadable Resume** — direct Google Drive link
+- 🎓 **Education timeline** — B.Tech, HSC, SSC, MHT-CET achievements
+- 📝 **Engineering blog section** — technical write-ups for featured projects
+- ⚡ **SEO optimized** — meta tags, semantic HTML, Open Graph
+
+---
+
+## 📂 Project Structure
+
+```
+portfolio/
+├── index.html              # Main single-page portfolio
+├── projects.html            # Extended projects gallery
+├── assets/
+│   ├── css/
+│   │   └── main.css         # Core stylesheet (10K+ lines)
+│   ├── js/
+│   │   ├── main.js          # Primary app logic, modals, side-nav
+│   │   ├── tw-cursor.js     # Custom cursor tracking
+│   │   └── vendor/          # GSAP, ScrollTrigger, jQuery, Bootstrap
+│   └── images/
+│       ├── profile.jpg      # Casual avatar
+│       ├── profile-formal.jpg # Formal LinkedIn avatar
+│       ├── github-contributions.svg # Generated heatmap
+│       └── shapes/          # Background decorative assets
+├── photos/                  # Source photography
+└── _gen_matrix.py           # Script to generate contribution SVG
+```
+
+---
+
+## 🚀 Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/absid10/portfolio.git
+cd portfolio
+
+# Open in browser (no build step required!)
+# Simply open index.html in your browser, or use a local server:
+npx serve .
+```
+
+---
+
+## 📬 Contact
+
+- 📧 **Email**: [siddiquiabdullahahmed75@gmail.com](mailto:siddiquiabdullahahmed75@gmail.com)
+- 💼 **LinkedIn**: [linkedin.com/in/absid10](https://www.linkedin.com/in/absid10/)
+- 🐙 **GitHub**: [github.com/absid10](https://github.com/absid10)
+- 📄 **Resume**: [Download CV (PDF)](https://drive.google.com/file/d/1-O7s7Wk81TYTWUoMmTNA2dQlYqtRxGAj/view?usp=sharing)
+
+---
+
+<div align="center">
+
+*Built with ❤️ by Abdullah Ahmed Siddiqui*
+
+</div>
