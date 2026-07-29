@@ -678,6 +678,102 @@
         width: 86px;
         height: 86px;
       }
+
+      /* ===== Google Account Modal Card ===== */
+      .google-account-modal-overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 10000;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 80px 30px 30px 30px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .google-account-modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .google-account-card {
+        background: rgba(18, 18, 18, 0.95);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 24px;
+        width: 360px;
+        max-width: 90vw;
+        padding: 24px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 30px rgba(66, 133, 244, 0.25);
+        position: relative;
+        transform: translateY(-20px) scale(0.95);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .google-account-modal-overlay.active .google-account-card {
+        transform: translateY(0) scale(1);
+      }
+      .account-card-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: rgba(255, 255, 255, 0.7);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .account-card-close:hover {
+        background: var(--accent);
+        color: #fff;
+      }
+      .account-card-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 16px;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      }
+      .account-card-btn.primary-btn {
+        background: var(--accent);
+        color: #fff;
+      }
+      .account-card-btn.primary-btn:hover {
+        background: #d6472d;
+        box-shadow: 0 4px 16px rgba(232, 85, 58, 0.4);
+      }
+      .account-card-btn.secondary-btn {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.85);
+      }
+      .account-card-btn.secondary-btn:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+      }
+      @media (max-width: 575px) {
+        .google-account-modal-overlay {
+          justify-content: center;
+          padding: 20px;
+          align-items: center;
+        }
+      }
     </style>
   </head>
 
@@ -1039,7 +1135,7 @@
                       <span style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
                       <span style="width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
                       <span style="width: 12px; height: 12px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
-                      <span class="ms-2 text-white-50" style="font-size: 0.8rem;">abdullah_engineer.py</span>
+                      <span class="ms-2 text-white-50" style="font-size: 0.8rem;">absid10.py</span>
                     </div>
                     <pre class="m-0" style="color: #c9d1d9; line-height: 1.7; overflow-x: auto;"><span style="color: #ff7b72;">class</span> <span style="color: #ffa657;">FullStackDeveloper</span>:
     <span style="color: #ff7b72;">def</span> <span style="color: #d2a8ff;">__init__</span>(<span style="color: #79c0ff;">self</span>):
@@ -1048,6 +1144,12 @@
         <span style="color: #79c0ff;">self</span>.location = <span style="color: #a5d6ff;">"Chh. Sambhajinagar, MH"</span>
         <span style="color: #79c0ff;">self</span>.education = <span style="color: #a5d6ff;">"B.Tech CSE @ GECA"</span>
         <span style="color: #79c0ff;">self</span>.core_stack = [<span style="color: #a5d6ff;">"Python"</span>, <span style="color: #a5d6ff;">"FastAPI"</span>, <span style="color: #a5d6ff;">"React"</span>, <span style="color: #a5d6ff;">"TypeScript"</span>]
+        <span style="color: #79c0ff;">self</span>.hobbies = [
+            <span style="color: #a5d6ff;">"Play Football ⚽"</span>,
+            <span style="color: #a5d6ff;">"Watch Anime 🍿"</span>,
+            <span style="color: #a5d6ff;">"Vibe-code Cool Stuff 💻"</span>,
+            <span style="color: #a5d6ff;">"Tech Enthusiast (New Phones, Laptops, GPUs) 📱⚡"</span>
+        ]
 
     <span style="color: #ff7b72;">def</span> <span style="color: #d2a8ff;">build_system</span>(<span style="color: #79c0ff;">self</span>, requirement):
         architecture = <span style="color: #79c0ff;">self</span>.design_architecture(requirement)
@@ -1063,14 +1165,14 @@
                 <div class="col-xl-6">
                   <div class="about-three-right" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                     <div>
-                      <p class="tw-text-xl tw-mb-10">
-                        I'm Abdullah Ahmed Siddiqui — a Python full-stack developer and aspiring software engineer currently pursuing my B.Tech in Computer Science & Engineering at Government College of Engineering (GECA), Chh. Sambhajinagar.
+                      <p class="tw-text-xl tw-mb-8" style="line-height: 1.8;">
+                        Hey there! I'm <strong>Abdullah Ahmed Siddiqui</strong> 👋 — a passionate Python full-stack developer, software engineer, and total tech enthusiast currently rocking my B.Tech in Computer Science & Engineering at Government College of Engineering (GECA), Chh. Sambhajinagar!
                       </p>
-                      <p class="tw-text-xl tw-mb-10">
-                        I build things that matter. From an AI-powered ERP suite and facial recognition attendance systems to real-time indoor navigation using A* pathfinding — my work spans Python backends, React frontends, REST APIs, and AI integrations.
+                      <p class="tw-text-xl tw-mb-8" style="line-height: 1.8;">
+                        I absolutely love turning creative ideas into fast, intelligent, real-world applications. Whether I'm building an AI-powered cloud ERP, crafting facial recognition attendance systems, or implementing multi-floor hospital indoor navigation using A* algorithms — I thrive when building cool things that actually solve real problems!
                       </p>
-                      <p class="tw-text-xl tw-mb-10">
-                        I believe great software is purposeful — every line of code should solve a real problem. My approach combines solid OOP foundations, clean architecture, and modern DevOps practices to deliver applications that are fast, maintainable, and production-ready.
+                      <p class="tw-text-xl tw-mb-8" style="line-height: 1.8;">
+                        When I'm not in full dev mode, you'll find me out on the field playing football ⚽, binge-watching anime 🍿, vibe-coding late-night side projects 💻, or geeking out over the latest tech drops — from flagship smartphones and laptops to beastly new GPUs! 🚀✨
                       </p>
                     </div>
                   </div>
@@ -1979,6 +2081,41 @@
         <div class="side-index-item" data-target="#contact">
           <span class="indicator-dash"></span>
           <span class="index-label"><i class="ph ph-envelope-simple"></i> Contact</span>
+        </div>
+      </div>
+    </div>
+    <!-- ==================== Google Account Card Modal ==================== -->
+    <div id="google-account-modal" class="google-account-modal-overlay">
+      <div class="google-account-card">
+        <button class="account-card-close" id="close-account-modal" aria-label="Close">&times;</button>
+        <div class="text-center mb-3">
+          <div class="google-profile-avatar" style="width: 76px; height: 76px;">
+            <img src="assets/images/profile.jpg" alt="Abdullah Ahmed Siddiqui" />
+          </div>
+          <h4 class="text-white fw-bold mt-3 mb-1" style="font-family: 'Space Grotesk', sans-serif;">Abdullah Ahmed Siddiqui</h4>
+          <p class="text-white-50 mb-2" style="font-size: 0.85rem;">siddiquiabdullahahmed75@gmail.com</p>
+          <span class="badge rounded-pill bg-success-subtle text-success border border-success-subtle px-3 py-2" style="font-size: 0.75rem;">
+            🟢 Open for Full-Stack & Engineering Roles
+          </span>
+        </div>
+        
+        <div class="d-flex flex-column gap-2 my-3">
+          <a href="#projects" class="account-card-btn primary-btn" id="modal-view-projects">
+            <i class="ph ph-folder-simple"></i> View Featured Projects
+          </a>
+          <a href="https://drive.google.com/file/d/1-O7s7Wk81TYTWUoMmTNA2dQlYqtRxGAj/view?usp=sharing" target="_blank" class="account-card-btn secondary-btn">
+            <i class="ph ph-download-simple"></i> Download Resume / CV
+          </a>
+          <a href="https://github.com/absid10" target="_blank" class="account-card-btn secondary-btn">
+            <i class="ph ph-github-logo"></i> Visit GitHub (@absid10)
+          </a>
+          <a href="mailto:siddiquiabdullahahmed75@gmail.com" class="account-card-btn secondary-btn">
+            <i class="ph ph-envelope-simple"></i> Direct Email
+          </a>
+        </div>
+
+        <div class="text-center mt-3 pt-2" style="border-top: 1px solid rgba(255,255,255,0.08);">
+          <small style="color: rgba(255,255,255,0.4); font-size: 0.75rem;">GECA B.Tech CSE &bull; Python Full Stack Developer</small>
         </div>
       </div>
     </div>

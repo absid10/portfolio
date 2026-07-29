@@ -390,4 +390,29 @@
       }
     });
   });
+
+  // 16. Google Account Profile Modal Handler
+  $(document).ready(function () {
+    var $modal = $("#google-account-modal");
+    if (!$modal.length) return;
+
+    $(".header-profile-avatar").on("click", function (e) {
+      e.preventDefault();
+      $modal.addClass("active");
+    });
+
+    $("#close-account-modal").on("click", function () {
+      $modal.removeClass("active");
+    });
+
+    $modal.on("click", function (e) {
+      if ($(e.target).is("#google-account-modal")) {
+        $modal.removeClass("active");
+      }
+    });
+
+    $("#modal-view-projects").on("click", function () {
+      $modal.removeClass("active");
+    });
+  });
 })(jQuery);
