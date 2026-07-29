@@ -615,6 +615,28 @@
         font-weight: 600;
       }
 
+      /* ===== 2-Column Staggered Portfolio Layout for All Laptop & Desktop Screens ===== */
+      @media (min-width: 992px) {
+        .portfolio-three-wrapper {
+          display: flex !important;
+          justify-content: space-between !important;
+          flex-wrap: wrap !important;
+          width: 100% !important;
+        }
+        .portfolio-three-item {
+          width: 48% !important;
+          max-width: 48% !important;
+          flex: 0 0 48% !important;
+          margin-bottom: 60px !important;
+        }
+        .portfolio-three-item:nth-child(odd) {
+          margin-top: 0 !important;
+        }
+        .portfolio-three-item:nth-child(even) {
+          margin-top: 220px !important;
+        }
+      }
+
       /* ===== Mobile Visual Parity & Desktop Aesthetic Matching ===== */
       @media (max-width: 991px) {
         .portfolio-three-shape-title {
