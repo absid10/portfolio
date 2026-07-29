@@ -20,7 +20,7 @@ Aspiring **Software Engineer** with strong foundations in **OOP**, **data struct
 
 - 📍 Based in **Chh. Sambhajinagar (Aurangabad), Maharashtra – 431002**
 - 🎓 **B.Tech in Computer Science & Engineering**, Government College of Engineering (GECA), Chh. Sambhajinagar  
-  - CGPA: **6.68** (till 7th semester)  
+  - CGPA: **~6.6**  
   - Expected Graduation: **May 2026**
 - 📫 Email: **siddiquiabdullahahmed75@gmail.com**
 - 🔗 LinkedIn: [absid10](https://www.linkedin.com/in/absid10)
