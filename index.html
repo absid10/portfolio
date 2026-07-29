@@ -44,28 +44,22 @@
       .font-space { font-family: 'Space Grotesk', sans-serif; }
       .font-inter { font-family: 'Inter', sans-serif; }
 
-      /* ===== Hero Title Centering Fix ===== */
+      /* ===== Hero Title — centred, reduced dominance (no illustration) ===== */
       .banner-three-title {
-        font-size: clamp(3rem, 13.5vw, 220px) !important;
-        white-space: nowrap !important;
-        text-align: center !important;
-        display: block !important;
-        width: 100% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
+        text-align: center;
+        white-space: nowrap;
+        letter-spacing: -0.04em;
+        opacity: 0.12;
+        pointer-events: none;
+        user-select: none;
       }
 
-      /* ===== Hero Center Subtitle Text Color Fix ===== */
+      /* ===== Hero Center Subtitle — solid dark text (no outline trick) ===== */
       .banner-three-center-title,
-      .banner-three-center-title *,
-      .banner-three-center-title span,
-      .banner-three-center-title div {
-        color: #111111 !important;
-        -webkit-text-fill-color: #111111 !important;
-        -webkit-text-stroke: 0px transparent !important;
-        -webkit-text-stroke-width: 0px !important;
-        font-weight: 800 !important;
-        opacity: 1 !important;
+      .banner-three-center-title * {
+        color: #111 !important;
+        -webkit-text-fill-color: #111 !important;
+        -webkit-text-stroke-width: 0 !important;
       }
 
       /* ===== Gradient Text ===== */
@@ -73,6 +67,8 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+      }
+
       /* ===== Tech Stack Logo Pills (Animated & Crisp) ===== */
       .tech-logo-pill {
         display: inline-flex !important;
@@ -127,6 +123,7 @@
       }
 
       /* ===== Skills Grid ===== */
+      .skill-card {
         background: rgba(255,255,255,0.03);
         border-radius: 16px;
         padding: 32px 28px;
@@ -590,6 +587,7 @@
                     </svg>
                   </span>
                 </span>
+              </button>
             </div>
           </div>
           <div class="tw-main-menu-mobile menu-hover-active counter-row">
@@ -621,6 +619,7 @@
                   </svg>
                 </span>
               </span>
+            </button>
           </div>
           <div class="tw-offcanvas-2-right-inner d-flex flex-column justify-content-between h-100">
             <div class="twoffcanvas__contact-info">
@@ -639,6 +638,7 @@
               </ul>
             </div>
             <div class="footer-social" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+              <ul>
                 <li>
                   <a href="https://github.com/absid10" target="_blank">
                     <span class="active-media d-flex align-items-center tw-gap-1">GitHub <i class="ph ph-arrow-bend-up-right"></i></span>
@@ -1738,7 +1738,6 @@
         </footer>
 
       </div>
-    </div>
 
     <!-- ==================== Scripts ==================== -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
