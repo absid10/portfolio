@@ -645,6 +645,39 @@
           transform: translateY(-50%) scale(0.9) !important;
         }
       }
+
+      /* ===== Google-Style Circular Profile Avatar ===== */
+      .google-profile-avatar {
+        position: relative;
+        display: inline-block;
+        border-radius: 50%;
+        padding: 3px;
+        background: conic-gradient(#ea4335 0% 25%, #4285f4 25% 50%, #34a853 50% 75%, #fbbc05 75% 100%);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        cursor: pointer;
+        vertical-align: middle;
+      }
+      .google-profile-avatar:hover {
+        transform: scale(1.08) rotate(4deg);
+        box-shadow: 0 8px 24px rgba(66, 133, 244, 0.4), 0 0 15px rgba(234, 67, 53, 0.3);
+      }
+      .google-profile-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #121212;
+        display: block;
+      }
+      .header-profile-avatar {
+        width: 44px;
+        height: 44px;
+      }
+      .hero-profile-avatar {
+        width: 86px;
+        height: 86px;
+      }
     </style>
   </head>
 
@@ -861,6 +894,9 @@
 
           <!-- Header Right -->
           <div class="header-right d-flex align-items-center tw-gap-705">
+            <a href="#about" class="google-profile-avatar header-profile-avatar d-inline-block" title="Abdullah Ahmed Siddiqui">
+              <img src="assets/images/profile.jpg" alt="Abdullah Ahmed Siddiqui" />
+            </a>
             <div class="header-three-menu">
               <button class="tw-offcanvas-open-btn tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center tw-transition-3 tw-rounded-md">
                 <span><img class="tw-transition-3" src="assets/images/icons/header-three-toggle.svg" alt="toggle" /></span>
@@ -894,6 +930,9 @@
                   <div class="banner-three-wrap d-flex justify-content-between align-items-end position-relative z-1">
                     <!-- Left Info -->
                     <div class="banner-three-left tw-rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                      <div class="google-profile-avatar hero-profile-avatar mb-4">
+                        <img src="assets/images/profile.jpg" alt="Abdullah Ahmed Siddiqui" />
+                      </div>
                       <h2 class="banner-three-left-title tw-text-3xl tw-mb-6">
                         Hello! I'm Abdullah <br />
                         a Python full-stack developer & software engineer.
