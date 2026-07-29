@@ -390,7 +390,7 @@
       /* ===== Floating Social Sidebar (Positioned on Left Edge to Avoid Overlap) ===== */
       .social-sidebar {
         position: fixed;
-        left: 24px;
+        left: 16px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 998;
@@ -500,6 +500,14 @@
         margin-bottom: 8px;
       }
 
+      /* ===== Desktop Gutter Safe Margin for Side Overlays ===== */
+      @media (min-width: 992px) {
+        .tw-container-1800-px {
+          padding-left: 90px !important;
+          padding-right: 90px !important;
+        }
+      }
+
       /* ===== Smooth Section Padding ===== */
       .section-padding { padding: 120px 0; }
       @media (max-width: 768px) {
@@ -509,7 +517,7 @@
       /* ===== Side Floating Index Navigator ===== */
       .side-index-container {
         position: fixed;
-        right: 20px;
+        right: 16px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 9999;
