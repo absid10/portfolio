@@ -555,7 +555,8 @@
   });
 
   ///////////////////////
-  // 09. Hover Reveal
+  // 09. Hover Reveal (Disabled)
+  /*
   const hoverItem = document.querySelectorAll(".hover__reveal-item");
   function moveImage(e, hoverItem, index) {
     const item = hoverItem.getBoundingClientRect();
@@ -570,6 +571,7 @@
       setInterval(moveImage(e, item, 1), 50);
     });
   });
+  */
 
   ///////////////////////
   // 10. Tesimonial Two child (2) Effect

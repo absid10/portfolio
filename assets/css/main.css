@@ -9849,26 +9849,18 @@ body.tw-magic-cursor #magic-cursor {
   position: relative;
 }
 .hover__reveal-item:hover .hover__reveal-bg {
-  opacity: 1;
+  opacity: 0 !important;
+  display: none !important;
+  visibility: hidden !important;
 }
 .hover__reveal-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 290px;
-  height: 374px;
-  opacity: 0;
-  margin: -150px 0 0 -150px;
-  pointer-events: none;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition:
-    opacity 0.3s,
-    transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
-    -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-  z-index: 5;
-  border-radius: 10px;
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  z-index: -9999 !important;
 }
 
 .hover__reveal-two-bg {
