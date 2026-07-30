@@ -8192,53 +8192,15 @@ body.tw-magic-cursor #magic-cursor {
   }
 }
 .banner-three-title {
-  font-size: 397px;
-  line-height: 83%;
-}
-@media screen and (max-width: 1799px) {
-  .banner-three-title {
-    font-size: 370px;
-  }
-}
-@media screen and (max-width: 1699px) {
-  .banner-three-title {
-    font-size: 350px;
-  }
-}
-@media screen and (max-width: 1499px) {
-  .banner-three-title {
-    font-size: 307px;
-  }
-}
-@media screen and (max-width: 1399px) {
-  .banner-three-title {
-    font-size: 260px;
-  }
-}
-@media screen and (max-width: 1199px) {
-  .banner-three-title {
-    font-size: 216px;
-  }
-}
-@media screen and (max-width: 991px) {
-  .banner-three-title {
-    font-size: 166px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .banner-three-title {
-    font-size: 123px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .banner-three-title {
-    font-size: 88px;
-  }
-}
-@media screen and (max-width: 424px) {
-  .banner-three-title {
-    font-size: 78px;
-  }
+  font-size: clamp(3.2rem, 14.2vw, 17.5rem) !important;
+  line-height: 0.85 !important;
+  text-transform: uppercase !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  letter-spacing: -0.04em !important;
+  box-sizing: border-box !important;
 }
 .banner-three-left {
   max-width: 410px;
