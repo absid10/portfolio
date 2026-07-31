@@ -83,12 +83,24 @@
         opacity: 1 !important;
         box-sizing: border-box !important;
       }
-      /* ===== CTA Button Positioned Inside Intended Shadowed Slot & Gentle Float Animation ===== */
+      /* ===== Bring Hero & CTA Button to Front Layer ===== */
+      #hero,
+      .banner-three-area {
+        position: relative !important;
+        z-index: 25 !important;
+      }
+      #about,
+      .about-three-area {
+        position: relative !important;
+        z-index: 1 !important;
+      }
+
+      /* ===== CTA Button Positioned Inside Intended Shadowed Slot (Front Layer) ===== */
       .banner-three-button {
         margin-top: 32px !important;
         margin-bottom: -36px !important;
         position: relative !important;
-        z-index: 10 !important;
+        z-index: 999 !important;
       }
       .banner-three-button .tw-hover-btn {
         animation: ctaFloat 2.5s ease-in-out infinite !important;
