@@ -65,15 +65,68 @@
         box-sizing: border-box !important;
       }
 
-      /* ===== Mobile Top Spacing Above DEVELOPER Title ===== */
+      /* ===== Floating Right-Side Section Index Pill Widget (Matches Screenshot 1:1) ===== */
+      .right-section-index-pill {
+        position: fixed !important;
+        right: 12px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 9999 !important;
+        background: #222222 !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        border-radius: 20px !important;
+        width: 28px !important;
+        padding: 10px 0 !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .right-section-index-pill .section-tick-link {
+        display: block !important;
+        padding: 4px 0 !important;
+        text-decoration: none !important;
+      }
+      .right-section-index-pill .tick-line {
+        width: 12px !important;
+        height: 2px !important;
+        background: rgba(255, 255, 255, 0.35) !important;
+        border-radius: 2px !important;
+        display: block !important;
+        transition: all 0.3s ease !important;
+      }
+      .right-section-index-pill .section-tick-link:hover .tick-line {
+        background: rgba(255, 255, 255, 0.8) !important;
+        width: 14px !important;
+      }
+      .right-section-index-pill .section-tick-link.active .tick-line {
+        width: 16px !important;
+        background: #E8553A !important;
+        box-shadow: 0 0 8px rgba(232, 85, 58, 0.8) !important;
+      }
+
+      /* ===== Mobile WORKS Staggered Left/Right Card Layout ===== */
       @media (max-width: 991px) {
-        .banner-three-area {
-          padding-top: 185px !important;
+        .portfolio-three-wrapper {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 20px !important;
         }
-        .banner-three-title,
-        .banner-three-title * {
-          margin-top: 35px !important;
-          margin-bottom: 25px !important;
+        .portfolio-three-item {
+          padding: 22px 20px !important;
+        }
+        .portfolio-three-item:nth-child(odd) {
+          width: 88% !important;
+          max-width: 88% !important;
+          margin-left: 0 !important;
+          margin-right: auto !important;
+        }
+        .portfolio-three-item:nth-child(even) {
+          width: 88% !important;
+          max-width: 88% !important;
+          margin-left: auto !important;
+          margin-right: 0 !important;
         }
       }
 
@@ -1049,6 +1102,38 @@
         </a>
       </div>
     </div>
+
+    <!-- ==================== Floating Right-Side Section Index Pill ==================== -->
+    <div id="rightSectionIndex" class="right-section-index-pill">
+      <a href="#hero" class="section-tick-link active" title="Home" data-section="hero"><span class="tick-line"></span></a>
+      <a href="#about" class="section-tick-link" title="About" data-section="about"><span class="tick-line"></span></a>
+      <a href="#skills" class="section-tick-link" title="Skills" data-section="skills"><span class="tick-line"></span></a>
+      <a href="#projects" class="section-tick-link" title="Works" data-section="projects"><span class="tick-line"></span></a>
+      <a href="#experience" class="section-tick-link" title="Experience" data-section="experience"><span class="tick-line"></span></a>
+      <a href="#contact" class="section-tick-link" title="Contact" data-section="contact"><span class="tick-line"></span></a>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.right-section-index-pill .section-tick-link');
+        window.addEventListener('scroll', () => {
+          let current = 'hero';
+          const scrollPos = window.scrollY + 250;
+          sections.forEach(sec => {
+            if (scrollPos >= sec.offsetTop) {
+              current = sec.getAttribute('id');
+            }
+          });
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-section') === current) {
+              link.classList.add('active');
+            }
+          });
+        });
+      });
+    </script>
 
     <!-- ==================== Offcanvas Mobile Menu Start ==================== -->
     <div class="tw-offcanvas-2-area p-relative">
