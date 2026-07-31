@@ -60,7 +60,7 @@
 
       /* ===== Hero Section & Title Top Spacing ===== */
       .banner-three-area {
-        padding-top: clamp(170px, 20vw, 240px) !important;
+        padding-top: clamp(190px, 22vw, 260px) !important;
       }
       .banner-three-title,
       .banner-three-title * {
@@ -75,7 +75,7 @@
         max-width: 100% !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        margin-top: clamp(30px, 4vw, 55px) !important;
+        margin-top: clamp(40px, 5vw, 65px) !important;
         display: block !important;
         color: #000000 !important;
         -webkit-text-fill-color: #000000 !important;
@@ -83,24 +83,34 @@
         opacity: 1 !important;
         box-sizing: border-box !important;
       }
-      /* ===== Desktop CTA Button Gentle Floating Micro-Animation ===== */
+      /* ===== CTA Button Positioned Inside Intended Shadowed Slot & Gentle Float Animation ===== */
+      .banner-three-button {
+        margin-top: 32px !important;
+        margin-bottom: -36px !important;
+        position: relative !important;
+        z-index: 10 !important;
+      }
       .banner-three-button .tw-hover-btn {
         animation: ctaFloat 2.5s ease-in-out infinite !important;
       }
       @keyframes ctaFloat {
-        0%, 100% { transform: translateY(0); box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15); }
-        50% { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3); }
+        0%, 100% { transform: translateY(0); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); }
+        50% { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35); }
       }
 
       /* ===== Mobile Top Spacing Above DEVELOPER Title ===== */
       @media (max-width: 991px) {
         .banner-three-area {
-          padding-top: 215px !important;
+          padding-top: 240px !important;
         }
         .banner-three-title,
         .banner-three-title * {
-          margin-top: 45px !important;
+          margin-top: 55px !important;
           margin-bottom: 25px !important;
+        }
+        .banner-three-button {
+          margin-top: 25px !important;
+          margin-bottom: -28px !important;
         }
       }
 
