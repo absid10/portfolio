@@ -100,8 +100,9 @@
         overflow: hidden !important;
         pointer-events: none !important;
       }
-      .portfolio-three-shape-title {
-        font-size: clamp(3.8rem, 31vw, 600px) !important;
+      .portfolio-three-shape-title,
+      .portfolio-three-shape-title * {
+        font-size: clamp(3.8rem, 33vw, 600px) !important;
         font-weight: 620 !important;
         text-transform: uppercase !important;
         color: #000000 !important;
@@ -816,8 +817,10 @@
       /* ===== Mobile Visual Parity & Desktop Aesthetic Matching ===== */
       @media (max-width: 991px) {
         .portfolio-three-shape-title {
-          font-size: clamp(100px, 20vw, 240px) !important;
-          opacity: 0.15 !important;
+          font-size: clamp(3.8rem, 33vw, 600px) !important;
+          color: #000000 !important;
+          -webkit-text-fill-color: #000000 !important;
+          opacity: 1 !important;
           display: block !important;
         }
         .portfolio-three-item {
