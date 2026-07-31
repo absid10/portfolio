@@ -69,7 +69,16 @@
         opacity: 1 !important;
         box-sizing: border-box !important;
       }
-      /* ===== Floating Hero Scroll Down Indicator Widget ===== */
+      /* ===== Desktop CTA Button Gentle Floating Micro-Animation ===== */
+      .banner-three-button .tw-hover-btn {
+        animation: ctaFloat 2.5s ease-in-out infinite !important;
+      }
+      @keyframes ctaFloat {
+        0%, 100% { transform: translateY(0); box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15); }
+        50% { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3); }
+      }
+
+      /* ===== Hero Scroll Down Indicator (Desktop Only, Hidden on Mobile) ===== */
       .hero-scroll-indicator {
         margin-top: clamp(35px, 5vw, 65px);
         margin-bottom: 10px;
@@ -113,7 +122,17 @@
         60% { transform: translateY(4px); }
       }
 
-      /* ===== Mobile Hero Full Stacking View (All Cards Visible & Cleanly Stacked) ===== */
+      @media (max-width: 991px) {
+        .hero-scroll-indicator {
+          display: none !important;
+        }
+      }
+
+      /* ==========================================================================
+         [TESTING] MOBILE-SPECIFIC HERO OVERRIDES ARE COMMENTED OUT BELOW
+         AS REQUESTED TO TEST THE PURE DESKTOP VERSION ON MOBILE
+         ========================================================================== */
+      /*
       @media (max-width: 991px) {
         .banner-three-area {
           padding-top: 130px !important;
@@ -173,6 +192,7 @@
           margin-bottom: 10px !important;
         }
       }
+      */
 
       /* ===== Shift Left & Right Hero Cards Downward Out of Initial Viewport Fold ===== */
       @media (min-width: 992px) {
