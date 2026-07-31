@@ -44,6 +44,14 @@
       .font-space { font-family: 'Space Grotesk', sans-serif; }
       .font-inter { font-family: 'Inter', sans-serif; }
 
+      /* ===== Smooth Scrolling on Mobile ===== */
+      @media (max-width: 991px) {
+        html, body {
+          scroll-behavior: smooth !important;
+          -webkit-overflow-scrolling: touch !important;
+        }
+      }
+
       /* ===== Header Shadow & Border Replacement (Replaces dotted line) ===== */
       .header,
       .header-two,
