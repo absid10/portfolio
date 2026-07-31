@@ -69,12 +69,44 @@
         opacity: 1 !important;
         box-sizing: border-box !important;
       }
-      @media (max-width: 768px) {
+      /* ===== Mobile Minimalist Hero Landing View (Matching User Screenshot) ===== */
+      @media (max-width: 991px) {
         .banner-three-area {
-          padding-top: 155px !important;
+          padding-top: 130px !important;
+          padding-bottom: 40px !important;
+          min-height: auto !important;
         }
         .banner-three-title {
-          margin-top: 25px !important;
+          margin-top: 20px !important;
+          margin-bottom: 24px !important;
+        }
+        .banner-three-left,
+        .banner-three-right {
+          display: none !important;
+        }
+        .banner-three-wrap {
+          flex-direction: column !important;
+          align-items: center !important;
+          justify-content: center !important;
+          text-align: center !important;
+        }
+        .banner-three-center {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 auto !important;
+          padding: 0 10px !important;
+        }
+        .banner-three-center-title {
+          font-size: clamp(0.9rem, 3.8vw, 1.25rem) !important;
+          font-weight: 700 !important;
+          text-transform: uppercase !important;
+          letter-spacing: 0.02em !important;
+          line-height: 1.4 !important;
+          color: #1a1a1a !important;
+          margin-bottom: 24px !important;
+        }
+        .banner-three-button {
+          margin-bottom: 10px !important;
         }
       }
 
