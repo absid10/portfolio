@@ -44,7 +44,10 @@
       .font-space { font-family: 'Space Grotesk', sans-serif; }
       .font-inter { font-family: 'Inter', sans-serif; }
 
-      /* ===== Hero Title (User Custom 21.2vw, weight 620) ===== */
+      /* ===== Hero Section & Title Top Spacing ===== */
+      .banner-three-area {
+        padding-top: clamp(140px, 16vw, 220px) !important;
+      }
       .banner-three-title,
       .banner-three-title * {
         font-size: clamp(3.8rem, 21.2vw, 450px) !important;
@@ -58,12 +61,21 @@
         max-width: 100% !important;
         margin-left: auto !important;
         margin-right: auto !important;
+        margin-top: clamp(20px, 4vw, 45px) !important;
         display: block !important;
         color: #000000 !important;
         -webkit-text-fill-color: #000000 !important;
         -webkit-text-stroke: 0px transparent !important;
         opacity: 1 !important;
         box-sizing: border-box !important;
+      }
+      @media (max-width: 768px) {
+        .banner-three-area {
+          padding-top: 155px !important;
+        }
+        .banner-three-title {
+          margin-top: 25px !important;
+        }
       }
 
       /* ===== WORKS Background Title (Matching User 620 weight & scale) ===== */
