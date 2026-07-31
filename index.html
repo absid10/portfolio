@@ -44,24 +44,7 @@
       .font-space { font-family: 'Space Grotesk', sans-serif; }
       .font-inter { font-family: 'Inter', sans-serif; }
 
-      /* ===== Header Shadow & Border Replacement (Replaces dotted line) ===== */
-      .header,
-      .header-two,
-      .header-three {
-        border-bottom: none !important;
-        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
-      }
-      .header.fixed-header {
-        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08) !important;
-        background: rgba(255, 255, 255, 0.95) !important;
-        backdrop-filter: blur(12px) !important;
-        -webkit-backdrop-filter: blur(12px) !important;
-      }
-
-      /* ===== Hero Section & Title Top Spacing (Sleek Desktop View with No Extra Gap) ===== */
-      .banner-three-area {
-        padding-top: 130px !important;
-      }
+      /* ===== Hero Title (User Custom 21.2vw, weight 620) ===== */
       .banner-three-title,
       .banner-three-title * {
         font-size: clamp(3.8rem, 21.2vw, 450px) !important;
@@ -75,44 +58,12 @@
         max-width: 100% !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        margin-top: 0px !important;
         display: block !important;
         color: #000000 !important;
         -webkit-text-fill-color: #000000 !important;
         -webkit-text-stroke: 0px transparent !important;
         opacity: 1 !important;
         box-sizing: border-box !important;
-      }
-      /* ===== Bring Hero & CTA Button to Front Layer ===== */
-      #hero,
-      .banner-three-area {
-        position: relative !important;
-        z-index: 25 !important;
-      }
-      #about,
-      .about-three-area {
-        position: relative !important;
-        z-index: 1 !important;
-      }
-
-      /* ===== Hero Side Cards Fully Visible on Laptop View (No Cutoff Overflow) ===== */
-      @media (min-width: 992px) {
-        .banner-three-left,
-        .banner-three-right {
-          margin-block-end: 140px !important;
-          margin-bottom: 140px !important;
-          position: relative !important;
-          z-index: 30 !important;
-        }
-      }
-
-      /* ===== CTA Button Micro-Animation ===== */
-      .banner-three-button .tw-hover-btn {
-        animation: ctaFloat 2.5s ease-in-out infinite !important;
-      }
-      @keyframes ctaFloat {
-        0%, 100% { transform: translateY(0); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); }
-        50% { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35); }
       }
 
       /* ===== Experience & Education Section Title White Text Fix ===== */
@@ -123,22 +74,6 @@
         color: #ffffff !important;
         -webkit-text-fill-color: #ffffff !important;
         opacity: 1 !important;
-      }
-
-      /* ===== Mobile Top Spacing Above DEVELOPER Title ===== */
-      @media (max-width: 991px) {
-        .banner-three-area {
-          padding-top: 240px !important;
-        }
-        .banner-three-title,
-        .banner-three-title * {
-          margin-top: 55px !important;
-          margin-bottom: 25px !important;
-        }
-        .banner-three-button {
-          margin-top: 25px !important;
-          margin-bottom: -28px !important;
-        }
       }
 
       /* ===== WORKS Background Title (100% Solid Pitch Black, Edge-to-Edge) ===== */
