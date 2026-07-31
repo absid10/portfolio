@@ -427,8 +427,86 @@
         transform: scale(1.12);
         box-shadow: 0 8px 24px rgba(232, 85, 58, 0.4);
       }
-      @media (max-width: 992px) {
-        .social-sidebar { display: none; }
+      @media (max-width: 768px) {
+        .social-sidebar {
+          left: 14px !important;
+          bottom: 20px !important;
+          top: auto !important;
+          transform: none !important;
+          flex-direction: row !important;
+          padding: 6px 12px !important;
+          border-radius: 30px !important;
+          background: rgba(18, 18, 18, 0.92) !important;
+          backdrop-filter: blur(12px) !important;
+          z-index: 999 !important;
+        }
+        .social-sidebar a {
+          width: 38px !important;
+          height: 38px !important;
+          font-size: 1.1rem !important;
+        }
+      }
+
+      /* ===== Desktop Header Nav Links & Dynamic Responsive Layout ===== */
+      .header-three-nav-links {
+        position: relative !important;
+        margin: 0 auto !important;
+        flex-shrink: 1 !important;
+      }
+      .header-three-nav-links ul {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 4px 8px !important;
+        border-radius: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+        display: flex;
+        align-items: center;
+        gap: clamp(2px, 0.6vw, 8px) !important;
+      }
+      .header-nav-item {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(0.75rem, 0.85vw, 0.9rem) !important;
+        font-weight: 600;
+        color: #1a1a1a;
+        text-decoration: none;
+        padding: 5px clamp(6px, 0.8vw, 14px) !important;
+        border-radius: 20px;
+        transition: all 0.2s ease;
+        white-space: nowrap !important;
+      }
+      .header-nav-item:hover {
+        color: #ffffff !important;
+        background: #1a1a1a !important;
+      }
+      @media (max-width: 1199px) {
+        .header-three-nav-links {
+          display: none !important;
+        }
+      }
+
+      /* ===== Smart Sticky Header (Hide on Scroll Down, Show on Scroll Up) ===== */
+      .header {
+        transition: top 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease !important;
+        will-change: transform, top;
+      }
+      .header.fixed-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+        background: rgba(244, 242, 238, 0.95) !important;
+        animation: none !important;
+      }
+      .header.header-hidden {
+        top: -150px !important;
+        transform: translateY(-150%) !important;
       }
 
 
@@ -984,24 +1062,14 @@
             </a>
           </div>
 
-          <!-- Social Icons -->
-          <div class="header-three-social d-none d-lg-block">
-            <ul class="d-flex tw-gap-205">
-              <li>
-                <a class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md" href="https://github.com/absid10" target="_blank" aria-label="GitHub">
-                  <i class="ph-bold ph-github-logo"></i>
-                </a>
-              </li>
-              <li>
-                <a class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md" href="https://www.linkedin.com/in/absid10/" target="_blank" aria-label="LinkedIn">
-                  <i class="ph-bold ph-linkedin-logo"></i>
-                </a>
-              </li>
-              <li>
-                <a class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md" href="mailto:siddiquiabdullahahmed75@gmail.com" aria-label="Email">
-                  <i class="ph-bold ph-envelope"></i>
-                </a>
-              </li>
+          <!-- Desktop Navigation Section Links -->
+          <div class="header-three-nav-links d-none d-lg-block">
+            <ul class="d-flex align-items-center m-0 p-0" style="list-style: none;">
+              <li><a href="#about" class="header-nav-item">About</a></li>
+              <li><a href="#skills" class="header-nav-item">Skills</a></li>
+              <li><a href="#projects" class="header-nav-item">Projects</a></li>
+              <li><a href="#experience" class="header-nav-item">Experience</a></li>
+              <li><a href="#contact" class="header-nav-item">Contact</a></li>
             </ul>
           </div>
 

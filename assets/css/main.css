@@ -8192,15 +8192,17 @@ body.tw-magic-cursor #magic-cursor {
   }
 }
 .banner-three-title {
-  font-size: clamp(3.2rem, 14.2vw, 17.5rem) !important;
-  line-height: 0.85 !important;
+  font-size: clamp(3.2rem, 16.8vw, 22rem) !important;
+  font-weight: 900 !important;
   text-transform: uppercase !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow: hidden !important;
+  letter-spacing: -0.05em !important;
+  line-height: 0.85 !important;
+  white-space: nowrap !important;
   text-align: center !important;
-  letter-spacing: -0.04em !important;
-  box-sizing: border-box !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
 }
 .banner-three-left {
   max-width: 410px;

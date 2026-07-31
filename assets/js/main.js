@@ -67,13 +67,23 @@
   });
 
   ////////////////////////////////////////////////////
-  // 02. Sticky Js
+  // 02. Smart Sticky Header (Hide on Scroll Down, Show on Scroll Up)
+  let lastScrollTop = 0;
   $(window).on("scroll", function () {
-    if ($(window).scrollTop() >= 260) {
+    let st = $(this).scrollTop();
+    if (st > 100) {
       $(".header").addClass("fixed-header");
+      if (st > lastScrollTop && st > 150) {
+        // Scroll Down -> Hide Header
+        $(".header").addClass("header-hidden");
+      } else if (st < lastScrollTop) {
+        // Scroll Up -> Show Header
+        $(".header").removeClass("header-hidden");
+      }
     } else {
-      $(".header").removeClass("fixed-header");
+      $(".header").removeClass("fixed-header header-hidden");
     }
+    lastScrollTop = st;
   });
 
   ////////////////////////////////////////////////////
