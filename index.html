@@ -44,14 +44,14 @@
       .font-space { font-family: 'Space Grotesk', sans-serif; }
       .font-inter { font-family: 'Inter', sans-serif; }
 
-      /* ===== Hero Title ===== */
+      /* ===== Hero Title (Enlarged 170% Edge-to-Edge) ===== */
       .banner-three-title,
       .banner-three-title * {
-        font-size: clamp(3rem, 13.8vw, 17.5rem) !important;
-        font-weight: 700 !important;
+        font-size: clamp(3.8rem, 16vw, 260px) !important;
+        font-weight: 800 !important;
         text-transform: uppercase !important;
         letter-spacing: -0.04em !important;
-        line-height: 0.88 !important;
+        line-height: 0.84 !important;
         white-space: nowrap !important;
         text-align: center !important;
         width: 100% !important;
@@ -422,12 +422,13 @@
         margin: 2px;
       }
 
-      /* ===== Floating Social Sidebar (Positioned on Left Edge to Avoid Overlap) ===== */
+      /* ===== Floating Social Sidebar (Positioned on Bottom Left) ===== */
       .social-sidebar {
         position: fixed;
-        left: 16px;
-        top: 50%;
-        transform: translateY(-50%);
+        left: 20px;
+        bottom: 30px;
+        top: auto;
+        transform: none;
         z-index: 998;
         display: flex;
         flex-direction: column;
