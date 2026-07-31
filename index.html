@@ -44,9 +44,23 @@
       .font-space { font-family: 'Space Grotesk', sans-serif; }
       .font-inter { font-family: 'Inter', sans-serif; }
 
+      /* ===== Header Shadow & Border Replacement (Replaces dotted line) ===== */
+      .header,
+      .header-two,
+      .header-three {
+        border-bottom: none !important;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
+      }
+      .header.fixed-header {
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08) !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+      }
+
       /* ===== Hero Section & Title Top Spacing ===== */
       .banner-three-area {
-        padding-top: clamp(140px, 16vw, 220px) !important;
+        padding-top: clamp(170px, 20vw, 240px) !important;
       }
       .banner-three-title,
       .banner-three-title * {
@@ -61,7 +75,7 @@
         max-width: 100% !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        margin-top: clamp(20px, 4vw, 45px) !important;
+        margin-top: clamp(30px, 4vw, 55px) !important;
         display: block !important;
         color: #000000 !important;
         -webkit-text-fill-color: #000000 !important;
@@ -81,11 +95,11 @@
       /* ===== Mobile Top Spacing Above DEVELOPER Title ===== */
       @media (max-width: 991px) {
         .banner-three-area {
-          padding-top: 185px !important;
+          padding-top: 215px !important;
         }
         .banner-three-title,
         .banner-three-title * {
-          margin-top: 35px !important;
+          margin-top: 45px !important;
           margin-bottom: 25px !important;
         }
       }
