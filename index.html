@@ -434,64 +434,94 @@
         margin: 2px;
       }
 
-      /* ===== Floating Social Sidebar (Positioned on Bottom Left) ===== */
+      /* ===== Floating Expandable Social Dock (Hidden until scroll, hover expand) ===== */
       .social-sidebar {
         position: fixed;
         left: 20px;
-        bottom: 30px;
-        top: auto;
-        transform: none;
-        z-index: 998;
+        bottom: 24px;
+        z-index: 999;
         display: flex;
-        flex-direction: column;
-        gap: 12px;
-        padding: 10px;
-        background: rgba(10, 10, 10, 0.85);
+        align-items: center;
+        gap: 0;
+        padding: 6px;
+        background: rgba(18, 18, 18, 0.92);
         backdrop-filter: blur(14px);
         -webkit-backdrop-filter: blur(14px);
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 40px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px) scale(0.9);
+        transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+        overflow: hidden;
       }
-      .social-sidebar a {
-        width: 44px;
-        height: 44px;
+      .social-sidebar.social-sidebar-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+      }
+      .social-sidebar-trigger {
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        color: #ffffff !important;
+        background: var(--accent);
+        color: #ffffff;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.25rem;
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+      .social-sidebar-links {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin 0.3s ease;
+        margin-left: 0;
+      }
+      .social-sidebar:hover .social-sidebar-links,
+      .social-sidebar.expanded .social-sidebar-links {
+        max-width: 220px;
+        opacity: 1;
+        margin-left: 8px;
+      }
+      .social-sidebar:hover .social-sidebar-trigger {
+        transform: rotate(45deg);
+        background: #ffffff;
+        color: var(--accent);
+      }
+      .social-sidebar a {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #ffffff !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        transition: all 0.25s ease;
         text-decoration: none;
+        flex-shrink: 0;
       }
       .social-sidebar a:hover {
         background: var(--accent) !important;
         border-color: var(--accent) !important;
         color: #ffffff !important;
-        transform: scale(1.12);
-        box-shadow: 0 8px 24px rgba(232, 85, 58, 0.4);
+        transform: scale(1.1);
+        box-shadow: 0 4px 14px rgba(232, 85, 58, 0.4);
       }
       @media (max-width: 768px) {
         .social-sidebar {
-          left: 14px !important;
-          bottom: 20px !important;
-          top: auto !important;
-          transform: none !important;
-          flex-direction: row !important;
-          padding: 6px 12px !important;
-          border-radius: 30px !important;
-          background: rgba(18, 18, 18, 0.92) !important;
-          backdrop-filter: blur(12px) !important;
-          z-index: 999 !important;
-        }
-        .social-sidebar a {
-          width: 38px !important;
-          height: 38px !important;
-          font-size: 1.1rem !important;
+          left: 14px;
+          bottom: 20px;
         }
       }
 
@@ -987,17 +1017,22 @@
       </button>
     </div>
 
-    <!-- ==================== Floating Social Sidebar ==================== -->
+    <!-- ==================== Floating Expandable Social Dock ==================== -->
     <div class="social-sidebar">
-      <a href="https://github.com/absid10" target="_blank" aria-label="GitHub">
-        <i class="ph-bold ph-github-logo"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/absid10/" target="_blank" aria-label="LinkedIn">
-        <i class="ph-bold ph-linkedin-logo"></i>
-      </a>
-      <a href="mailto:siddiquiabdullahahmed75@gmail.com" aria-label="Email">
-        <i class="ph-bold ph-envelope"></i>
-      </a>
+      <div class="social-sidebar-trigger" title="Connect & Links">
+        <i class="ph-bold ph-paper-plane-tilt"></i>
+      </div>
+      <div class="social-sidebar-links">
+        <a href="https://github.com/absid10" target="_blank" aria-label="GitHub" title="GitHub">
+          <i class="ph-bold ph-github-logo"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/absid10/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+          <i class="ph-bold ph-linkedin-logo"></i>
+        </a>
+        <a href="mailto:siddiquiabdullahahmed75@gmail.com" aria-label="Email" title="Email">
+          <i class="ph-bold ph-envelope"></i>
+        </a>
+      </div>
     </div>
 
     <!-- ==================== Offcanvas Mobile Menu Start ==================== -->

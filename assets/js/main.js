@@ -67,7 +67,7 @@
   });
 
   ////////////////////////////////////////////////////
-  // 02. Smart Sticky Header (Hide on Scroll Down, Show on Scroll Up)
+  // 02. Smart Sticky Header & Floating Social Dock
   let lastScrollTop = 0;
   $(window).on("scroll", function () {
     let st = $(this).scrollTop();
@@ -83,7 +83,24 @@
     } else {
       $(".header").removeClass("fixed-header header-hidden");
     }
+
+    // Toggle Floating Social Dock (only visible when scrolled > 180px)
+    if (st > 180) {
+      $(".social-sidebar").addClass("social-sidebar-visible");
+    } else {
+      $(".social-sidebar").removeClass("social-sidebar-visible");
+    }
+
     lastScrollTop = st;
+  });
+
+  // Mobile / Touch click toggle for social dock
+  $(".social-sidebar-trigger").on("click", function (e) {
+    e.stopPropagation();
+    $(".social-sidebar").toggleClass("expanded");
+  });
+  $(document).on("click", function () {
+    $(".social-sidebar").removeClass("expanded");
   });
 
   ////////////////////////////////////////////////////
