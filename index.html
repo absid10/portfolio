@@ -95,10 +95,19 @@
         z-index: 1 !important;
       }
 
-      /* ===== CTA Button Positioned Inside Intended Shadowed Slot (Front Layer) ===== */
+      /* ===== Hero Side Cards Fully Visible (No Cutoff Overflow) ===== */
+      .banner-three-left,
+      .banner-three-right {
+        margin-block-end: 0px !important;
+        margin-bottom: 0px !important;
+        position: relative !important;
+        z-index: 30 !important;
+      }
+
+      /* ===== CTA Button Positioned Inside Intended Shadowed Slot ===== */
       .banner-three-button {
-        margin-top: 32px !important;
-        margin-bottom: -36px !important;
+        margin-top: 25px !important;
+        margin-bottom: 0px !important;
         position: relative !important;
         z-index: 999 !important;
       }
@@ -108,6 +117,16 @@
       @keyframes ctaFloat {
         0%, 100% { transform: translateY(0); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); }
         50% { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35); }
+      }
+
+      /* ===== Experience & Education Section Title White Text Fix ===== */
+      #experience h2,
+      #experience .tw-itm-title,
+      #experience .text-heading,
+      .feature-three-area h2 {
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+        opacity: 1 !important;
       }
 
       /* ===== Mobile Top Spacing Above DEVELOPER Title ===== */
@@ -1732,7 +1751,7 @@
               <div class="col-xl-12">
                 <div class="text-center tw-mb-21">
                   <span class="section-label d-inline-flex" style="color: var(--accent);">Venture & Background</span>
-                  <h2 class="tw-text-15 text-heading tw-itm-title tw-itm-anim">Experience & Education</h2>
+                  <h2 class="tw-text-15 text-white tw-itm-title tw-itm-anim">Experience & Education</h2>
                 </div>
                 <div class="feature-three-wrapper">
 
