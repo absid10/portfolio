@@ -106,8 +106,14 @@
         box-shadow: 0 0 8px rgba(232, 85, 58, 0.8) !important;
       }
 
-      /* ===== Mobile WORKS Staggered Left/Right Card Layout ===== */
+      /* ===== Mobile Layout Overrides ===== */
       @media (max-width: 991px) {
+        /* Hide right section index on mobile view */
+        .right-section-index-pill {
+          display: none !important;
+        }
+
+        /* Mobile WORKS Staggered Left/Right Card Layout */
         .portfolio-three-wrapper {
           display: flex !important;
           flex-direction: column !important;
@@ -127,6 +133,26 @@
           max-width: 88% !important;
           margin-left: auto !important;
           margin-right: 0 !important;
+        }
+
+        /* All Projects Circle on Mobile (Smaller & Overlapping Last Card) */
+        .portfolio-three-counter {
+          position: relative !important;
+          bottom: auto !important;
+          left: 15px !important;
+          margin-top: -65px !important;
+          margin-bottom: 30px !important;
+          z-index: 30 !important;
+          display: block !important;
+        }
+        .portfolio-three-counter .tw-btn-circle {
+          width: 145px !important;
+          height: 145px !important;
+          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18) !important;
+        }
+        .portfolio-three-counter .tw-btn-circle span {
+          font-size: 1rem !important;
+          line-height: 1.25 !important;
         }
       }
 
