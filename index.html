@@ -179,6 +179,36 @@
         opacity: 1 !important;
       }
 
+      /* ===== Contact Section Social Badges (Orange Styling) ===== */
+      .contact-social-badge {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 10px 18px !important;
+        border-radius: 30px !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(232, 85, 58, 0.35) !important;
+        color: #E8553A !important;
+        font-weight: 600 !important;
+        font-size: 0.9rem !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+      }
+      .contact-social-badge i {
+        color: #E8553A !important;
+        font-size: 1.1rem !important;
+      }
+      .contact-social-badge:hover {
+        background: #E8553A !important;
+        color: #ffffff !important;
+        border-color: #E8553A !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(232, 85, 58, 0.35) !important;
+      }
+      .contact-social-badge:hover i {
+        color: #ffffff !important;
+      }
+
       /* ===== WORKS Background Title (100% Solid Pitch Black, Edge-to-Edge) ===== */
       .portfolio-three-shape {
         width: 100% !important;
@@ -2227,32 +2257,20 @@
                       <a href="https://www.linkedin.com/company/ayebeestech" target="_blank" class="text-white tw-text-xl" style="text-decoration: none; opacity: 0.8;">AyeBeesTech Studio ↗</a>
                     </div>
                   </div>
-                    <ul class="tw-gap-2">
-                      <li>
-                        <a href="https://github.com/absid10" target="_blank">
-                          <span class="active-media d-flex align-items-center tw-gap-1">GitHub <i class="ph ph-arrow-bend-up-right"></i></span>
-                          <span class="hover-media"><i class="ph ph-github-logo"></i></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.linkedin.com/in/absid10/" target="_blank">
-                          <span class="active-media d-flex align-items-center tw-gap-1">LinkedIn <i class="ph ph-arrow-bend-up-right"></i></span>
-                          <span class="hover-media"><i class="ph ph-linkedin-logo"></i></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.linkedin.com/company/ayebeestech" target="_blank">
-                          <span class="active-media d-flex align-items-center tw-gap-1">AyeBeesTech <i class="ph ph-arrow-bend-up-right"></i></span>
-                          <span class="hover-media"><i class="ph ph-rocket-launch"></i></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="mailto:siddiquiabdullahahmed75@gmail.com">
-                          <span class="active-media d-flex align-items-center tw-gap-1">Email <i class="ph ph-arrow-bend-up-right"></i></span>
-                          <span class="hover-media"><i class="ph ph-envelope"></i></span>
-                        </a>
-                      </li>
-                    </ul>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                      <a href="https://github.com/absid10" target="_blank" class="contact-social-badge">
+                        <i class="ph ph-github-logo"></i> GitHub ↗
+                      </a>
+                      <a href="https://www.linkedin.com/in/absid10/" target="_blank" class="contact-social-badge">
+                        <i class="ph ph-linkedin-logo"></i> LinkedIn ↗
+                      </a>
+                      <a href="https://www.linkedin.com/company/ayebeestech" target="_blank" class="contact-social-badge">
+                        <i class="ph ph-rocket-launch"></i> AyeBeesTech ↗
+                      </a>
+                      <a href="mailto:siddiquiabdullahahmed75@gmail.com" class="contact-social-badge">
+                        <i class="ph ph-envelope"></i> Email ↗
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2283,33 +2301,27 @@
         </section>
 
         <!-- ==================== FOOTER ==================== -->
-        <footer class="py-5" style="background: #050505;">
+        <footer class="py-5 text-center" style="background: #050505; border-top: 1px solid rgba(255, 255, 255, 0.08);">
           <div class="container tw-container-1800-px">
-            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
-              <div>
-                <a href="#hero" style="font-size: 1.6rem; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Space Grotesk', sans-serif;">
-                  Abdullah<span style="color: var(--accent);">.</span>
-                </a>
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <a href="#hero" class="mb-3" style="font-size: 1.8rem; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Space Grotesk', sans-serif;">
+                Abdullah<span style="color: var(--accent);">.</span>
+              </a>
+              <div class="d-flex flex-wrap justify-content-center gap-3 gap-md-4 mb-4" style="font-size: 0.9rem;">
+                <a href="#hero" class="text-white-50 text-decoration-none hover-text-white">Home</a>
+                <a href="#about" class="text-white-50 text-decoration-none hover-text-white">About</a>
+                <a href="#skills" class="text-white-50 text-decoration-none hover-text-white">Skills</a>
+                <a href="#projects" class="text-white-50 text-decoration-none hover-text-white">Projects</a>
+                <a href="#experience" class="text-white-50 text-decoration-none hover-text-white">Experience</a>
+                <a href="#certifications" class="text-white-50 text-decoration-none hover-text-white">Certifications</a>
+                <a href="#contact" class="text-white-50 text-decoration-none hover-text-white">Contact</a>
               </div>
-              <div>
-                <p class="text-white mb-1" style="opacity: 0.7; font-size: 0.85rem;">
-                  © 2026 Abdullah Ahmed Siddiqui. All rights reserved.
-                </p>
-                <p class="mb-0" style="font-size: 0.78rem; opacity: 0.5;">
-                  Built by <a href="https://www.linkedin.com/company/ayebeestech" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">AyeBeesTech Studio ↗</a>
-                </p>
-              </div>
-              <div class="d-flex gap-3">
-                <a href="https://github.com/absid10" target="_blank" style="color: rgba(255,255,255,0.4); font-size: 1.2rem; transition: color 0.3s;" onmouseover="this.style.color='#E8553A'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
-                  <i class="ph ph-github-logo"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/absid10/" target="_blank" style="color: rgba(255,255,255,0.4); font-size: 1.2rem; transition: color 0.3s;" onmouseover="this.style.color='#E8553A'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
-                  <i class="ph ph-linkedin-logo"></i>
-                </a>
-                <a href="mailto:siddiquiabdullahahmed75@gmail.com" style="color: rgba(255,255,255,0.4); font-size: 1.2rem; transition: color 0.3s;" onmouseover="this.style.color='#E8553A'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">
-                  <i class="ph ph-envelope"></i>
-                </a>
-              </div>
+              <p class="text-white mb-1" style="opacity: 0.7; font-size: 0.85rem;">
+                © 2026 Abdullah Ahmed Siddiqui. All rights reserved.
+              </p>
+              <p class="mb-0" style="font-size: 0.78rem; opacity: 0.5;">
+                Built by <a href="https://www.linkedin.com/company/ayebeestech" target="_blank" style="color: #E8553A; text-decoration: none; font-weight: 600;">AyeBeesTech Studio ↗</a>
+              </p>
             </div>
           </div>
         </footer>
