@@ -56,6 +56,12 @@
       normalizeScroll: false,
       ignoreMobileResize: true,
     });
+    window.addEventListener("load", function () {
+      ScrollTrigger.refresh();
+    });
+    setTimeout(function () {
+      ScrollTrigger.refresh();
+    }, 1500);
   }
 
   ////////////////////////////////////////////////////
