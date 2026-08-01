@@ -105,10 +105,12 @@ npx serve .
 
 ---
 
-## 📄 License & Copyright
+## 📄 License & Attribution
 
-© 2026 Abdullah Ahmed Siddiqui. All rights reserved.  
+© 2026 **Abdullah Ahmed Siddiqui**. All rights reserved.  
 Licensed under the [MIT License](LICENSE).
+
+> **📌 Attribution Requirement**: If you use, clone, or adapt this portfolio codebase or design, you **must include explicit credit and attribution to Abdullah Ahmed Siddiqui** ([@absid10](https://github.com/absid10/portfolio)) in your repository and documentation.
 
 ---
 
