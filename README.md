@@ -105,6 +105,13 @@ npx serve .
 
 ---
 
+## 📄 License & Copyright
+
+© 2026 Abdullah Ahmed Siddiqui. All rights reserved.  
+Licensed under the [MIT License](LICENSE).
+
+---
+
 <div align="center">
 
 *Built with ❤️ by Abdullah Ahmed Siddiqui*
