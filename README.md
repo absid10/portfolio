@@ -81,7 +81,7 @@ portfolio/
 
 ---
 
-## 🚀 Run Locally
+## 💻 Run Locally
 
 ```bash
 # Clone the repository
@@ -98,7 +98,7 @@ npx serve .
 ## 📬 Contact
 
 - 📧 **Email**: [siddiquiabdullahahmed75@gmail.com](mailto:siddiquiabdullahahmed75@gmail.com)
-- 🚀 **Studio Venture**: [AyeBeesTech on LinkedIn](https://www.linkedin.com/company/ayebeestech)
+- 🌐 **Agency Venture**: [AyeBeesTech on LinkedIn](https://www.linkedin.com/company/ayebeestech)
 - 💼 **LinkedIn**: [linkedin.com/in/absid10](https://www.linkedin.com/in/absid10/)
 - 🐙 **GitHub**: [github.com/absid10](https://github.com/absid10)
 - 📄 **Resume**: [Download CV (PDF)](https://drive.google.com/file/d/1-O7s7Wk81TYTWUoMmTNA2dQlYqtRxGAj/view?usp=sharing)
