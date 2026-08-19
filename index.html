@@ -13,8 +13,20 @@
     />
     <meta name="robots" content="INDEX,FOLLOW" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://absid10.vercel.app/" />
+    <meta property="og:title" content="Abdullah Ahmed Siddiqui — Software Developer" />
+    <meta property="og:description" content="Software developer with hands-on experience across full-stack development, backend engineering, and software QA." />
+    <meta property="og:image" content="https://absid10.vercel.app/assets/images/Abdullah_linkedin_banner.png" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://absid10.vercel.app/" />
+    <meta property="twitter:title" content="Abdullah Ahmed Siddiqui — Software Developer" />
+    <meta property="twitter:description" content="Software developer with hands-on experience across full-stack development, backend engineering, and software QA." />
+    <meta property="twitter:image" content="https://absid10.vercel.app/assets/images/Abdullah_linkedin_banner.png" />
     <!-- Title -->
-    <title>Abdullah Ahmed Siddiqui — Python Full Stack Developer</title>
+    <title>Abdullah Ahmed Siddiqui — Software Developer</title>
     <!-- Favicon -->
     <link rel="icon" href="assets/images/ayebeestech-dark.jpg" type="image/jpeg" />
     <!-- Bootstrap -->
@@ -2302,6 +2314,16 @@
                         <i class="ph ph-envelope"></i> Email ↗
                       </a>
                     </div>
+
+                    <!-- LinkedIn Connect Banner Card -->
+                    <div class="mt-4" style="max-width: 480px;">
+                      <a href="https://www.linkedin.com/in/absid10/" target="_blank" class="d-block overflow-hidden rounded-4 text-decoration-none position-relative" style="border: 1px solid rgba(255,255,255,0.12); transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 14px 40px rgba(232,85,58,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)';">
+                        <img src="assets/images/Abdullah_linkedin_banner.png" alt="Connect with Abdullah on LinkedIn" class="w-100 d-block" style="object-fit: cover;" />
+                        <div class="position-absolute bottom-0 end-0 m-2 px-3 py-1 rounded-pill d-flex align-items-center gap-1" style="background: rgba(10,10,10,0.85); backdrop-filter: blur(8px); font-size: 0.75rem; color: #fff; border: 1px solid rgba(255,255,255,0.15);">
+                          <i class="ph ph-linkedin-logo" style="color: #0A66C2;"></i> Connect on LinkedIn ↗
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2443,36 +2465,42 @@
     </div>
     <!-- ==================== Google Account Card Modal ==================== -->
     <div id="google-account-modal" class="google-account-modal-overlay">
-      <div class="google-account-card">
-        <button class="account-card-close" id="close-account-modal" aria-label="Close">&times;</button>
-        <div class="text-center mb-3">
-          <div class="google-profile-avatar" style="width: 76px; height: 76px;">
+      <div class="google-account-card overflow-hidden p-0">
+        <div class="position-relative" style="height: 100px; overflow: hidden; border-top-left-radius: 24px; border-top-right-radius: 24px;">
+          <img src="assets/images/Abdullah_linkedin_banner.png" alt="Abdullah Ahmed Siddiqui Banner" style="width: 100%; height: 100%; object-fit: cover;" />
+          <button class="account-card-close" id="close-account-modal" aria-label="Close" style="top: 10px; right: 10px;">&times;</button>
+        </div>
+        <div class="p-4 pt-0 text-center">
+          <div class="google-profile-avatar mx-auto" style="width: 76px; height: 76px; margin-top: -38px; position: relative; z-index: 2; border: 3px solid #121212; box-shadow: 0 4px 14px rgba(0,0,0,0.5);">
             <img src="assets/images/profile-formal.jpg" alt="Abdullah Ahmed Siddiqui" />
           </div>
-          <h4 class="text-white fw-bold mt-3 mb-1" style="font-family: 'Space Grotesk', sans-serif;">Abdullah Ahmed Siddiqui</h4>
+          <h4 class="text-white fw-bold mt-2 mb-1" style="font-family: 'Space Grotesk', sans-serif;">Abdullah Ahmed Siddiqui</h4>
           <p class="text-white-50 mb-2" style="font-size: 0.85rem;">siddiquiabdullahahmed75@gmail.com</p>
           <span class="badge rounded-pill bg-success-subtle text-success border border-success-subtle px-3 py-2" style="font-size: 0.75rem;">
             🟢 Software Developer Intern @ Quartoloom Solutions
           </span>
-        </div>
         
-        <div class="d-flex flex-column gap-2 my-3">
-          <a href="#projects" class="account-card-btn primary-btn" id="modal-view-projects">
-            <i class="ph ph-folder-simple"></i> View Featured Projects
-          </a>
-          <a href="https://drive.google.com/file/d/1-O7s7Wk81TYTWUoMmTNA2dQlYqtRxGAj/view?usp=sharing" target="_blank" class="account-card-btn secondary-btn">
-            <i class="ph ph-download-simple"></i> Download Resume / CV
-          </a>
-          <a href="https://github.com/absid10" target="_blank" class="account-card-btn secondary-btn">
-            <i class="ph ph-github-logo"></i> Visit GitHub (@absid10)
-          </a>
-          <a href="mailto:siddiquiabdullahahmed75@gmail.com" class="account-card-btn secondary-btn">
-            <i class="ph ph-envelope-simple"></i> Direct Email
-          </a>
-        </div>
+          <div class="d-flex flex-column gap-2 my-3">
+            <a href="#projects" class="account-card-btn primary-btn" id="modal-view-projects">
+              <i class="ph ph-folder-simple"></i> View Featured Projects
+            </a>
+            <a href="https://drive.google.com/file/d/1-O7s7Wk81TYTWUoMmTNA2dQlYqtRxGAj/view?usp=sharing" target="_blank" class="account-card-btn secondary-btn">
+              <i class="ph ph-download-simple"></i> Download Resume / CV
+            </a>
+            <a href="https://github.com/absid10" target="_blank" class="account-card-btn secondary-btn">
+              <i class="ph ph-github-logo"></i> Visit GitHub (@absid10)
+            </a>
+            <a href="https://www.linkedin.com/in/absid10/" target="_blank" class="account-card-btn secondary-btn" style="border-color: rgba(10,102,194,0.4); color: #70b5f9;">
+              <i class="ph ph-linkedin-logo"></i> Connect on LinkedIn
+            </a>
+            <a href="mailto:siddiquiabdullahahmed75@gmail.com" class="account-card-btn secondary-btn">
+              <i class="ph ph-envelope-simple"></i> Direct Email
+            </a>
+          </div>
 
-        <div class="text-center mt-3 pt-2" style="border-top: 1px solid rgba(255,255,255,0.08);">
-          <small style="color: rgba(255,255,255,0.4); font-size: 0.75rem;">GECA B.Tech CSE &bull; Software Developer Intern @ Quartoloom Solutions</small>
+          <div class="text-center mt-3 pt-2" style="border-top: 1px solid rgba(255,255,255,0.08);">
+            <small style="color: rgba(255,255,255,0.4); font-size: 0.75rem;">GECA B.Tech CSE &bull; Software Developer Intern @ Quartoloom Solutions</small>
+          </div>
         </div>
       </div>
     </div>
