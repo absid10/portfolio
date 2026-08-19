@@ -32,7 +32,7 @@ Software developer with hands-on experience across full-stack development, backe
 
 ### **Web Developer Intern** — [Amdox Technologies](https://absid10.vercel.app)
 *Remote &bull; Apr 2026 – Jul 2026*
-- Contributed to an AI-powered cloud ERP suite by building React UI components, integrating backend APIs, and performing functional and regression testing using Katalon Studio.
+- Contributed to an AI-powered cloud ERP suite by building React UI components, integrating backend APIs, and performing functional and regression testing.
 - Created test cases, documented defects, and supported frontend, backend, and QA activities across the software development lifecycle.
 
 ### **Founder & Full-Stack Developer** — [AyeBeesTech](https://www.linkedin.com/company/ayebeestech)
