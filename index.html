@@ -1108,11 +1108,93 @@
         border-color: rgba(255, 255, 255, 0.2);
         color: #fff;
       }
+
+      /* Resume PDF Viewer Modal */
+      .resume-modal-overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        z-index: 100000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .resume-modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .resume-modal-card {
+        background: rgba(18, 18, 18, 0.98);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        width: 94vw;
+        max-width: 1050px;
+        height: 88vh;
+        max-height: 920px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.95), 0 0 40px rgba(232, 85, 58, 0.2);
+        transform: translateY(20px) scale(0.97);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .resume-modal-overlay.active .resume-modal-card {
+        transform: translateY(0) scale(1);
+      }
+      .resume-modal-header {
+        padding: 14px 20px;
+        background: rgba(25, 25, 25, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .resume-modal-body {
+        flex-grow: 1;
+        background: #1e1e1e;
+        position: relative;
+        overflow: hidden;
+      }
+      .resume-action-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 14px;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        transition: all 0.2s ease;
+      }
+      .resume-action-btn:hover {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+      }
+
       @media (max-width: 575px) {
         .google-account-modal-overlay {
           justify-content: center;
           padding: 20px;
           align-items: center;
+        }
+        .resume-modal-card {
+          width: 98vw;
+          height: 92vh;
+          border-radius: 16px;
+        }
+        .resume-modal-header {
+          padding: 10px 14px;
         }
       }
     </style>
@@ -1335,10 +1417,10 @@
               </button>
             </div>
             <div class="header-three-button d-none d-md-block">
-              <a class="tw-hover-btn bg-black text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-white text-uppercase tw-rounded-md" href="https://drive.google.com/file/d/1-O7s7Wk81TYTWUoMmTNA2dQlYqtRxGAj/view?usp=sharing" target="_blank">
-                download cv
+              <button type="button" class="tw-hover-btn bg-black text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-white text-uppercase tw-rounded-md open-resume-btn border-0" style="cursor: pointer;">
+                view resume
                 <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
-              </a>
+              </button>
             </div>
           </div>
         </nav>
@@ -2510,6 +2592,10 @@
           <span class="indicator-dash"></span>
           <span class="index-label"><i class="ph ph-envelope-simple"></i> Contact</span>
         </div>
+        <div class="side-index-item open-resume-btn" style="cursor: pointer;" title="View Resume">
+          <span class="indicator-dash" style="background: var(--accent);"></span>
+          <span class="index-label" style="color: var(--accent); font-weight: 700;"><i class="ph ph-file-pdf"></i> Resume</span>
+        </div>
       </div>
     </div>
     <!-- ==================== Google Account Card Modal ==================== -->
@@ -2531,11 +2617,11 @@
           </div>
         
           <div class="d-flex flex-column gap-2 my-3">
-            <a href="#projects" class="account-card-btn primary-btn" id="modal-view-projects">
+            <button type="button" class="account-card-btn primary-btn open-resume-btn border-0 w-100" style="cursor: pointer;">
+              <i class="ph ph-file-pdf"></i> View / Download Resume
+            </button>
+            <a href="#projects" class="account-card-btn secondary-btn" id="modal-view-projects">
               <i class="ph ph-folder-simple"></i> View Featured Projects
-            </a>
-            <a href="https://drive.google.com/file/d/1-O7s7Wk81TYTWUoMmTNA2dQlYqtRxGAj/view?usp=sharing" target="_blank" class="account-card-btn secondary-btn">
-              <i class="ph ph-download-simple"></i> Download Resume / CV
             </a>
             <a href="https://github.com/absid10" target="_blank" class="account-card-btn secondary-btn">
               <i class="ph ph-github-logo"></i> Visit GitHub (@absid10)
@@ -2551,6 +2637,35 @@
           <div class="text-center mt-3 pt-2" style="border-top: 1px solid rgba(255,255,255,0.08);">
             <small style="color: rgba(255,255,255,0.4); font-size: 0.75rem;">GECA B.Tech CSE &bull; Software Developer Intern @ Quartoloom Solutions</small>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== In-Page Resume PDF Viewer Modal ==================== -->
+    <div id="resume-modal" class="resume-modal-overlay">
+      <div class="resume-modal-card">
+        <div class="resume-modal-header">
+          <div class="d-flex align-items-center gap-2">
+            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(232,85,58,0.15); border: 1px solid rgba(232,85,58,0.3); display: flex; align-items: center; justify-content: center;">
+              <i class="ph ph-file-pdf" style="color: var(--accent); font-size: 1.3rem;"></i>
+            </div>
+            <div>
+              <span class="text-white fw-bold d-block lh-1" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem;">Abdullah Ahmed Siddiqui — Resume</span>
+              <span style="font-size: 0.7rem; color: rgba(255,255,255,0.45);">Live Google Drive Document &bull; Full-Stack &amp; QA</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <a href="https://drive.google.com/uc?export=download&id=1-O7s7Wk81TYTWUoMmTNA2dQlYqtRxGAj" target="_blank" class="resume-action-btn" title="Download PDF to device">
+              <i class="ph ph-download-simple"></i> <span class="d-none d-sm-inline">Download PDF</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1-O7s7Wk81TYTWUoMmTNA2dQlYqtRxGAj/view?usp=sharing" target="_blank" class="resume-action-btn" title="Open full document in Google Drive">
+              <i class="ph ph-arrow-square-out"></i> <span class="d-none d-sm-inline">Open in Drive</span>
+            </a>
+            <button id="close-resume-modal" class="account-card-close position-static m-0" aria-label="Close" style="width: 32px; height: 32px;">&times;</button>
+          </div>
+        </div>
+        <div class="resume-modal-body">
+          <iframe id="resume-iframe" src="https://drive.google.com/file/d/1-O7s7Wk81TYTWUoMmTNA2dQlYqtRxGAj/preview" width="100%" height="100%" style="border:none; width: 100%; height: 100%;" allow="autoplay"></iframe>
         </div>
       </div>
     </div>

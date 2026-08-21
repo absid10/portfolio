@@ -442,4 +442,37 @@
       $modal.removeClass("active");
     });
   });
+
+  // 17. In-Page Resume PDF Viewer Modal Handler
+  $(document).ready(function () {
+    var $resumeModal = $("#resume-modal");
+    if (!$resumeModal.length) return;
+
+    $(document).on("click", ".open-resume-btn", function (e) {
+      e.preventDefault();
+      $("#google-account-modal").removeClass("active");
+      $resumeModal.addClass("active");
+      document.body.style.overflow = "hidden";
+    });
+
+    $("#close-resume-modal").on("click", function () {
+      $resumeModal.removeClass("active");
+      document.body.style.overflow = "";
+    });
+
+    $resumeModal.on("click", function (e) {
+      if ($(e.target).is("#resume-modal")) {
+        $resumeModal.removeClass("active");
+        document.body.style.overflow = "";
+      }
+    });
+
+    $(document).on("keydown", function (e) {
+      if (e.key === "Escape") {
+        $resumeModal.removeClass("active");
+        $("#google-account-modal").removeClass("active");
+        document.body.style.overflow = "";
+      }
+    });
+  });
 })(jQuery);
