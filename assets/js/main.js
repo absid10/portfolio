@@ -384,36 +384,38 @@
         $sideNav.removeClass("visible");
       }
 
-      // Determine active section
+      // Determine active section accurately
+      var checkPos = scrollPos + 220;
       var currentSection = "#hero";
+
       sections.forEach(function (secId) {
         var $sec = $(secId);
         if ($sec.length) {
-          var top = $sec.offset().top - 150;
-          var bottom = top + $sec.outerHeight();
-          if (scrollPos >= top && scrollPos < bottom) {
+          var top = $sec.offset().top;
+          if (checkPos >= top) {
             currentSection = secId;
           }
         }
       });
 
-      // Update active class on side index items
-      $(".side-index-item").removeClass("active");
+      // Update active class only on navigation items (do not affect action buttons)
+      $(".side-index-item[data-target]").removeClass("active");
       $(".side-index-item[data-target='" + currentSection + "']").addClass("active");
     }
 
     $(window).on("scroll resize", updateSideNav);
     updateSideNav();
 
-    // Click to scroll to target section
-    $(".side-index-item").on("click", function (e) {
+    // Click to scroll to target section accurately
+    $(".side-index-item[data-target]").on("click", function (e) {
       e.preventDefault();
       var targetId = $(this).data("target");
       var $target = $(targetId);
       if ($target.length) {
+        var targetOffset = $target.offset().top - 60;
         $("html, body").stop().animate({
-          scrollTop: $target.offset().top - 80
-        }, 700);
+          scrollTop: targetOffset
+        }, 500);
       }
     });
   });
