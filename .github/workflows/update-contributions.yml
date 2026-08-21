@@ -1,0 +1,37 @@
+name: Update GitHub Contribution Matrix
+
+on:
+  schedule:
+    # Runs daily at midnight UTC (5:30 AM IST)
+    - cron: '0 0 * * *'
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-matrix:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate Contribution Matrix SVG
+        run: |
+          python _gen_matrix.py
+
+      - name: Commit and Push if Changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git add assets/images/github-contributions.svg
+          git diff --staged --quiet || (git commit -m "Auto-update GitHub contribution heatmap matrix [skip ci]" && git push)
