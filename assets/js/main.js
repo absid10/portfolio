@@ -179,8 +179,8 @@
     }
   });
 
-  // Smooth scroll for all hash links on page
-  $(document).on("click", "a[href^='#']", function (e) {
+  // Smooth scroll for all hash links on page (excluding modal triggers)
+  $(document).on("click", "a[href^='#']:not(.header-profile-avatar):not(.google-profile-avatar):not(.open-resume-btn)", function (e) {
     var targetId = $(this).attr("href");
     if (targetId && targetId !== "#" && $(targetId).length) {
       e.preventDefault();
@@ -425,8 +425,9 @@
     var $modal = $("#google-account-modal");
     if (!$modal.length) return;
 
-    $(".header-profile-avatar").on("click", function (e) {
+    $(document).on("click", ".header-profile-avatar, .hero-profile-avatar", function (e) {
       e.preventDefault();
+      e.stopPropagation();
       $modal.addClass("active");
     });
 
