@@ -986,21 +986,25 @@
         }
       }
 
-      /* ===== Google-Style Circular Profile Avatar ===== */
+      /* ===== Google-Style Circular Profile Avatar with Smooth Gradient Ring ===== */
       .google-profile-avatar {
         position: relative;
-        display: inline-block;
-        border-radius: 50%;
-        padding: 3px;
-        background: conic-gradient(#ea4335 0% 25%, #4285f4 25% 50%, #34a853 50% 75%, #fbbc05 75% 100%);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50% !important;
+        padding: 3px !important;
+        background: conic-gradient(from 220deg, #3b82f6 0%, #8b5cf6 30%, #E8553A 65%, #38bdf8 85%, #3b82f6 100%) !important;
+        box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35), 0 0 14px rgba(232, 85, 58, 0.25) !important;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
         cursor: pointer;
         vertical-align: middle;
+        border: none !important;
+        outline: none !important;
       }
       .google-profile-avatar:hover {
-        transform: scale(1.08) rotate(4deg);
-        box-shadow: 0 8px 24px rgba(66, 133, 244, 0.4), 0 0 15px rgba(234, 67, 53, 0.3);
+        transform: scale(1.08) !important;
+        box-shadow: 0 6px 24px rgba(59, 130, 246, 0.55), 0 0 22px rgba(232, 85, 58, 0.45) !important;
       }
       .google-profile-avatar img {
         width: 100%;
@@ -1008,7 +1012,7 @@
         object-fit: cover;
         object-position: center 8%;
         border-radius: 50%;
-        border: 2px solid #121212;
+        border: 2px solid #0d0d0d;
         display: block;
       }
       .header-profile-avatar {
@@ -1637,7 +1641,7 @@
 
           <!-- Header Right -->
           <div class="header-right d-flex align-items-center tw-gap-705">
-            <button type="button" class="google-profile-avatar header-profile-avatar d-inline-block border-0 bg-transparent p-0" title="Abdullah Ahmed Siddiqui" aria-label="Open Profile Details">
+            <button type="button" class="google-profile-avatar header-profile-avatar" title="Abdullah Ahmed Siddiqui" aria-label="Open Profile Details">
               <img src="assets/images/profile.jpg" alt="Abdullah Ahmed Siddiqui" />
             </button>
             <div class="header-three-menu">
