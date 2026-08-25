@@ -64,7 +64,18 @@
         }
       }
 
-      /* ===== Header Fixed & Smart Sticky Styling (Always visible on load) ===== */
+      /* ===== Preloader (Highest Priority Overlay During Loading) ===== */
+      .preloader {
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        z-index: 999999 !important;
+        background: #0b0b0b !important;
+        pointer-events: all;
+      }
+
+      /* ===== Header Fixed & Smart Sticky Styling ===== */
       .header,
       .header-two,
       .header-three {

@@ -27,6 +27,7 @@
   "use strict";
 
   ////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////
   // 01. PreLoader Js
   document.addEventListener("DOMContentLoaded", () => {
     // Create GSAP timeline
@@ -34,37 +35,64 @@
     const svg = document.getElementById("preloaderSvg");
     const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
     const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
-    // Text animation
-    tl.to(".preloader-heading .load-text, .preloader-heading .cont", {
-      delay: 1,
-      y: -80,
-      opacity: 0,
-      duration: 0.6,
-    })
-      // SVG curve animation
-      .to(svg, {
-        duration: 0.6,
-        attr: { d: curve },
-        ease: "power2.inOut",
+    
+    if (svg) {
+      tl.to(".preloader-heading .load-text, .preloader-heading .cont", {
+        delay: 0.8,
+        y: -80,
+        opacity: 0,
+        duration: 0.5,
       })
-      // Flatten SVG
-      .to(svg, {
-        duration: 0.6,
-        attr: { d: flat },
-        ease: "power2.inOut",
-      })
-      // Slide preloader up
-      .to(".preloader", {
-        y: "-130%",
-        duration: 0.8,
-        ease: "power4.inOut",
-      })
-      // Remove from DOM flow
-      .set(".preloader", {
-        display: "none",
-        zIndex: -1,
+        // SVG curve animation
+        .to(svg, {
+          duration: 0.5,
+          attr: { d: curve },
+          ease: "power2.inOut",
+        })
+        // Flatten SVG
+        .to(svg, {
+          duration: 0.5,
+          attr: { d: flat },
+          ease: "power2.inOut",
+        })
+        // Slide preloader up
+        .to(".preloader", {
+          y: "-130%",
+          duration: 0.7,
+          ease: "power4.inOut",
+        })
+        // Remove from DOM flow completely
+        .set(".preloader", {
+          display: "none",
+          zIndex: -1,
+          pointerEvents: "none",
+        });
+    }
+
+    // Safety fallback to guarantee preloader dismisses
+    setTimeout(() => {
+      $(".preloader").fadeOut(300, function () {
+        $(this).css({ display: "none", zIndex: -1, pointerEvents: "none" });
       });
+    }, 3000);
   });
+
+  ////////////////////////////////////////////////////
+  // Helper: Universal Section Scroll
+  function scrollToSection(targetId) {
+    if (!targetId || targetId === "#") return;
+    var $target = $(targetId);
+    if (!$target.length) return;
+
+    if (window.smoother && typeof window.smoother.scrollTo === "function") {
+      window.smoother.scrollTo($target[0], true, "top 80px");
+    } else {
+      var targetTop = $target.offset().top - 80;
+      $("html, body").stop().animate({
+        scrollTop: targetTop
+      }, 700);
+    }
+  }
 
   ////////////////////////////////////////////////////
   // 02. Smart Sticky Header & Floating Social Dock
@@ -139,7 +167,9 @@
 
   ////////////////////////////////////////////////////
   // 04. offcanvas Menu JS
-  $(".tw-offcanvas-open-btn").on("click", function () {
+  $(document).on("click", ".tw-offcanvas-open-btn", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
     $(".tw-offcanvas-2-area").addClass("opened");
 
     setTimeout(() => {
@@ -149,7 +179,9 @@
 
   ////////////////////////////////////////////////////
   // 05. offcanvas two Menu JS
-  $(".tw-offcanvas-2-close-btn").on("click", function () {
+  $(document).on("click", ".tw-offcanvas-2-close-btn", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
     setTimeout(() => {
       $(".tw-text-hover-effect-word").removeClass("animated-text");
     }, 1200);
@@ -159,7 +191,7 @@
   });
 
   // Auto-close offcanvas overlay and smooth scroll on link click
-  $(".tw-offcanvas-2-area a, .tw-main-menu-mobile a").on("click", function (e) {
+  $(document).on("click", ".tw-offcanvas-2-area a, .tw-main-menu-mobile a", function (e) {
     var href = $(this).attr("href");
     
     // Close offcanvas overlay immediately
@@ -169,13 +201,8 @@
 
     // If anchor link on current page, smooth scroll to target section
     if (href && href.startsWith("#") && href.length > 1) {
-      var target = $(href);
-      if (target.length) {
-        e.preventDefault();
-        $("html, body").stop().animate({
-          scrollTop: target.offset().top - 80
-        }, 800);
-      }
+      e.preventDefault();
+      scrollToSection(href);
     }
   });
 
@@ -184,22 +211,15 @@
     var targetId = $(this).attr("href");
     if (targetId && targetId !== "#" && $(targetId).length) {
       e.preventDefault();
-      $("html, body").stop().animate({
-        scrollTop: $(targetId).offset().top - 80
-      }, 800);
+      scrollToSection(targetId);
     }
   });
 
   // Initial page load hash navigation (e.g., coming from projects.html to index.html#contact)
   if (window.location.hash) {
-    var hashTarget = $(window.location.hash);
-    if (hashTarget.length) {
-      setTimeout(function () {
-        $("html, body").stop().animate({
-          scrollTop: hashTarget.offset().top - 80
-        }, 600);
-      }, 500);
-    }
+    setTimeout(function () {
+      scrollToSection(window.location.hash);
+    }, 600);
   }
 
   ////////////////////////////////////////////////////
@@ -423,57 +443,69 @@
   // 16. Google Account Profile Modal Handler
   $(document).ready(function () {
     var $modal = $("#google-account-modal");
-    if (!$modal.length) return;
 
-    $(document).on("click", ".header-profile-avatar, .hero-profile-avatar", function (e) {
+    $(document).on("click", ".header-profile-avatar, .hero-profile-avatar, .google-profile-avatar", function (e) {
       e.preventDefault();
       e.stopPropagation();
-      $modal.addClass("active");
+      $("#google-account-modal").addClass("active");
+      document.body.style.overflow = "hidden";
     });
 
-    $("#close-account-modal").on("click", function () {
-      $modal.removeClass("active");
+    $(document).on("click", "#close-account-modal", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $("#google-account-modal").removeClass("active");
+      document.body.style.overflow = "";
     });
 
-    $modal.on("click", function (e) {
+    $(document).on("click", "#google-account-modal", function (e) {
       if ($(e.target).is("#google-account-modal")) {
-        $modal.removeClass("active");
+        $("#google-account-modal").removeClass("active");
+        document.body.style.overflow = "";
       }
     });
 
-    $("#modal-view-projects").on("click", function () {
-      $modal.removeClass("active");
+    $(document).on("click", "#modal-view-projects", function (e) {
+      e.preventDefault();
+      $("#google-account-modal").removeClass("active");
+      document.body.style.overflow = "";
+      scrollToSection("#projects");
     });
   });
 
   // 17. In-Page Resume PDF Viewer Modal Handler
   $(document).ready(function () {
     var $resumeModal = $("#resume-modal");
-    if (!$resumeModal.length) return;
 
     $(document).on("click", ".open-resume-btn", function (e) {
       e.preventDefault();
+      e.stopPropagation();
       $("#google-account-modal").removeClass("active");
-      $resumeModal.addClass("active");
+      $(".tw-offcanvas-2-area").removeClass("opened");
+      $(".body-overlay").removeClass("opened");
+      $("#resume-modal").addClass("active");
       document.body.style.overflow = "hidden";
     });
 
-    $("#close-resume-modal").on("click", function () {
-      $resumeModal.removeClass("active");
+    $(document).on("click", "#close-resume-modal", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $("#resume-modal").removeClass("active");
       document.body.style.overflow = "";
     });
 
-    $resumeModal.on("click", function (e) {
+    $(document).on("click", "#resume-modal", function (e) {
       if ($(e.target).is("#resume-modal")) {
-        $resumeModal.removeClass("active");
+        $("#resume-modal").removeClass("active");
         document.body.style.overflow = "";
       }
     });
 
     $(document).on("keydown", function (e) {
       if (e.key === "Escape") {
-        $resumeModal.removeClass("active");
+        $("#resume-modal").removeClass("active");
         $("#google-account-modal").removeClass("active");
+        $(".tw-offcanvas-2-area").removeClass("opened");
         document.body.style.overflow = "";
       }
     });
