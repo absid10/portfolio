@@ -58,11 +58,9 @@
         y: "-130%",
         duration: 0.8,
         ease: "power4.inOut",
-      })
-      // Remove from DOM flow
-      .set(".preloader", {
-        display: "none",
-        zIndex: -1,
+        onComplete: function () {
+          $(".preloader").remove();
+        }
       });
   });
 

@@ -5737,8 +5737,8 @@ input:focus-visible {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  z-index: 999;
+  background: #0b0b0b;
+  z-index: 999999;
 }
 
 .preloader svg {
