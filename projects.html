@@ -20,209 +20,622 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/images/ayebeestech-dark.jpg" type="image/jpeg" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css" />
     <style>
       :root { --accent: #E8553A; --accent-light: #FF7A5C; }
-      body { background: #0a0a0a; color: #fff; font-family: 'Inter', sans-serif; }
-      .page-hero { padding: 140px 0 80px; border-bottom: 1px solid rgba(255,255,255,0.08); }
-      .page-hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800; line-height: 1.05; color: #ffffff !important; }
-      .gradient-text { background: linear-gradient(135deg, var(--accent), var(--accent-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-      .back-link { color: rgba(255,255,255,0.6); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s; }
-      .back-link:hover { color: var(--accent); }
-      .rank-badge { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; display: block; }
-      .project-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 36px; height: 100%; transition: all 0.4s ease; }
-      .project-card:hover { border-color: rgba(232,85,58,0.3); transform: translateY(-4px); box-shadow: 0 24px 64px rgba(0,0,0,0.4); }
-      .project-card.flagship { border-color: rgba(232,85,58,0.35); background: linear-gradient(135deg, rgba(232,85,58,0.08), rgba(255,255,255,0.02)); grid-column: 1 / -1; }
-      .project-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 12px; }
-      .project-card h3 a { color: #fff; text-decoration: none; }
+
+      /* ===== Base ===== */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        background: #0a0a0a;
+        color: #fff;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+      ::selection { background: var(--accent); color: #fff; }
+
+      /* ===== Smooth Scroll Wrapper ===== */
+      #smooth-wrapper { overflow: hidden; }
+      #smooth-content { overflow: visible; will-change: transform; }
+
+      /* ===== Header ===== */
+      .projects-header {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 9999;
+        padding: 18px 0;
+        background: rgba(10, 10, 10, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+        transform: translateY(0);
+      }
+      .projects-header.header-hidden {
+        transform: translateY(-110%);
+      }
+      .projects-header .logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .projects-header .logo span { color: var(--accent); }
+      .projects-header .contact-btn {
+        padding: 10px 28px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+      }
+      .projects-header .contact-btn:hover {
+        background: transparent;
+        border-color: var(--accent);
+        color: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      /* ===== Page Hero ===== */
+      .page-hero {
+        padding: 160px 0 80px;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        position: relative;
+        overflow: hidden;
+      }
+      .page-hero::after {
+        content: '';
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 600px; height: 600px;
+        background: radial-gradient(circle, rgba(232,85,58,0.06) 0%, transparent 70%);
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+      .page-hero h1 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-weight: 800;
+        line-height: 1.05;
+        color: #ffffff;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, var(--accent), var(--accent-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .back-link {
+        color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.88rem;
+        font-weight: 500;
+        transition: color 0.3s, gap 0.3s;
+      }
+      .back-link:hover { color: var(--accent); gap: 12px; }
+      .hero-subtitle {
+        color: var(--accent);
+        letter-spacing: 0.15em;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .hero-description {
+        max-width: 640px;
+        color: rgba(255,255,255,0.5);
+        font-size: 1.1rem;
+        line-height: 1.75;
+      }
+
+      /* ===== Stats Bar ===== */
+      .stats-bar {
+        display: flex;
+        gap: 48px;
+        margin-top: 40px;
+        padding-top: 32px;
+        border-top: 1px solid rgba(255,255,255,0.06);
+      }
+      .stat-item .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2rem;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1;
+      }
+      .stat-item .stat-label {
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.4);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-top: 4px;
+      }
+
+      /* ===== Projects Grid ===== */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        gap: 24px;
+        padding: 80px 0 120px;
+      }
+      @media (max-width: 480px) {
+        .projects-grid { grid-template-columns: 1fr; }
+      }
+
+      /* ===== Project Card ===== */
+      .project-card {
+        background: rgba(255,255,255,0.025);
+        border: 1px solid rgba(255,255,255,0.06);
+        border-radius: 20px;
+        padding: 36px;
+        height: 100%;
+        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      .project-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(232,85,58,0.06), transparent 40%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .project-card:hover::before { opacity: 1; }
+      .project-card:hover {
+        border-color: rgba(232,85,58,0.25);
+        transform: translateY(-6px) !important;
+        box-shadow: 0 28px 72px rgba(0,0,0,0.45), 0 0 0 1px rgba(232,85,58,0.1);
+      }
+      .project-card > * { position: relative; z-index: 1; }
+      .project-card.revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Rank Badge */
+      .rank-badge {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 14px;
+        display: inline-block;
+        padding: 4px 10px;
+        background: rgba(232,85,58,0.08);
+        border-radius: 6px;
+        border: 1px solid rgba(232,85,58,0.15);
+      }
+
+      /* Card Title */
+      .project-card h3 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.45rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .project-card h3 a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
       .project-card h3 a:hover { color: var(--accent); }
-      .project-card p { color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 20px; font-size: 0.95rem; }
-      .tech-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.72rem; font-weight: 500; border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); margin: 3px; }
-      .live-badge { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); border-radius: 20px; font-size: 0.7rem; font-weight: 600; color: #34D399; margin-right: 8px; }
-      .live-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #34D399; }
-      .project-link { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; margin-right: 16px; transition: color 0.3s; }
-      .project-link:hover { color: var(--accent); }
-      .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 24px; padding: 80px 0 120px; }
-      .meta-row { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; font-size: 0.8rem; color: rgba(255,255,255,0.4); }
-      .meta-row span { display: inline-flex; align-items: center; gap: 6px; }
+
+      /* Card Description */
+      .project-card p {
+        color: rgba(255,255,255,0.5);
+        line-height: 1.75;
+        margin-bottom: 20px;
+        font-size: 0.92rem;
+      }
+
+      /* Meta Row */
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 16px;
+        font-size: 0.78rem;
+        color: rgba(255,255,255,0.35);
+      }
+      .meta-row span {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      /* Tech Badges */
+      .tech-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.72rem;
+        font-weight: 500;
+        border: 1px solid rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.6);
+        margin: 3px;
+        transition: all 0.3s ease;
+      }
+      .tech-badge:hover {
+        border-color: rgba(232,85,58,0.3);
+        color: var(--accent);
+        background: rgba(232,85,58,0.06);
+      }
+
+      /* Live Badge */
+      .live-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 12px;
+        background: rgba(52,211,153,0.1);
+        border: 1px solid rgba(52,211,153,0.25);
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #34D399;
+        margin-right: 8px;
+      }
+      .live-badge::before {
+        content: '';
+        width: 6px; height: 6px;
+        border-radius: 50%;
+        background: #34D399;
+        animation: pulse-dot 2s ease-in-out infinite;
+      }
+      @keyframes pulse-dot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(0.7); }
+      }
+
+      /* Project Links */
+      .project-link {
+        color: rgba(255,255,255,0.55);
+        text-decoration: none;
+        font-size: 0.84rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-right: 16px;
+        transition: all 0.3s ease;
+      }
+      .project-link:hover {
+        color: var(--accent);
+        gap: 10px;
+      }
+
+      /* ===== Footer ===== */
+      .projects-footer {
+        padding: 48px 0;
+        text-center;
+        border-top: 1px solid rgba(255,255,255,0.06);
+      }
+      .projects-footer p { margin-bottom: 6px; }
+
+      /* ===== Scroll Progress Bar ===== */
+      .scroll-progress {
+        position: fixed;
+        top: 0; left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-light));
+        z-index: 99999;
+        transition: width 0.1s linear;
+      }
+
+      /* ===== Responsive ===== */
+      @media (max-width: 768px) {
+        .stats-bar { gap: 28px; flex-wrap: wrap; }
+        .stat-item .stat-number { font-size: 1.5rem; }
+        .projects-grid { padding: 50px 0 80px; }
+        .project-card { padding: 28px; }
+      }
     </style>
   </head>
   <body>
-    <header class="position-fixed top-0 start-0 end-0 py-4" style="z-index: 100; background: rgba(10,10,10,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06);">
-      <div class="container tw-container-1800-px d-flex justify-content-between align-items-center">
-        <a href="index.html" style="font-size: 1.5rem; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Space Grotesk', sans-serif;">Abdullah<span style="color: var(--accent);">.</span></a>
-        <a href="index.html#contact" class="tw-hover-btn bg-main-two-600 text-white fw-bold tw-py-3 tw-px-8 d-inline-block text-uppercase tw-rounded-md text-decoration-none" style="font-size: 0.85rem;">Contact</a>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Header -->
+    <header class="projects-header" id="projects-header">
+      <div class="container d-flex justify-content-between align-items-center" style="max-width: 1800px;">
+        <a href="index.html" class="logo">Abdullah<span>.</span></a>
+        <a href="index.html#contact" class="contact-btn">Contact</a>
       </div>
     </header>
 
-    <main>
-      <section class="page-hero">
-        <div class="container tw-container-1800-px">
-          <a href="index.html" class="back-link mb-4"><i class="ph ph-arrow-left"></i> Back to Home</a>
-          <p class="text-uppercase fw-semibold mb-3" style="color: var(--accent); letter-spacing: 0.15em; font-size: 0.8rem;">Ranked Portfolio</p>
-          <h1>All <span class="gradient-text">Projects</span></h1>
-          <p class="mt-4 mb-0" style="max-width: 640px; color: rgba(255,255,255,0.55); font-size: 1.15rem; line-height: 1.7;">
-            Every repository from my GitHub profile, ranked by technical complexity, real-world impact, and overall polish. 10 projects — 5 live deployments.
-          </p>
-        </div>
-      </section>
+    <!-- Smooth Scroll Wrapper -->
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
 
-      <section>
-        <div class="container tw-container-1800-px">
-          <div class="projects-grid">
-
-            <article class="project-card" data-aos="fade-up">
-              <span class="rank-badge">#1</span>
-              <h3><a href="https://multi-building-pathfinder.vercel.app" target="_blank">Multi-Building Pathfinder</a></h3>
-              <div class="meta-row">
-                <span><i class="ph ph-calendar"></i> 2025</span>
-                <span><i class="ph ph-code"></i> TypeScript</span>
-                <span><i class="ph ph-tag"></i> Navigation / Algorithms</span>
+        <main>
+          <!-- Hero Section -->
+          <section class="page-hero">
+            <div class="container" style="max-width: 1800px;">
+              <a href="index.html" class="back-link mb-4 d-inline-flex" id="hero-back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back to Home
+              </a>
+              <p class="hero-subtitle mb-3" id="hero-subtitle">Ranked Portfolio</p>
+              <h1 id="hero-title">All <span class="gradient-text">Projects</span></h1>
+              <p class="hero-description mt-4 mb-0" id="hero-desc">
+                Every repository from my GitHub profile, ranked by technical complexity, real-world impact, and overall polish. 10 projects — 5 live deployments.
+              </p>
+              <div class="stats-bar" id="hero-stats">
+                <div class="stat-item">
+                  <div class="stat-number">10</div>
+                  <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">5</div>
+                  <div class="stat-label">Live Deploys</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">6+</div>
+                  <div class="stat-label">Technologies</div>
+                </div>
               </div>
-              <p>Multi-building hospital indoor navigation with Leaflet + SVG maps, A* pathfinding on weighted graphs, Flask REST API, JWT auth, and Redis background jobs.</p>
-              <div class="mb-3"><span class="live-badge">Live</span><span class="tech-badge">React</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Flask</span><span class="tech-badge">A*</span><span class="tech-badge">Leaflet.js</span></div>
-              <a href="https://multi-building-pathfinder.vercel.app" target="_blank" class="project-link"><i class="ph ph-globe"></i> Live</a>
-              <a href="https://github.com/absid10/multi-building-pathfinder" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
-            </article>
+            </div>
+          </section>
 
-            <article class="project-card" data-aos="fade-up">
-              <span class="rank-badge">#2</span>
-              <h3><a href="https://github.com/absid10/FaceID-Attendance-App" target="_blank">FaceID Attendance App</a></h3>
-              <div class="meta-row">
-                <span><i class="ph ph-calendar"></i> 2025</span>
-                <span><i class="ph ph-code"></i> Python</span>
-                <span><i class="ph ph-tag"></i> AI / Computer Vision</span>
+          <!-- Projects Grid -->
+          <section>
+            <div class="container" style="max-width: 1800px;">
+              <div class="projects-grid" id="projects-grid">
+
+                <article class="project-card">
+                  <span class="rank-badge">#1</span>
+                  <h3><a href="https://multi-building-pathfinder.vercel.app" target="_blank">Multi-Building Pathfinder</a></h3>
+                  <div class="meta-row">
+                    <span>📅 2025</span>
+                    <span>💻 TypeScript</span>
+                    <span>🏷️ Navigation / Algorithms</span>
+                  </div>
+                  <p>Multi-building hospital indoor navigation with Leaflet + SVG maps, A* pathfinding on weighted graphs, Flask REST API, JWT auth, and Redis background jobs.</p>
+                  <div class="mb-3"><span class="live-badge">Live</span><span class="tech-badge">React</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Flask</span><span class="tech-badge">A*</span><span class="tech-badge">Leaflet.js</span></div>
+                  <a href="https://multi-building-pathfinder.vercel.app" target="_blank" class="project-link">🌐 Live</a>
+                  <a href="https://github.com/absid10/multi-building-pathfinder" target="_blank" class="project-link">⚙️ GitHub</a>
+                </article>
+
+                <article class="project-card">
+                  <span class="rank-badge">#2</span>
+                  <h3><a href="https://github.com/absid10/FaceID-Attendance-App" target="_blank">FaceID Attendance App</a></h3>
+                  <div class="meta-row">
+                    <span>📅 2025</span>
+                    <span>💻 Python</span>
+                    <span>🏷️ AI / Computer Vision</span>
+                  </div>
+                  <p>Desktop attendance automation with OpenCV Haar Cascade + LBPH recognition, SQLite storage, CSV export, Windows EXE packaging, and GitHub Actions CI/CD.</p>
+                  <div class="mb-3"><span class="tech-badge">Python</span><span class="tech-badge">OpenCV</span><span class="tech-badge">SQLite</span><span class="tech-badge">GitHub Actions</span></div>
+                  <a href="https://github.com/absid10/FaceID-Attendance-App/releases/tag/v1.0.1" target="_blank" class="project-link">⬇️ Download EXE</a>
+                  <a href="https://github.com/absid10/FaceID-Attendance-App" target="_blank" class="project-link">⚙️ GitHub</a>
+                </article>
+
+                <article class="project-card">
+                  <span class="rank-badge">#3</span>
+                  <h3><a href="https://buildflow-erp.vercel.app" target="_blank">BuildFlow ERP</a></h3>
+                  <div class="meta-row">
+                    <span>📅 2026 — Present</span>
+                    <span>💻 TypeScript</span>
+                    <span>🏷️ Enterprise ERP</span>
+                  </div>
+                  <p>Construction project management ERP with revenue analytics, office expenses, project progress tracking & contractor management.</p>
+                  <div class="mb-3"><span class="live-badge" style="background: rgba(230,81,0,0.15); color: #FF6D00; border-color: rgba(255,109,0,0.3);">In Active Development</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span><span class="tech-badge">ERP</span></div>
+                  <a href="https://buildflow-erp.vercel.app" target="_blank" class="project-link">🌐 Live Preview</a>
+                  <a href="https://github.com/absid10/BuildFlow-ERP" target="_blank" class="project-link">⚙️ GitHub</a>
+                </article>
+
+                <article class="project-card">
+                  <span class="rank-badge">#4</span>
+                  <h3><a href="https://benevo-bice.vercel.app" target="_blank">Benevo</a></h3>
+                  <div class="meta-row">
+                    <span>📅 2025</span>
+                    <span>💻 TypeScript</span>
+                    <span>🏷️ Charity / Full Stack</span>
+                  </div>
+                  <p>Competitive golf scoring combined with charitable giving — monthly score entry, draws, and automatic charity support.</p>
+                  <div class="mb-3"><span class="live-badge">Live</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span></div>
+                  <a href="https://benevo-bice.vercel.app" target="_blank" class="project-link">🌐 Live</a>
+                  <a href="https://github.com/absid10/benevo" target="_blank" class="project-link">⚙️ GitHub</a>
+                </article>
+
+                <article class="project-card">
+                  <span class="rank-badge">#5</span>
+                  <h3><a href="https://github.com/absid10/AI-Powered-Cloud-ERP-Suite" target="_blank">AI-Powered Cloud ERP Suite</a></h3>
+                  <div class="meta-row">
+                    <span>📅 2026</span>
+                    <span>💻 Python</span>
+                    <span>🏷️ Enterprise / AI</span>
+                  </div>
+                  <p>Cloud ERP system with AI-powered workflows, backend architecture, and data modeling.</p>
+                  <div class="mb-3"><span class="tech-badge">Python</span><span class="tech-badge">AI</span><span class="tech-badge">Cloud ERP</span><span class="tech-badge">Enterprise</span></div>
+                  <a href="https://github.com/absid10/AI-Powered-Cloud-ERP-Suite" target="_blank" class="project-link">⚙️ GitHub</a>
+                </article>
+
+                <article class="project-card">
+                  <span class="rank-badge">#6</span>
+                  <h3><a href="https://github.com/absid10/secure-notes" target="_blank">Secure Notes</a></h3>
+                  <div class="meta-row">
+                    <span>📅 2025</span>
+                    <span>💻 Python</span>
+                    <span>🏷️ Backend / Auth</span>
+                  </div>
+                  <p>FastAPI + React notes API with JWT auth, bcrypt password hashing, RBAC role-based access control, and pytest test coverage.</p>
+                  <div class="mb-3"><span class="tech-badge">FastAPI</span><span class="tech-badge">React</span><span class="tech-badge">JWT</span><span class="tech-badge">bcrypt</span><span class="tech-badge">RBAC</span><span class="tech-badge">pytest</span></div>
+                  <a href="https://github.com/absid10/secure-notes" target="_blank" class="project-link">⚙️ GitHub</a>
+                </article>
+
+                <article class="project-card">
+                  <span class="rank-badge">#7</span>
+                  <h3><a href="https://vital-flow-rust.vercel.app" target="_blank">VitalFlow</a></h3>
+                  <div class="meta-row">
+                    <span>📅 2025</span>
+                    <span>💻 Web App</span>
+                    <span>🏷️ Health Tech</span>
+                  </div>
+                  <p>Health vitals monitoring and flow tracking system with live deployment.</p>
+                  <div class="mb-3"><span class="live-badge">Live</span><span class="tech-badge">Health Tech</span><span class="tech-badge">Web App</span></div>
+                  <a href="https://vital-flow-rust.vercel.app" target="_blank" class="project-link">🌐 Live</a>
+                  <a href="https://github.com/absid10/VitalFlow" target="_blank" class="project-link">⚙️ GitHub</a>
+                </article>
+
+                <article class="project-card">
+                  <span class="rank-badge">#8</span>
+                  <h3><a href="https://github.com/absid10/RateMatrix" target="_blank">RateMatrix</a></h3>
+                  <div class="meta-row">
+                    <span>📅 2025</span>
+                    <span>💻 TypeScript</span>
+                    <span>🏷️ Full Stack</span>
+                  </div>
+                  <p>Rating and review matrix system built with TypeScript.</p>
+                  <div class="mb-3"><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span></div>
+                  <a href="https://github.com/absid10/RateMatrix" target="_blank" class="project-link">⚙️ GitHub</a>
+                </article>
+
+                <article class="project-card">
+                  <span class="rank-badge">#9</span>
+                  <h3><a href="https://github.com/absid10/task-manager" target="_blank">Task Manager</a></h3>
+                  <div class="meta-row">
+                    <span>📅 2024</span>
+                    <span>💻 JavaScript</span>
+                    <span>🏷️ CRUD / Productivity</span>
+                  </div>
+                  <p>Full-featured task management application with JavaScript.</p>
+                  <div class="mb-3"><span class="tech-badge">JavaScript</span><span class="tech-badge">CRUD</span></div>
+                  <a href="https://github.com/absid10/task-manager" target="_blank" class="project-link">⚙️ GitHub</a>
+                </article>
+
+                <article class="project-card">
+                  <span class="rank-badge">#10</span>
+                  <h3><a href="https://github.com/absid10/absid10" target="_blank">GitHub Profile</a></h3>
+                  <div class="meta-row">
+                    <span>📅 Ongoing</span>
+                    <span>💻 Markdown</span>
+                    <span>🏷️ Profile</span>
+                  </div>
+                  <p>GitHub profile README showcasing skills, stats, and developer identity.</p>
+                  <div class="mb-3"><span class="tech-badge">GitHub</span><span class="tech-badge">Markdown</span></div>
+                  <a href="https://github.com/absid10/absid10" target="_blank" class="project-link">⚙️ GitHub</a>
+                </article>
+
               </div>
-              <p>Desktop attendance automation with OpenCV Haar Cascade + LBPH recognition, SQLite storage, CSV export, Windows EXE packaging, and GitHub Actions CI/CD.</p>
-              <div class="mb-3"><span class="tech-badge">Python</span><span class="tech-badge">OpenCV</span><span class="tech-badge">SQLite</span><span class="tech-badge">GitHub Actions</span></div>
-              <a href="https://github.com/absid10/FaceID-Attendance-App/releases/tag/v1.0.1" target="_blank" class="project-link"><i class="ph ph-download-simple"></i> Download EXE</a>
-              <a href="https://github.com/absid10/FaceID-Attendance-App" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
-            </article>
+            </div>
+          </section>
+        </main>
 
-            <article class="project-card" data-aos="fade-up">
-              <span class="rank-badge">#3</span>
-              <h3><a href="https://buildflow-erp.vercel.app" target="_blank">BuildFlow ERP</a></h3>
-              <div class="meta-row">
-                <span><i class="ph ph-calendar"></i> 2026 — Present</span>
-                <span><i class="ph ph-code"></i> TypeScript</span>
-                <span><i class="ph ph-tag"></i> Enterprise ERP</span>
-              </div>
-              <p>Construction project management ERP with revenue analytics, office expenses, project progress tracking & contractor management.</p>
-              <div class="mb-3"><span class="live-badge" style="background: #e65100; color: #fff;">In Active Development</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span><span class="tech-badge">ERP</span></div>
-              <a href="https://buildflow-erp.vercel.app" target="_blank" class="project-link"><i class="ph ph-globe"></i> Live Preview</a>
-              <a href="https://github.com/absid10/BuildFlow-ERP" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
-            </article>
+        <footer class="projects-footer text-center">
+          <p class="text-white mb-1" style="opacity: 0.6; font-size: 0.85rem;">© 2026 Abdullah Ahmed Siddiqui. All rights reserved.</p>
+          <p class="mb-0" style="font-size: 0.78rem; opacity: 0.45;">Built by <a href="https://www.linkedin.com/company/ayebeestech" target="_blank" style="color: var(--accent); text-decoration: none; font-weight: 600;">AyeBeesTech ↗</a></p>
+        </footer>
 
-            <article class="project-card" data-aos="fade-up">
-              <span class="rank-badge">#4</span>
-              <h3><a href="https://benevo-bice.vercel.app" target="_blank">Benevo</a></h3>
-              <div class="meta-row">
-                <span><i class="ph ph-calendar"></i> 2025</span>
-                <span><i class="ph ph-code"></i> TypeScript</span>
-                <span><i class="ph ph-tag"></i> Charity / Full Stack</span>
-              </div>
-              <p>Competitive golf scoring combined with charitable giving — monthly score entry, draws, and automatic charity support.</p>
-              <div class="mb-3"><span class="live-badge">Live</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span></div>
-              <a href="https://benevo-bice.vercel.app" target="_blank" class="project-link"><i class="ph ph-globe"></i> Live</a>
-              <a href="https://github.com/absid10/benevo" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
-            </article>
+      </div>
+    </div>
 
-            <article class="project-card" data-aos="fade-up">
-              <span class="rank-badge">#5</span>
-              <h3><a href="https://github.com/absid10/AI-Powered-Cloud-ERP-Suite" target="_blank">AI-Powered Cloud ERP Suite</a></h3>
-              <div class="meta-row">
-                <span><i class="ph ph-calendar"></i> 2026</span>
-                <span><i class="ph ph-code"></i> Python</span>
-                <span><i class="ph ph-tag"></i> Enterprise / AI</span>
-              </div>
-              <p>Cloud ERP system with AI-powered workflows, backend architecture, and data modeling.</p>
-              <div class="mb-3"><span class="tech-badge">Python</span><span class="tech-badge">AI</span><span class="tech-badge">Cloud ERP</span><span class="tech-badge">Enterprise</span></div>
-              <a href="https://github.com/absid10/AI-Powered-Cloud-ERP-Suite" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
-            </article>
-
-            <article class="project-card" data-aos="fade-up">
-              <span class="rank-badge">#6</span>
-              <h3><a href="https://github.com/absid10/secure-notes" target="_blank">Secure Notes</a></h3>
-              <div class="meta-row">
-                <span><i class="ph ph-calendar"></i> 2025</span>
-                <span><i class="ph ph-code"></i> Python</span>
-                <span><i class="ph ph-tag"></i> Backend / Auth</span>
-              </div>
-              <p>FastAPI + React notes API with JWT auth, bcrypt password hashing, RBAC role-based access control, and pytest test coverage.</p>
-              <div class="mb-3"><span class="tech-badge">FastAPI</span><span class="tech-badge">React</span><span class="tech-badge">JWT</span><span class="tech-badge">bcrypt</span><span class="tech-badge">RBAC</span><span class="tech-badge">pytest</span></div>
-              <a href="https://github.com/absid10/secure-notes" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
-            </article>
-
-            <article class="project-card" data-aos="fade-up">
-              <span class="rank-badge">#7</span>
-              <h3><a href="https://vital-flow-rust.vercel.app" target="_blank">VitalFlow</a></h3>
-              <div class="meta-row">
-                <span><i class="ph ph-calendar"></i> 2025</span>
-                <span><i class="ph ph-code"></i> Web App</span>
-                <span><i class="ph ph-tag"></i> Health Tech</span>
-              </div>
-              <p>Health vitals monitoring and flow tracking system with live deployment.</p>
-              <div class="mb-3"><span class="live-badge">Live</span><span class="tech-badge">Health Tech</span><span class="tech-badge">Web App</span></div>
-              <a href="https://vital-flow-rust.vercel.app" target="_blank" class="project-link"><i class="ph ph-globe"></i> Live</a>
-              <a href="https://github.com/absid10/VitalFlow" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
-            </article>
-
-            <article class="project-card" data-aos="fade-up">
-              <span class="rank-badge">#8</span>
-              <h3><a href="https://github.com/absid10/RateMatrix" target="_blank">RateMatrix</a></h3>
-              <div class="meta-row">
-                <span><i class="ph ph-calendar"></i> 2025</span>
-                <span><i class="ph ph-code"></i> TypeScript</span>
-                <span><i class="ph ph-tag"></i> Full Stack</span>
-              </div>
-              <p>Rating and review matrix system built with TypeScript.</p>
-              <div class="mb-3"><span class="tech-badge">TypeScript</span><span class="tech-badge">Full Stack</span></div>
-              <a href="https://github.com/absid10/RateMatrix" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
-            </article>
-
-            <article class="project-card" data-aos="fade-up">
-              <span class="rank-badge">#9</span>
-              <h3><a href="https://github.com/absid10/task-manager" target="_blank">Task Manager</a></h3>
-              <div class="meta-row">
-                <span><i class="ph ph-calendar"></i> 2024</span>
-                <span><i class="ph ph-code"></i> JavaScript</span>
-                <span><i class="ph ph-tag"></i> CRUD / Productivity</span>
-              </div>
-              <p>Full-featured task management application with JavaScript.</p>
-              <div class="mb-3"><span class="tech-badge">JavaScript</span><span class="tech-badge">CRUD</span></div>
-              <a href="https://github.com/absid10/task-manager" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
-            </article>
-
-            <article class="project-card" data-aos="fade-up">
-              <span class="rank-badge">#10</span>
-              <h3><a href="https://github.com/absid10/absid10" target="_blank">GitHub Profile</a></h3>
-              <div class="meta-row">
-                <span><i class="ph ph-calendar"></i> Ongoing</span>
-                <span><i class="ph ph-code"></i> Markdown</span>
-                <span><i class="ph ph-tag"></i> Profile</span>
-              </div>
-              <p>GitHub profile README showcasing skills, stats, and developer identity.</p>
-              <div class="mb-3"><span class="tech-badge">GitHub</span><span class="tech-badge">Markdown</span></div>
-              <a href="https://github.com/absid10/absid10" target="_blank" class="project-link"><i class="ph ph-github-logo"></i> GitHub</a>
-            </article>
-
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="py-5 text-center" style="border-top: 1px solid rgba(255,255,255,0.08);">
-      <p class="mb-1 text-white" style="opacity: 0.7; font-size: 0.85rem;">© 2026 Abdullah Ahmed Siddiqui. All rights reserved.</p>
-      <p class="mb-0" style="font-size: 0.78rem; opacity: 0.5;">Built by <a href="https://www.linkedin.com/company/ayebeestech" target="_blank" style="color: #E8553A; text-decoration: none; font-weight: 600;">AyeBeesTech ↗</a></p>
-    </footer>
-
+    <!-- Scripts -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/phosphor-icon.js"></script>
-    <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="assets/js/gsap/gsap.js"></script>
+    <script src="assets/js/gsap/gsap-scroll-to-plugin.js"></script>
+    <script src="assets/js/gsap/gsap-scroll-smoother.js"></script>
+    <script src="assets/js/gsap/gsap-scroll-trigger.js"></script>
+
+    <script>
+    (function () {
+      "use strict";
+
+      // ===== Register GSAP Plugins =====
+      gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother);
+
+      // ===== ScrollSmoother =====
+      const smoother = ScrollSmoother.create({
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+        smooth: 1.2,
+        effects: true,
+        smoothTouch: 0.1,
+      });
+
+      // ===== Hero Entrance Timeline =====
+      const heroTl = gsap.timeline({ delay: 0.2 });
+      heroTl
+        .from("#hero-back", { y: 20, opacity: 0, duration: 0.5, ease: "power2.out" })
+        .from("#hero-subtitle", { y: 20, opacity: 0, duration: 0.5, ease: "power2.out" }, "-=0.3")
+        .from("#hero-title", { y: 40, opacity: 0, duration: 0.7, ease: "power3.out" }, "-=0.3")
+        .from("#hero-desc", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" }, "-=0.4")
+        .from("#hero-stats .stat-item", {
+          y: 30, opacity: 0, duration: 0.5, stagger: 0.12, ease: "power2.out"
+        }, "-=0.3");
+
+      // ===== Staggered Card Reveal on Scroll =====
+      const cards = document.querySelectorAll(".project-card");
+      cards.forEach(function (card, i) {
+        gsap.to(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 88%",
+            toggleActions: "play none none none",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          delay: (i % 3) * 0.1,
+          ease: "power3.out",
+          onComplete: function () {
+            card.classList.add("revealed");
+          }
+        });
+      });
+
+      // ===== Card Mouse Glow Effect =====
+      cards.forEach(function (card) {
+        card.addEventListener("mousemove", function (e) {
+          var rect = card.getBoundingClientRect();
+          var x = ((e.clientX - rect.left) / rect.width) * 100;
+          var y = ((e.clientY - rect.top) / rect.height) * 100;
+          card.style.setProperty("--mouse-x", x + "%");
+          card.style.setProperty("--mouse-y", y + "%");
+        });
+      });
+
+      // ===== Smart Sticky Header =====
+      var lastScrollTop = 0;
+      var header = document.getElementById("projects-header");
+      window.addEventListener("scroll", function () {
+        var st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > 120 && st > lastScrollTop) {
+          header.classList.add("header-hidden");
+        } else {
+          header.classList.remove("header-hidden");
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+      });
+
+      // ===== Scroll Progress Bar =====
+      var progressBar = document.getElementById("scroll-progress");
+      window.addEventListener("scroll", function () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var scrollPercent = (scrollTop / docHeight) * 100;
+        progressBar.style.width = scrollPercent + "%";
+      });
+
+    })();
+    </script>
   </body>
 </html>
