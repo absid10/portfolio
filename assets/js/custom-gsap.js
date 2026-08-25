@@ -56,7 +56,6 @@
       normalizeScroll: false,
       ignoreMobileResize: true,
     });
-    window.smoother = smoother;
     window.addEventListener("load", function () {
       ScrollTrigger.refresh();
     });

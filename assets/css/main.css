@@ -3733,12 +3733,13 @@ input:focus-visible {
   transition: 0.2s linear;
   visibility: hidden;
   opacity: 0;
-  pointer-events: none !important;
+  cursor:
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVBAMAAABbObilAAAAMFBMVEVMaXH////////////////////////////////////////////////////////////6w4mEAAAAD3RSTlMAlAX+BKLcA5+b6hJ7foD4ZP1OAAAAkUlEQVR4XkWPoQ3CUBQAL4SktoKAbCUjgAKLJZ2ABYosngTJCHSD6joUI6BZgqSoB/+Shqde7sS9x3OGk81fdO+texMtRVTia+TsQtHEUJLdohJfgNNPJHyEJPZTsWLoxShqsWITazEwqePAn69Sw2TUxk1+euPis3EwaXy8RMHSZBIlRcKKnC5hRctjMf57/wJbBlAIs9k1BAAAAABJRU5ErkJggg==),
+    progress;
 }
 .overlay.show-overlay {
   visibility: visible;
   opacity: 1;
-  pointer-events: all !important;
 }
 
 .side-overlay {
@@ -3753,12 +3754,13 @@ input:focus-visible {
   transition: 0.2s linear;
   visibility: hidden;
   opacity: 0;
-  pointer-events: none !important;
+  cursor:
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVBAMAAABbObilAAAAMFBMVEVMaXH////////////////////////////////////////////////////////////6w4mEAAAAD3RSTlMAlAX+BKLcA5+b6hJ7foD4ZP1OAAAAkUlEQVR4XkWPoQ3CUBQAL4SktoKAbCUjgAKLJZ2ABYosngTJCHSD6joUI6BZgqSoB/+Shqde7sS9x3OGk81fdO+texMtRVTia+TsQtHEUJLdohJfgNNPJHyEJPZTsWLoxShqsWITazEwqePAn69Sw2TUxk1+euPis3EwaXy8RMHSZBIlRcKKnC5hRctjMf57/wJbBlAIs9k1BAAAAABJRU5ErkJggg==),
+    progress;
 }
 .side-overlay.show {
   visibility: visible;
   opacity: 1;
-  pointer-events: all !important;
 }
 
 /* Overlay End */
@@ -5735,8 +5737,8 @@ input:focus-visible {
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  background: #0b0b0b !important;
-  z-index: 999999 !important;
+  background: transparent;
+  z-index: 999;
 }
 
 .preloader svg {
