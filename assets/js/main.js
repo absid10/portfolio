@@ -60,21 +60,18 @@
           y: "-130%",
           duration: 0.7,
           ease: "power4.inOut",
-        })
-        // Remove from DOM flow completely
-        .set(".preloader", {
-          display: "none",
-          zIndex: -1,
-          pointerEvents: "none",
+          onComplete: function () {
+            $(".preloader").addClass("preloader-hidden").remove();
+            $("body").addClass("loaded");
+          }
         });
     }
 
-    // Safety fallback to guarantee preloader dismisses
+    // Safety fallback to guarantee preloader dismisses immediately
     setTimeout(() => {
-      $(".preloader").fadeOut(300, function () {
-        $(this).css({ display: "none", zIndex: -1, pointerEvents: "none" });
-      });
-    }, 3000);
+      $(".preloader").addClass("preloader-hidden").remove();
+      $("body").addClass("loaded");
+    }, 2200);
   });
 
   ////////////////////////////////////////////////////

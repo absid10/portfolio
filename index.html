@@ -66,13 +66,23 @@
 
       /* ===== Preloader (Highest Priority Overlay During Loading) ===== */
       .preloader {
-        position: fixed !important;
-        inset: 0 !important;
-        width: 100vw !important;
-        height: 100vh !important;
-        z-index: 999999 !important;
-        background: #0b0b0b !important;
-        pointer-events: all;
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999999;
+        background: #0b0b0b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .preloader.preloader-hidden,
+      body.loaded .preloader {
+        display: none !important;
+        pointer-events: none !important;
+        visibility: hidden !important;
+        z-index: -1 !important;
+        opacity: 0 !important;
       }
 
       /* ===== Header Fixed & Smart Sticky Styling ===== */
@@ -92,6 +102,7 @@
         box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04) !important;
         transition: top 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease !important;
         will-change: transform, top;
+        pointer-events: auto !important;
       }
       .header.fixed-header {
         box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08) !important;
@@ -1062,11 +1073,13 @@
         padding: 80px 30px 30px 30px;
         opacity: 0;
         visibility: hidden;
+        pointer-events: none !important;
         transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .google-account-modal-overlay.active {
         opacity: 1;
         visibility: visible;
+        pointer-events: all !important;
       }
       .google-account-card {
         background: rgba(18, 18, 18, 0.95);
@@ -1151,11 +1164,13 @@
         padding: 20px;
         opacity: 0;
         visibility: hidden;
+        pointer-events: none !important;
         transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .resume-modal-overlay.active {
         opacity: 1;
         visibility: visible;
+        pointer-events: all !important;
       }
       .resume-modal-card {
         background: rgba(18, 18, 18, 0.98);
