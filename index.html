@@ -613,6 +613,7 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
         opacity: 0;
         visibility: hidden;
+        pointer-events: none !important;
         transform: translateY(20px) scale(0.9);
         transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
         overflow: hidden;
@@ -620,6 +621,7 @@
       .social-sidebar.social-sidebar-visible {
         opacity: 1;
         visibility: visible;
+        pointer-events: auto !important;
         transform: translateY(0) scale(1);
       }
       .social-sidebar-trigger {
@@ -1328,6 +1330,20 @@
       }
 
       /* ==================== Minimalist Agency Offcanvas Drawer ==================== */
+      .tw-offcanvas-2-area:not(.opened),
+      .tw-offcanvas-2-area:not(.opened) * {
+        pointer-events: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+      }
+      .tw-offcanvas-2-area.opened {
+        pointer-events: auto !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      .tw-offcanvas-2-area.opened * {
+        pointer-events: auto !important;
+      }
       .tw-offcanvas-2-area {
         overflow: hidden !important;
       }

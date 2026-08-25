@@ -429,58 +429,66 @@
 
   // 16. Google Account Profile Modal Handler
   $(document).ready(function () {
-    var $modal = $("#google-account-modal");
-    if (!$modal.length) return;
-
-    $(document).on("click", ".header-profile-avatar, .hero-profile-avatar", function (e) {
+    $(document).on("click", ".header-profile-avatar, .hero-profile-avatar, .google-profile-avatar", function (e) {
       e.preventDefault();
       e.stopPropagation();
-      $modal.addClass("active");
+      $("#google-account-modal").addClass("active");
+      document.body.style.overflow = "hidden";
     });
 
-    $("#close-account-modal").on("click", function () {
-      $modal.removeClass("active");
+    $(document).on("click", "#close-account-modal", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $("#google-account-modal").removeClass("active");
+      document.body.style.overflow = "";
     });
 
-    $modal.on("click", function (e) {
+    $(document).on("click", "#google-account-modal", function (e) {
       if ($(e.target).is("#google-account-modal")) {
-        $modal.removeClass("active");
+        $("#google-account-modal").removeClass("active");
+        document.body.style.overflow = "";
       }
     });
 
-    $("#modal-view-projects").on("click", function () {
-      $modal.removeClass("active");
+    $(document).on("click", "#modal-view-projects", function (e) {
+      e.preventDefault();
+      $("#google-account-modal").removeClass("active");
+      document.body.style.overflow = "";
+      scrollToSection("#projects");
     });
   });
 
   // 17. In-Page Resume PDF Viewer Modal Handler
   $(document).ready(function () {
-    var $resumeModal = $("#resume-modal");
-    if (!$resumeModal.length) return;
-
     $(document).on("click", ".open-resume-btn", function (e) {
       e.preventDefault();
+      e.stopPropagation();
       $("#google-account-modal").removeClass("active");
-      $resumeModal.addClass("active");
+      $(".tw-offcanvas-2-area").removeClass("opened");
+      $(".body-overlay").removeClass("opened");
+      $("#resume-modal").addClass("active");
       document.body.style.overflow = "hidden";
     });
 
-    $("#close-resume-modal").on("click", function () {
-      $resumeModal.removeClass("active");
+    $(document).on("click", "#close-resume-modal", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $("#resume-modal").removeClass("active");
       document.body.style.overflow = "";
     });
 
-    $resumeModal.on("click", function (e) {
+    $(document).on("click", "#resume-modal", function (e) {
       if ($(e.target).is("#resume-modal")) {
-        $resumeModal.removeClass("active");
+        $("#resume-modal").removeClass("active");
         document.body.style.overflow = "";
       }
     });
 
     $(document).on("keydown", function (e) {
       if (e.key === "Escape") {
-        $resumeModal.removeClass("active");
+        $("#resume-modal").removeClass("active");
         $("#google-account-modal").removeClass("active");
+        $(".tw-offcanvas-2-area").removeClass("opened");
         document.body.style.overflow = "";
       }
     });

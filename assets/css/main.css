@@ -7037,6 +7037,20 @@ input:focus-visible {
   position: relative;
   z-index: 99999;
 }
+.tw-offcanvas-2-area:not(.opened),
+.tw-offcanvas-2-area:not(.opened) * {
+  pointer-events: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+.tw-offcanvas-2-area.opened {
+  pointer-events: auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.tw-offcanvas-2-area.opened * {
+  pointer-events: auto !important;
+}
 .tw-offcanvas-2-area.opened .animated-text > nav > ul > li a::after {
   visibility: visible;
   opacity: 1;
@@ -7531,11 +7545,13 @@ input:focus-visible {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none !important;
   transition: all 0.3s;
 }
 .back-to-top-wrapper.back-to-top-btn-show {
   visibility: visible;
   opacity: 1;
+  pointer-events: auto !important;
   bottom: 50px;
 }
 
