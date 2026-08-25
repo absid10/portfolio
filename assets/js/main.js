@@ -138,8 +138,27 @@
   }
 
   ////////////////////////////////////////////////////
+  // Helper: Universal Section Scroll
+  function scrollToSection(targetId) {
+    if (!targetId || targetId === "#") return;
+    var $target = $(targetId);
+    if (!$target.length) return;
+
+    if (window.smoother && typeof window.smoother.scrollTo === "function") {
+      window.smoother.scrollTo($target[0], true, "top 80px");
+    } else {
+      var targetTop = $target.offset().top - 80;
+      $("html, body").stop().animate({
+        scrollTop: targetTop
+      }, 700);
+    }
+  }
+
+  ////////////////////////////////////////////////////
   // 04. offcanvas Menu JS
-  $(".tw-offcanvas-open-btn").on("click", function () {
+  $(document).on("click", ".tw-offcanvas-open-btn", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
     $(".tw-offcanvas-2-area").addClass("opened");
 
     setTimeout(() => {
@@ -149,7 +168,9 @@
 
   ////////////////////////////////////////////////////
   // 05. offcanvas two Menu JS
-  $(".tw-offcanvas-2-close-btn").on("click", function () {
+  $(document).on("click", ".tw-offcanvas-2-close-btn", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
     setTimeout(() => {
       $(".tw-text-hover-effect-word").removeClass("animated-text");
     }, 1200);
@@ -159,7 +180,7 @@
   });
 
   // Auto-close offcanvas overlay and smooth scroll on link click
-  $(".tw-offcanvas-2-area a, .tw-main-menu-mobile a").on("click", function (e) {
+  $(document).on("click", ".tw-offcanvas-2-area a, .tw-main-menu-mobile a", function (e) {
     var href = $(this).attr("href");
     
     // Close offcanvas overlay immediately
@@ -169,13 +190,8 @@
 
     // If anchor link on current page, smooth scroll to target section
     if (href && href.startsWith("#") && href.length > 1) {
-      var target = $(href);
-      if (target.length) {
-        e.preventDefault();
-        $("html, body").stop().animate({
-          scrollTop: target.offset().top - 80
-        }, 800);
-      }
+      e.preventDefault();
+      scrollToSection(href);
     }
   });
 
@@ -184,22 +200,15 @@
     var targetId = $(this).attr("href");
     if (targetId && targetId !== "#" && $(targetId).length) {
       e.preventDefault();
-      $("html, body").stop().animate({
-        scrollTop: $(targetId).offset().top - 80
-      }, 800);
+      scrollToSection(targetId);
     }
   });
 
   // Initial page load hash navigation (e.g., coming from projects.html to index.html#contact)
   if (window.location.hash) {
-    var hashTarget = $(window.location.hash);
-    if (hashTarget.length) {
-      setTimeout(function () {
-        $("html, body").stop().animate({
-          scrollTop: hashTarget.offset().top - 80
-        }, 600);
-      }, 500);
-    }
+    setTimeout(function () {
+      scrollToSection(window.location.hash);
+    }, 600);
   }
 
   ////////////////////////////////////////////////////
