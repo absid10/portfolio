@@ -634,7 +634,7 @@
       }
       .social-sidebar:hover .social-sidebar-links,
       .social-sidebar.expanded .social-sidebar-links {
-        max-width: 220px;
+        max-width: 270px;
         opacity: 1;
         margin-left: 8px;
       }
@@ -1329,6 +1329,75 @@
         background-clip: text;
       }
 
+      /* Offcanvas Menu Layout Polish */
+      .tw-offcanvas-2-area .tw-main-menu-mobile {
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+      }
+      .tw-offcanvas-2-area .tw-main-menu-mobile > nav > ul > li > a {
+        font-size: clamp(1.2rem, 2.1vw, 1.85rem) !important;
+        padding: 7px 0 7px 24px !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.01em !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+        transition: all 0.25s ease !important;
+      }
+      .tw-offcanvas-2-area .tw-main-menu-mobile > nav > ul > li:last-child > a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      }
+      .tw-offcanvas-2-area .tw-main-menu-mobile > nav > ul > li > a:hover {
+        color: var(--accent) !important;
+        padding-left: 36px !important;
+      }
+      .twoffcanvas__logo {
+        margin-bottom: 20px !important;
+      }
+      .tw-offcanvas-2-left {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+      }
+      .tw-offcanvas-2-right {
+        padding: 35px 50px !important;
+      }
+      .twoffcanvas__contact-info ul li {
+        margin-bottom: 16px !important;
+        font-size: 0.95rem !important;
+      }
+      .twoffcanvas__contact-info ul li a {
+        color: #ffffff !important;
+        transition: color 0.2s ease !important;
+      }
+      .twoffcanvas__contact-info ul li a:hover {
+        color: var(--accent) !important;
+      }
+      .tw-offcanvas-2-right .footer-social ul {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+      }
+      .tw-offcanvas-2-right .footer-social ul li a {
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 999px !important;
+        padding: 7px 16px !important;
+        color: #ffffff !important;
+        font-size: 0.8rem !important;
+        font-weight: 600 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        transition: all 0.25s ease !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        text-decoration: none !important;
+      }
+      .tw-offcanvas-2-right .footer-social ul li a:hover {
+        background: var(--accent) !important;
+        border-color: var(--accent) !important;
+        color: #ffffff !important;
+        transform: translateY(-2px) !important;
+      }
+
       @media (max-width: 575px) {
         .google-account-modal-overlay {
           justify-content: center;
@@ -1410,6 +1479,9 @@
         </a>
         <a href="https://www.linkedin.com/in/absid10/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
           <i class="ph-bold ph-linkedin-logo"></i>
+        </a>
+        <a href="https://wa.me/917420940665" target="_blank" aria-label="WhatsApp" title="WhatsApp">
+          <i class="ph-bold ph-whatsapp-logo"></i>
         </a>
         <a href="mailto:siddiquiabdullahahmed75@gmail.com" aria-label="Email" title="Email">
           <i class="ph-bold ph-envelope"></i>
@@ -2544,7 +2616,7 @@
                   <div class="mb-5 d-flex flex-wrap align-items-center gap-2" style="font-size: 0.95rem; color: var(--accent); font-weight: 600; letter-spacing: 0.02em;">
                     <a href="mailto:siddiquiabdullahahmed75@gmail.com" style="color: var(--accent); text-decoration: none;">siddiquiabdullahahmed75@gmail.com</a>
                     <span class="text-white-50">//</span>
-                    <a href="https://wa.me/917420940665" target="_blank" style="color: var(--accent); text-decoration: none;"><i class="ph ph-whatsapp-logo"></i> +91 74209 40665</a>
+                    <a href="tel:+917420940665" style="color: var(--accent); text-decoration: none;">+91 74209 40665</a>
                   </div>
 
                   <!-- Profile Badge Card (Reference Design) -->
