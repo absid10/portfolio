@@ -1333,73 +1333,142 @@
         background-clip: text;
       }
 
-      /* Offcanvas Menu Layout Polish */
-      .tw-offcanvas-2-area .tw-main-menu-mobile {
-        padding-left: 50px !important;
-        padding-right: 50px !important;
-      }
-      .tw-offcanvas-2-area .tw-main-menu-mobile > nav > ul > li > a {
-        font-size: clamp(1.2rem, 2.1vw, 1.85rem) !important;
-        padding: 7px 0 7px 24px !important;
-        font-weight: 700 !important;
-        letter-spacing: -0.01em !important;
-        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-        transition: all 0.25s ease !important;
-      }
-      .tw-offcanvas-2-area .tw-main-menu-mobile > nav > ul > li:last-child > a {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-      }
-      .tw-offcanvas-2-area .tw-main-menu-mobile > nav > ul > li > a:hover {
-        color: var(--accent) !important;
-        padding-left: 36px !important;
-      }
-      .twoffcanvas__logo {
-        margin-bottom: 20px !important;
+      /* ==================== Offcanvas Drawer Polish & Modern Layout ==================== */
+      .tw-offcanvas-2-area .tw-offcanvas-2-wrapper {
+        background: #080808 !important;
       }
       .tw-offcanvas-2-left {
-        padding-top: 35px !important;
-        padding-bottom: 35px !important;
+        background: #060606 !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+        padding: 30px 40px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
       .tw-offcanvas-2-right {
-        padding: 35px 50px !important;
+        background: #090909 !important;
+        padding: 30px 40px !important;
       }
-      .twoffcanvas__contact-info ul li {
-        margin-bottom: 16px !important;
-        font-size: 0.95rem !important;
+      .tw-offcanvas-brand-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        text-decoration: none;
       }
-      .twoffcanvas__contact-info ul li a {
-        color: #ffffff !important;
-        transition: color 0.2s ease !important;
+      .tw-offcanvas-brand-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: rgba(232, 85, 58, 0.12);
+        border: 1px solid rgba(232, 85, 58, 0.35);
+        color: var(--accent);
+        font-size: 1.3rem;
+        font-weight: 900;
+        font-family: 'Space Grotesk', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 14px rgba(232, 85, 58, 0.25);
+        transition: transform 0.3s ease;
       }
-      .twoffcanvas__contact-info ul li a:hover {
-        color: var(--accent) !important;
+      .tw-offcanvas-brand-badge:hover .tw-offcanvas-brand-icon {
+        transform: scale(1.08) rotate(-4deg);
       }
-      .tw-offcanvas-2-right .footer-social ul {
+      .tw-offcanvas-2-area .tw-main-menu-mobile {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-top: 15px !important;
+      }
+      .tw-offcanvas-2-area .tw-main-menu-mobile > nav > ul > li > a {
+        font-size: clamp(1.05rem, 1.8vw, 1.5rem) !important;
+        padding: 8px 12px !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.01em !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
         display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 8px !important;
-      }
-      .tw-offcanvas-2-right .footer-social ul li a {
-        border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 999px !important;
-        padding: 7px 16px !important;
-        color: #ffffff !important;
-        font-size: 0.8rem !important;
-        font-weight: 600 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.05em !important;
-        display: inline-flex !important;
         align-items: center !important;
-        gap: 6px !important;
-        transition: all 0.25s ease !important;
-        background: rgba(255, 255, 255, 0.04) !important;
-        text-decoration: none !important;
+        justify-content: space-between !important;
+        border-radius: 8px !important;
+        transition: all 0.22s ease !important;
+        color: rgba(255, 255, 255, 0.85) !important;
       }
-      .tw-offcanvas-2-right .footer-social ul li a:hover {
-        background: var(--accent) !important;
-        border-color: var(--accent) !important;
+      .tw-offcanvas-2-area .tw-main-menu-mobile > nav > ul > li:last-child > a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+      }
+      .tw-offcanvas-2-area .tw-main-menu-mobile > nav > ul > li > a:hover {
         color: #ffffff !important;
-        transform: translateY(-2px) !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        padding-left: 18px !important;
+      }
+      .tw-offcanvas-2-area .tw-main-menu-mobile > nav > ul > li > a:hover .menu-num {
+        color: var(--accent) !important;
+        opacity: 1 !important;
+        transform: translateX(-4px);
+      }
+      .menu-num {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.35);
+        font-family: 'Space Grotesk', monospace;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        transition: all 0.22s ease;
+      }
+      .menu-name {
+        font-family: 'Space Grotesk', sans-serif;
+        text-transform: uppercase;
+      }
+
+      /* Right Drawer Styling */
+      .offcanvas-profile-badge {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      }
+      .offcanvas-contact-card {
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        transition: all 0.25s ease;
+      }
+      .offcanvas-contact-card:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(232, 85, 58, 0.35);
+        transform: translateY(-2px);
+      }
+      .offcanvas-contact-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: rgba(232, 85, 58, 0.12);
+        border: 1px solid rgba(232, 85, 58, 0.3);
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+      .offcanvas-social-pill {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #ffffff !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.15rem;
+        transition: all 0.25s ease;
+        text-decoration: none;
+      }
+      .offcanvas-social-pill:hover {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #ffffff !important;
+        transform: translateY(-3px) scale(1.08);
+        box-shadow: 0 6px 18px rgba(232, 85, 58, 0.45);
       }
 
       @media (max-width: 575px) {
@@ -1498,11 +1567,16 @@
       <div class="tw-offcanvas-2-bg is-left left-box"></div>
       <div class="tw-offcanvas-2-bg is-right right-box d-none d-md-block"></div>
       <div class="tw-offcanvas-2-wrapper">
+        <!-- Left Drawer: Brand & Dynamic Menu List -->
         <div class="tw-offcanvas-2-left left-box">
-          <div class="tw-offcanvas-2-left-wrap d-flex justify-content-between align-items-center">
-            <div class="twoffcanvas__logo">
-              <a class="logo-1" href="#hero" style="font-size: 1.8rem; font-weight: 800; color: #fff; text-decoration: none; font-family: 'Space Grotesk', sans-serif;">Abdullah<span style="color: var(--accent);">.</span></a>
-            </div>
+          <div class="tw-offcanvas-2-left-wrap d-flex justify-content-between align-items-center mb-3">
+            <a href="#hero" class="tw-offcanvas-brand-badge">
+              <span class="tw-offcanvas-brand-icon">A</span>
+              <div>
+                <span class="logo-1 d-block lh-1" style="font-size: 1.45rem; font-weight: 800; color: #fff; font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em;">Abdullah<span style="color: var(--accent);">.</span></span>
+                <span style="font-size: 0.72rem; color: rgba(255,255,255,0.45); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500;">Software Developer</span>
+              </div>
+            </a>
             <div class="tw-offcanvas-2-close d-md-none text-end">
               <button class="tw-offcanvas-2-close-btn">
                 <span class="text"><span class="text-white">close</span></span>
@@ -1519,28 +1593,34 @@
           </div>
           <div class="tw-main-menu-mobile menu-hover-active counter-row">
             <nav>
-              <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="projects.html">All Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#github">GitHub</a></li>
-                <li><a href="#contact">Contact</a></li>
+              <ul class="p-0 m-0 list-unstyled">
+                <li><a href="#hero"><span class="menu-name">Home</span><span class="menu-num">01</span></a></li>
+                <li><a href="#about"><span class="menu-name">About</span><span class="menu-num">02</span></a></li>
+                <li><a href="#skills"><span class="menu-name">Skills</span><span class="menu-num">03</span></a></li>
+                <li><a href="#projects"><span class="menu-name">Projects</span><span class="menu-num">04</span></a></li>
+                <li><a href="projects.html"><span class="menu-name">All Projects ↗</span><span class="menu-num">05</span></a></li>
+                <li><a href="#experience"><span class="menu-name">Experience</span><span class="menu-num">06</span></a></li>
+                <li><a href="#certifications"><span class="menu-name">Certifications</span><span class="menu-num">07</span></a></li>
+                <li><a href="#blog"><span class="menu-name">Blog</span><span class="menu-num">08</span></a></li>
+                <li><a href="#github"><span class="menu-name">GitHub</span><span class="menu-num">09</span></a></li>
+                <li><a href="#contact"><span class="menu-name">Contact</span><span class="menu-num">10</span></a></li>
               </ul>
             </nav>
           </div>
+          <div class="pt-3 border-top border-white border-opacity-10 d-flex justify-content-between align-items-center">
+            <span style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">&copy; 2026 Abdullah Ahmed Siddiqui</span>
+            <span style="font-size: 0.75rem; color: var(--accent);">absid10</span>
+          </div>
         </div>
+
+        <!-- Right Drawer: Rich Eye-Soothing Connect & Profile Hub -->
         <div class="tw-offcanvas-2-right right-box d-none d-md-block p-relative">
-          <div class="tw-offcanvas-2-close text-end">
+          <div class="tw-offcanvas-2-close text-end mb-4">
             <button class="tw-offcanvas-2-close-btn">
               <span class="text"><span>close</span></span>
               <span class="d-inline-block">
                 <span>
-                  <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="32" height="32" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.809 9.808L28.193 28.192" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M9.809 28.192L28.193 9.808" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
@@ -1548,49 +1628,90 @@
               </span>
             </button>
           </div>
-          <div class="tw-offcanvas-2-right-inner d-flex flex-column justify-content-between h-100">
-            <div class="twoffcanvas__contact-info">
-              <div class="twoffcanvas__contact-title">
-                <h5 class="text-white">Get In Touch</h5>
+
+          <div class="tw-offcanvas-2-right-inner d-flex flex-column justify-content-between h-100 pb-3">
+            <div>
+              <!-- Profile Snapshot Card -->
+              <div class="offcanvas-profile-badge p-3 rounded-4 mb-4">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="google-profile-avatar" style="width: 50px; height: 50px; flex-shrink: 0;">
+                    <img src="assets/images/profile-formal.jpg" alt="Abdullah Ahmed Siddiqui" />
+                  </div>
+                  <div>
+                    <h6 class="text-white fw-bold m-0" style="font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem;">Abdullah Ahmed Siddiqui</h6>
+                    <span class="text-white-50 d-block" style="font-size: 0.75rem;">Software Developer Intern @ Quartoloom</span>
+                  </div>
+                </div>
+                <div class="d-inline-flex align-items-center gap-2 px-2 py-1 rounded-pill" style="background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25); font-size: 0.72rem; color: #4ade80;">
+                  <span style="width: 6px; height: 6px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e;"></span>
+                  Available for Full-Time & Freelance Roles
+                </div>
               </div>
-              <ul>
-                <li>
-                  <span class="text-main-two-600 tw-text-xl"><i class="ph ph-phone-call"></i></span>
-                  <a class="text-white" href="tel:+917420940665">+91 74209 40665</a>
-                </li>
-                <li>
-                  <span class="text-main-two-600 tw-text-xl"><i class="ph ph-envelope"></i></span>
-                  <a class="text-white" href="mailto:siddiquiabdullahahmed75@gmail.com">siddiquiabdullahahmed75@gmail.com</a>
-                </li>
-              </ul>
+
+              <!-- Quick Contact Cards Grid -->
+              <div class="offcanvas-contact-grid mb-4 d-flex flex-column gap-2">
+                <a href="tel:+917420940665" class="offcanvas-contact-card d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="offcanvas-contact-icon"><i class="ph ph-phone-call"></i></div>
+                    <div>
+                      <span class="d-block text-white-50" style="font-size: 0.72rem;">Call Directly</span>
+                      <span class="text-white fw-semibold" style="font-size: 0.88rem;">+91 74209 40665</span>
+                    </div>
+                  </div>
+                  <i class="ph ph-arrow-up-right text-white-50" style="font-size: 0.9rem;"></i>
+                </a>
+                <a href="https://wa.me/917420940665" target="_blank" class="offcanvas-contact-card d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="offcanvas-contact-icon" style="color: #25D366; background: rgba(37,211,102,0.12); border-color: rgba(37,211,102,0.3);"><i class="ph ph-whatsapp-logo"></i></div>
+                    <div>
+                      <span class="d-block text-white-50" style="font-size: 0.72rem;">Instant Chat</span>
+                      <span class="text-white fw-semibold" style="font-size: 0.88rem;">WhatsApp Message</span>
+                    </div>
+                  </div>
+                  <i class="ph ph-arrow-up-right text-white-50" style="font-size: 0.9rem;"></i>
+                </a>
+                <a href="mailto:siddiquiabdullahahmed75@gmail.com" class="offcanvas-contact-card d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="offcanvas-contact-icon"><i class="ph ph-envelope-simple"></i></div>
+                    <div>
+                      <span class="d-block text-white-50" style="font-size: 0.72rem;">Direct Email</span>
+                      <span class="text-white fw-semibold" style="font-size: 0.85rem;">siddiquiabdullahahmed75@gmail.com</span>
+                    </div>
+                  </div>
+                  <i class="ph ph-arrow-up-right text-white-50" style="font-size: 0.9rem;"></i>
+                </a>
+              </div>
             </div>
-            <div class="footer-social" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-              <ul>
-                <li>
-                  <a href="https://github.com/absid10" target="_blank">
-                    <span class="active-media d-flex align-items-center tw-gap-1">GitHub <i class="ph ph-arrow-bend-up-right"></i></span>
-                    <span class="hover-media"><i class="ph ph-github-logo"></i></span>
+
+            <!-- Bottom Actions & Social Grid -->
+            <div>
+              <div class="d-flex gap-2 mb-3">
+                <button type="button" class="account-card-btn primary-btn open-resume-btn border-0 flex-grow-1 text-center py-2 px-3 rounded-3" style="cursor: pointer; font-size: 0.85rem;">
+                  <i class="ph ph-file-pdf"></i> View Resume
+                </button>
+                <a href="projects.html" class="account-card-btn secondary-btn text-center py-2 px-3 rounded-3 text-decoration-none" style="font-size: 0.85rem;">
+                  <i class="ph ph-grid-four"></i> Projects
+                </a>
+              </div>
+
+              <!-- Social Pills Row -->
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-white border-opacity-10">
+                <span class="text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.08em; color: var(--accent);">Connect</span>
+                <div class="d-flex align-items-center gap-2">
+                  <a href="https://github.com/absid10" target="_blank" class="offcanvas-social-pill" title="GitHub">
+                    <i class="ph ph-github-logo"></i>
                   </a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/absid10/" target="_blank">
-                    <span class="active-media d-flex align-items-center tw-gap-1">LinkedIn <i class="ph ph-arrow-bend-up-right"></i></span>
-                    <span class="hover-media"><i class="ph ph-linkedin-logo"></i></span>
+                  <a href="https://www.linkedin.com/in/absid10/" target="_blank" class="offcanvas-social-pill" title="LinkedIn">
+                    <i class="ph ph-linkedin-logo"></i>
                   </a>
-                </li>
-                <li>
-                  <a href="https://wa.me/917420940665" target="_blank">
-                    <span class="active-media d-flex align-items-center tw-gap-1">WhatsApp <i class="ph ph-arrow-bend-up-right"></i></span>
-                    <span class="hover-media"><i class="ph ph-whatsapp-logo"></i></span>
+                  <a href="https://wa.me/917420940665" target="_blank" class="offcanvas-social-pill" title="WhatsApp">
+                    <i class="ph ph-whatsapp-logo"></i>
                   </a>
-                </li>
-                <li>
-                  <a href="mailto:siddiquiabdullahahmed75@gmail.com">
-                    <span class="active-media d-flex align-items-center tw-gap-1">Email <i class="ph ph-arrow-bend-up-right"></i></span>
-                    <span class="hover-media"><i class="ph ph-envelope"></i></span>
+                  <a href="mailto:siddiquiabdullahahmed75@gmail.com" class="offcanvas-social-pill" title="Email">
+                    <i class="ph ph-envelope"></i>
                   </a>
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
