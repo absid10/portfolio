@@ -746,30 +746,6 @@
         }
       }
 
-      /* ===== Smart Sticky Header (Hide on Scroll Down, Show on Scroll Up) ===== */
-      .header {
-        transition: top 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, box-shadow 0.3s ease !important;
-        will-change: transform, top;
-      }
-      .header.fixed-header {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        z-index: 9999 !important;
-        backdrop-filter: blur(16px) !important;
-        -webkit-backdrop-filter: blur(16px) !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
-        background: rgba(244, 242, 238, 0.95) !important;
-        animation: none !important;
-      }
-      .header.header-hidden {
-        top: -150px !important;
-        transform: translateY(-150%) !important;
-      }
-
-
       /* ===== Flagship Project ===== */
       .portfolio-three-item.flagship-project {
         border: 1px solid rgba(232,85,58,0.25);
@@ -1708,7 +1684,7 @@
     <!-- ==================== Offcanvas Mobile Menu End ==================== -->
 
     <!-- ==================== Header Start ==================== -->
-    <header class="header header-two header-three tw-transition-all tw-z-99 position-relative">
+    <header class="header header-two header-three tw-transition-all position-fixed">
       <div class="container tw-container-1800-px">
         <nav class="d-flex align-items-center justify-content-between position-relative">
           <!-- Logo -->
