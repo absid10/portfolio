@@ -511,8 +511,11 @@
       }
     });
 
-    // Auto-open resume modal if URL path is /resume
-    if (window.location.pathname === "/resume" || window.location.pathname === "/resume.html") {
+    // Auto-open resume modal if URL path is /resume or hash is #resume
+    if (window.location.pathname === "/resume" || window.location.pathname === "/resume.html" || window.location.hash === "#resume") {
+      if (window.location.hash === "#resume") {
+        history.replaceState({ resumeOpen: true }, "", "/resume");
+      }
       setTimeout(function () {
         openResumeModal();
       }, 1200);
