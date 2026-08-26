@@ -467,6 +467,10 @@
       $("#resume-modal").addClass("active");
       $(".header, .header-two, .header-three").css("transform", "translateY(-120%)");
       document.body.style.overflow = "hidden";
+      // Update URL to /resume for consistency & shareability
+      if (window.location.pathname !== "/resume") {
+        history.pushState({ resumeOpen: true }, "", "/resume");
+      }
     }
 
     function closeResumeModal() {
@@ -513,5 +517,14 @@
         openResumeModal();
       }, 1200);
     }
+
+    // Handle browser back button: close resume instead of leaving page
+    $(window).on("popstate", function () {
+      if ($("#resume-modal").hasClass("active")) {
+        $("#resume-modal").removeClass("active");
+        $(".header, .header-two, .header-three").css("transform", "");
+        document.body.style.overflow = "";
+      }
+    });
   });
 })(jQuery);
