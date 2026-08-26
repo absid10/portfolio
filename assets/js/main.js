@@ -473,9 +473,9 @@
       $("#resume-modal").removeClass("active");
       $(".header, .header-two, .header-three").css("transform", "");
       document.body.style.overflow = "";
-      // Clean hash without scrolling
-      if (window.location.hash === "#resume") {
-        history.replaceState(null, "", window.location.pathname + window.location.search);
+      // If on /resume page, navigate back to homepage
+      if (window.location.pathname === "/resume" || window.location.pathname === "/resume.html") {
+        history.replaceState(null, "", "/");
       }
     }
 
@@ -507,18 +507,11 @@
       }
     });
 
-    // Auto-open resume modal if URL has #resume hash
-    if (window.location.hash === "#resume") {
+    // Auto-open resume modal if URL path is /resume
+    if (window.location.pathname === "/resume" || window.location.pathname === "/resume.html") {
       setTimeout(function () {
         openResumeModal();
       }, 1200);
     }
-
-    // Listen for hash changes (e.g. clicking a link to #resume)
-    $(window).on("hashchange", function () {
-      if (window.location.hash === "#resume") {
-        openResumeModal();
-      }
-    });
   });
 })(jQuery);

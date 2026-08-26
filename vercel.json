@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/resume", "destination": "/resume.html" }
+    { "source": "/resume", "destination": "/index.html" }
   ],
   "cleanUrls": true
 }

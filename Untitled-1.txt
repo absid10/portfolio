@@ -1,0 +1,182 @@
+<div class="js-yearly-contributions">
+  
+
+<div class="position-relative">
+
+  
+
+
+    <h2 tabindex="-1" id="js-contribution-activity-description" class="f4 text-normal mb-2">
+      306
+      contributions
+        in the last year
+    </h2>
+
+    <a href="#year-link-2026" class="hide-sm hide-md hide-lg tmp-p-3 color-bg-accent-emphasis color-fg-on-emphasis show-on-focus">Skip to contributions year list</a>
+
+    <div class="py-2 graph-before-activity-overview">
+      <div class="js-calendar-graph tmp-mx-md-2 tmp-mx-3 d-flex flex-column flex-items-end flex-xl-items-center overflow-hidden pt-1 is-graph-loading graph-canvas ContributionCalendar height-full text-center"
+          data-graph-url="/users/absid10/contributions"
+          data-url="/absid10"
+          data-from="2025-07-27 00:00:00 UTC"
+          data-to="2026-08-01 23:59:59 UTC"
+          data-org=""
+          >
+        
+
+<div style="max-width: 100%; overflow-y: hidden; overflow-x: auto">
+  <table data-hydro-click="{&quot;event_type&quot;:&quot;user_profile.click&quot;,&quot;payload&quot;:{&quot;profile_user_id&quot;:167672575,&quot;target&quot;:&quot;CONTRIBUTION_CALENDAR_SQUARE&quot;,&quot;user_id&quot;:null,&quot;originating_url&quot;:&quot;https://github.com/users/absid10/contributions&quot;}}" data-hydro-click-hmac="14b79c3f445c699ec899fe7d55eeae77fdd6068dd151e4293e0d0b1dd114e3c2" role="grid" aria-readonly="true" class="ContributionCalendar-grid js-calendar-graph-table" style="border-spacing: 3px; overflow: hidden; position: relative">
+    <caption class="sr-only">Contribution Graph</caption>
+
+    <thead>
+      <tr style="height: 13px">
+        <td style="width: 28px">
+          <span class="sr-only">Day of Week</span>
+        </td>
+
+
+          <td class="ContributionCalendar-label" colspan="5" style="position: relative">
+            <span class="sr-only">August</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">Aug</span>
+          </td>
+
+          <td class="ContributionCalendar-label" colspan="4" style="position: relative">
+            <span class="sr-only">September</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">Sep</span>
+          </td>
+
+          <td class="ContributionCalendar-label" colspan="4" style="position: relative">
+            <span class="sr-only">October</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">Oct</span>
+          </td>
+
+          <td class="ContributionCalendar-label" colspan="5" style="position: relative">
+            <span class="sr-only">November</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">Nov</span>
+          </td>
+
+          <td class="ContributionCalendar-label" colspan="4" style="position: relative">
+            <span class="sr-only">December</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">Dec</span>
+          </td>
+
+          <td class="ContributionCalendar-label" colspan="4" style="position: relative">
+            <span class="sr-only">January</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">Jan</span>
+          </td>
+
+          <td class="ContributionCalendar-label" colspan="4" style="position: relative">
+            <span class="sr-only">February</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">Feb</span>
+          </td>
+
+          <td class="ContributionCalendar-label" colspan="5" style="position: relative">
+            <span class="sr-only">March</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">Mar</span>
+          </td>
+
+          <td class="ContributionCalendar-label" colspan="4" style="position: relative">
+            <span class="sr-only">April</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">Apr</span>
+          </td>
+
+          <td class="ContributionCalendar-label" colspan="5" style="position: relative">
+            <span class="sr-only">May</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">May</span>
+          </td>
+
+          <td class="ContributionCalendar-label" colspan="4" style="position: relative">
+            <span class="sr-only">June</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">Jun</span>
+          </td>
+
+          <td class="ContributionCalendar-label" colspan="4" style="position: relative">
+            <span class="sr-only">July</span>
+            <span aria-hidden="true" style="position: absolute; top: 0">Jul</span>
+          </td>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr style="height: 10px">
+          <td class="ContributionCalendar-label" style="position: relative">
+            <span class="sr-only">Sunday</span>
+            <span aria-hidden="true" style="clip-path: Circle(0); position: absolute; bottom: -3px">
+              Sun
+            </span>
+          </td>
+
+                <td tabindex="0" data-ix="0" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-07-27" id="contribution-day-component-0-0" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-17a275a5-a263-4929-9281-506e6047715c" for="contribution-day-component-0-0" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on July 27th.</tool-tip>
+
+                <td tabindex="0" data-ix="1" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-08-03" id="contribution-day-component-0-1" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-0bf4cfae-297f-428c-8ad3-fa7e8e4f0f5b" for="contribution-day-component-0-1" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on August 3rd.</tool-tip>
+
+                <td tabindex="0" data-ix="2" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-08-10" id="contribution-day-component-0-2" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-22a137b5-4aeb-463d-ab6a-6849d6b7bb6b" for="contribution-day-component-0-2" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on August 10th.</tool-tip>
+
+                <td tabindex="0" data-ix="3" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-08-17" id="contribution-day-component-0-3" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-2940f840-4ff9-4e9e-b391-f13e121a94a1" for="contribution-day-component-0-3" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on August 17th.</tool-tip>
+
+                <td tabindex="0" data-ix="4" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-08-24" id="contribution-day-component-0-4" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-304d9fc7-5de5-4319-861f-4fbfad1c461b" for="contribution-day-component-0-4" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on August 24th.</tool-tip>
+
+                <td tabindex="0" data-ix="5" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-08-31" id="contribution-day-component-0-5" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-029ef9ef-c2b4-42df-9291-78e0bf8ab9af" for="contribution-day-component-0-5" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on August 31st.</tool-tip>
+
+                <td tabindex="0" data-ix="6" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-09-07" id="contribution-day-component-0-6" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-9d54293c-a4f5-4ba0-b4df-afb4818b3f49" for="contribution-day-component-0-6" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on September 7th.</tool-tip>
+
+                <td tabindex="0" data-ix="7" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-09-14" id="contribution-day-component-0-7" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-c50f800e-9045-43c0-bc51-ab2e2bf2e8a6" for="contribution-day-component-0-7" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on September 14th.</tool-tip>
+
+                <td tabindex="0" data-ix="8" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-09-21" id="contribution-day-component-0-8" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-b83aa711-43d8-4575-876f-883826d6338f" for="contribution-day-component-0-8" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on September 21st.</tool-tip>
+
+                <td tabindex="0" data-ix="9" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-09-28" id="contribution-day-component-0-9" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-de50e93e-7dd8-4430-ae67-3783d0b883b3" for="contribution-day-component-0-9" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on September 28th.</tool-tip>
+
+                <td tabindex="0" data-ix="10" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-10-05" id="contribution-day-component-0-10" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-0dd247ee-a7a9-41b9-a782-790f0ed01c1b" for="contribution-day-component-0-10" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on October 5th.</tool-tip>
+
+                <td tabindex="0" data-ix="11" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-10-12" id="contribution-day-component-0-11" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-e97d3a8e-b4e8-41b3-8523-e27b7e0eaf06" for="contribution-day-component-0-11" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on October 12th.</tool-tip>
+
+                <td tabindex="0" data-ix="12" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-10-19" id="contribution-day-component-0-12" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-07260deb-d64d-4649-b3f2-f399ee558a7f" for="contribution-day-component-0-12" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on October 19th.</tool-tip>
+
+                <td tabindex="0" data-ix="13" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-10-26" id="contribution-day-component-0-13" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-9680564e-21a8-4632-9d42-b3967c87259d" for="contribution-day-component-0-13" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on October 26th.</tool-tip>
+
+                <td tabindex="0" data-ix="14" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-11-02" id="contribution-day-component-0-14" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-7931e156-4759-4b07-817a-ac97bbc30733" for="contribution-day-component-0-14" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on November 2nd.</tool-tip>
+
+                <td tabindex="0" data-ix="15" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-11-09" id="contribution-day-component-0-15" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-8f71be74-46e6-4811-888d-8ff912791ad8" for="contribution-day-component-0-15" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on November 9th.</tool-tip>
+
+                <td tabindex="0" data-ix="16" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-11-16" id="contribution-day-component-0-16" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-cf98547f-6e23-41ba-88b6-c1eb815ae1a3" for="contribution-day-component-0-16" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on November 16th.</tool-tip>
+
+                <td tabindex="0" data-ix="17" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-11-23" id="contribution-day-component-0-17" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-6cfd50b7-8127-492a-ae5d-797625bd2bec" for="contribution-day-component-0-17" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on November 23rd.</tool-tip>
+
+                <td tabindex="0" data-ix="18" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-11-30" id="contribution-day-component-0-18" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-3df52bc0-e121-41de-a38e-76e2e68a2bc0" for="contribution-day-component-0-18" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on November 30th.</tool-tip>
+
+                <td tabindex="0" data-ix="19" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-12-07" id="contribution-day-component-0-19" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-b37cf47d-ac95-4e28-8bb5-a63a05692129" for="contribution-day-component-0-19" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on December 7th.</tool-tip>
+
+                <td tabindex="0" data-ix="20" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-12-14" id="contribution-day-component-0-20" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-079e2a94-9b2a-4eaf-81ad-576f93dc145b" for="contribution-day-component-0-20" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on December 14th.</tool-tip>
+
+                <td tabindex="0" data-ix="21" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2025-12-21" id="contribution-day-component-0-21" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-1dc31c33-3c21-4fb8-9fa9-7ec5e2e2011d" for="contribution-day-component-0-21" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on December 21st.</tool-tip>
+
+                <td tabindex="0" data-ix="22" aria-selected="false" aria-describedby="contribution-graph-legend-level-2" style="width: 10px" data-date="2025-12-28" id="contribution-day-component-0-22" data-level="2" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-17e482cd-d118-4a9e-a471-5c8ed93635df" for="contribution-day-component-0-22" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">15 contributions on December 28th.</tool-tip>
+
+                <td tabindex="0" data-ix="23" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2026-01-04" id="contribution-day-component-0-23" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-8fa4bb2b-0a44-474e-8d97-eb427be1e104" for="contribution-day-component-0-23" popover="manual" data-direction="n" data-type="label" data-view-component="true" class="sr-only position-absolute">No contributions on January 4th.</tool-tip>
+
+                <td tabindex="0" data-ix="24" aria-selected="false" aria-describedby="contribution-graph-legend-level-0" style="width: 10px" data-date="2026-01-11" id="contribution-day-component-0-24" data-level="0" role="gridcell" data-view-component="true" class="ContributionCalendar-day"></td>
+  <tool-tip style="pointer-events: none;" id="tooltip-1fe113f5-6097-494c-9bd5-0f8b1d45998d" for="contribution-day-component-0-24" popover="manual" data-direc
