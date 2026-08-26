@@ -460,36 +460,64 @@
 
   // 17. In-Page Resume PDF Viewer Modal Handler
   $(document).ready(function () {
-    $(document).on("click", ".open-resume-btn", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
+    function openResumeModal() {
       $("#google-account-modal").removeClass("active");
       $(".tw-offcanvas-2-area").removeClass("opened");
       $(".body-overlay").removeClass("opened");
       $("#resume-modal").addClass("active");
+      $(".header, .header-two, .header-three").css("transform", "translateY(-120%)");
       document.body.style.overflow = "hidden";
+    }
+
+    function closeResumeModal() {
+      $("#resume-modal").removeClass("active");
+      $(".header, .header-two, .header-three").css("transform", "");
+      document.body.style.overflow = "";
+      // Clean hash without scrolling
+      if (window.location.hash === "#resume") {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+      }
+    }
+
+    $(document).on("click", ".open-resume-btn", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      openResumeModal();
     });
 
     $(document).on("click", "#close-resume-modal", function (e) {
       e.preventDefault();
       e.stopPropagation();
-      $("#resume-modal").removeClass("active");
-      document.body.style.overflow = "";
+      closeResumeModal();
     });
 
     $(document).on("click", "#resume-modal", function (e) {
       if ($(e.target).is("#resume-modal")) {
-        $("#resume-modal").removeClass("active");
-        document.body.style.overflow = "";
+        closeResumeModal();
       }
     });
 
     $(document).on("keydown", function (e) {
       if (e.key === "Escape") {
-        $("#resume-modal").removeClass("active");
+        closeResumeModal();
         $("#google-account-modal").removeClass("active");
+        $(".header, .header-two, .header-three").css("transform", "");
         $(".tw-offcanvas-2-area").removeClass("opened");
         document.body.style.overflow = "";
+      }
+    });
+
+    // Auto-open resume modal if URL has #resume hash
+    if (window.location.hash === "#resume") {
+      setTimeout(function () {
+        openResumeModal();
+      }, 1200);
+    }
+
+    // Listen for hash changes (e.g. clicking a link to #resume)
+    $(window).on("hashchange", function () {
+      if (window.location.hash === "#resume") {
+        openResumeModal();
       }
     });
   });
