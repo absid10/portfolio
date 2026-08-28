@@ -93,11 +93,12 @@ Software developer with hands-on experience across full-stack development, backe
 
 | Category | Technology |
 | :--- | :--- |
-| **Structure** | `HTML5` — Semantic markup |
-| **Styling** | `CSS3` `Bootstrap 5` — Custom dark theme with glassmorphism |
-| **Animations** | `GSAP` `ScrollTrigger` — Smooth scroll-based animations & parallax |
-| **Interactivity** | `jQuery` `Vanilla JavaScript` — Custom magnetic cursor, modals, side-nav |
-| **Deployment** | `Vercel` — Automated CI/CD from `main` branch |
+| **Structure** | `HTML5` — Semantic markup (`index.html`, `projects.html`, `resume.html`) |
+| **Styling** | `CSS3` `Bootstrap 5` — Custom dark theme with glassmorphism & CSS custom properties |
+| **Animations** | `GSAP` `ScrollTrigger` `ScrollSmoother` — Silky smooth scrolling, parallax & entrance timelines |
+| **Interactivity** | `jQuery` `Vanilla JavaScript` — Custom magnetic cursor, in-page resume PDF modal, dynamic routing |
+| **SEO & Social** | OpenGraph, Twitter Cards, Schema.org metadata, and responsive preview optimization |
+| **Deployment** | `Vercel` — Automated CI/CD from `main` branch with clean URL rewrites |
 
 ### Run Locally
 ```bash
