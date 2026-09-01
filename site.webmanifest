@@ -1,0 +1,21 @@
+{
+  "name": "Abdullah Ahmed Siddiqui - Portfolio",
+  "short_name": "Abdullah",
+  "description": "Portfolio of Abdullah Ahmed Siddiqui — Software Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#E8553A",
+  "icons": [
+    {
+      "src": "assets/images/ayebeestech-dark.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/images/ayebeestech-dark.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
