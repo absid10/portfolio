@@ -386,4 +386,6 @@
 <rect x="749" y="109" width="11" height="11" rx="2" ry="2" fill="#181818" class="day-rect"><title>2026-08-29: level 0</title></rect>
 <rect x="763" y="25" width="11" height="11" rx="2" ry="2" fill="#181818" class="day-rect"><title>2026-08-30: level 0</title></rect>
 <rect x="763" y="39" width="11" height="11" rx="2" ry="2" fill="#181818" class="day-rect"><title>2026-08-31: level 0</title></rect>
+<text x="763" y="14" class="month-label">Sep</text>
+<rect x="763" y="53" width="11" height="11" rx="2" ry="2" fill="#181818" class="day-rect"><title>2026-09-01: level 0</title></rect>
 </svg>
