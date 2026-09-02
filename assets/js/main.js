@@ -460,6 +460,11 @@
 
   // 17. In-Page Resume PDF Viewer Modal Handler
   $(document).ready(function () {
+    /**
+     * Opens the in-page Google Drive resume PDF modal.
+     * Hides sticky header to prevent obstructing PDF controls,
+     * locks body scroll, and synchronizes URL to /resume.
+     */
     function openResumeModal() {
       $("#google-account-modal").removeClass("active");
       $(".tw-offcanvas-2-area").removeClass("opened");
@@ -473,6 +478,10 @@
       }
     }
 
+    /**
+     * Closes the resume modal, restores header translation,
+     * unlocks body scroll, and reverts URL to / without reloading.
+     */
     function closeResumeModal() {
       $("#resume-modal").removeClass("active");
       $(".header, .header-two, .header-three").css("transform", "");
