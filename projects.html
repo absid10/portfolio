@@ -175,14 +175,14 @@
         .projects-grid { grid-template-columns: 1fr; }
       }
 
-      /* ===== Project Card ===== */
       .project-card {
         background: rgba(255,255,255,0.025);
         border: 1px solid rgba(255,255,255,0.06);
         border-radius: 20px;
         padding: 36px;
         height: 100%;
-        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+        will-change: transform, box-shadow;
         position: relative;
         overflow: hidden;
         opacity: 0;
