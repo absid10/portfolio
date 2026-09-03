@@ -11,8 +11,10 @@
 🌐 [absid10.vercel.app](https://absid10.vercel.app) &bull; 💼 [linkedin.com/in/absid10](https://linkedin.com/in/absid10) &bull; 🐙 [github.com/absid10](https://github.com/absid10)
 
 [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-absid10.vercel.app-E8553A?style=for-the-badge&logo=vercel&logoColor=white)](https://absid10.vercel.app)
+[![Resume](https://img.shields.io/badge/Resume-Interactive_PDF-4A90E2?style=for-the-badge&logo=googledrive&logoColor=white)](https://absid10.vercel.app/resume)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-absid10-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/absid10/)
 [![GitHub](https://img.shields.io/badge/GitHub-@absid10-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/absid10)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 </div>
 
