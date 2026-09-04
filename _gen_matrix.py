@@ -1,14 +1,20 @@
 import urllib.request
+import urllib.error
 import re
+import sys
 from datetime import datetime
 
 url = 'https://github.com/users/absid10/contributions'
-req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-html = urllib.request.urlopen(req).read().decode('utf-8')
+req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+
+try:
+    with urllib.request.urlopen(req, timeout=15) as response:
+        html = response.read().decode('utf-8')
+except (urllib.error.URLError, TimeoutError) as err:
+    print(f"Error fetching contributions: {err}", file=sys.stderr)
+    sys.exit(0)
 
 # Extract days: date, level, tooltips if available
-# e.g. <td ... data-date="2025-08-01" ... data-level="2" id="contribution-day-component-0-2">...</td>
-# <tool-tip ...>3 contributions on August 1, 2025</tool-tip>
 pattern = r'data-date="([^"]+)".*?data-level="(\d+)"'
 matches = re.findall(pattern, html, re.DOTALL)
 
