@@ -70,7 +70,7 @@ Software developer with hands-on experience across full-stack development, backe
 | **Databases** | MySQL, PostgreSQL, SQLite, MongoDB |
 | **Cloud & DevOps** | AWS (EC2, S3), Docker, Linux, Vercel, Render, Git, GitHub Actions |
 | **Testing & QA** | Katalon Studio, Automation Testing, pytest, Postman, Functional/Regression Testing, Bug Reporting |
-| **AI-Assisted Dev** | GitHub Copilot, Cursor, Claude Code, ChatGPT, Gemini, Google Antigravity |
+| **AI & LLMs** | Claude / Anthropic API, Prompt Engineering, Tool Use, Context Engineering, GitHub Copilot, Cursor, ChatGPT, Gemini |
 | **Core Concepts** | Data Structures & Algorithms, OOP, DBMS, SDLC, CI/CD, AuthN/AuthZ, RBAC, Data Modeling, Debugging |
 
 ---
@@ -82,7 +82,11 @@ Software developer with hands-on experience across full-stack development, backe
   *B.Tech in Computer Science & Engineering* &bull; Passed: June 2026 &bull; **CGPA: 6.601**
 
 ### **Certifications**
-- **micro1 AI Interview Certified**: Passed AI-conducted technical interview; certified by micro1 (*April 2026*)
+- **Claude Certified Developer — Foundations** — **Anthropic** (*Nov 2026*)  
+  *Credential ID: `be38643d-cac3-4b43-8d7b-5dd93eaacde0`* &bull; [Verify Credential ↗](https://www.credly.com/badges/be38643d-cac3-4b43-8d7b-5dd93eaacde0) &bull; [View Certificate](assets/docs/claude-certified-developer-foundations.pdf)  
+  *Covers: LLMs, prompt engineering, context engineering, tool use, integrations, evaluation, and debugging.*
+- **micro1 AI Interview Certified** — **micro1** (*April 2026*) &bull; [View Certificate](assets/docs/micro1_certificate.jpg)  
+  *Passed AI-conducted technical interview demonstrating strong software engineering fundamentals.*
 - **NPTEL**: Enhancing Soft Skills and Personality
 - **NPTEL**: Entrepreneurship Essentials
 
