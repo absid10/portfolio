@@ -790,6 +790,45 @@
         font-size: 1.4rem;
         margin-bottom: 20px;
       }
+      .cert-btn-primary {
+        background: var(--accent);
+        color: #fff !important;
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 8px 14px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.3s ease;
+      }
+      .cert-btn-primary:hover {
+        background: #d4442a;
+        border-color: #d4442a;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 14px rgba(232,85,58,0.35);
+      }
+      .cert-btn-outline {
+        background: rgba(255,255,255,0.06);
+        color: #fff !important;
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 8px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        padding: 8px 14px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.3s ease;
+      }
+      .cert-btn-outline:hover {
+        background: rgba(255,255,255,0.12);
+        border-color: rgba(255,255,255,0.3);
+        transform: translateY(-2px);
+      }
 
       /* ===== Achievements ===== */
       .achievement-card {
@@ -1713,6 +1752,7 @@
               <li><a href="#skills" class="header-nav-item">Skills</a></li>
               <li><a href="#projects" class="header-nav-item">Projects</a></li>
               <li><a href="#experience" class="header-nav-item">Experience</a></li>
+              <li><a href="#certifications" class="header-nav-item">Certifications</a></li>
               <li><a href="#contact" class="header-nav-item">Contact</a></li>
             </ul>
           </div>
@@ -2046,6 +2086,9 @@
                     </div>
                   </div>
                   <div class="d-flex flex-wrap gap-2">
+                    <span class="tech-logo-pill"><i class="ph ph-sparkle" style="color: #D97706;"></i> Claude / Anthropic API</span>
+                    <span class="tech-logo-pill"><i class="ph ph-chat-centered-text" style="color: #60A5FA;"></i> Prompt Engineering</span>
+                    <span class="tech-logo-pill"><i class="ph ph-wrench" style="color: #34D399;"></i> Tool Use</span>
                     <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="20" alt="Git" /> Git & GitHub</span>
                     <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" height="20" alt="GitHub Actions" /> GitHub Actions</span>
                     <span class="tech-logo-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" height="20" alt="OpenCV" /> OpenCV</span>
@@ -2490,31 +2533,88 @@
               <h2 class="tw-text-15 text-white tw-itm-title tw-itm-anim">Certifications</h2>
             </div>
             <div class="row g-4">
-              <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
-                <div class="cert-card">
-                  <div class="cert-icon"><i class="ph ph-robot"></i></div>
-                  <h4 class="text-white fw-semibold mb-3">micro1 AI Interview Certified</h4>
-                  <p class="mb-3" style="color: rgba(255,255,255,0.5); line-height: 1.7;">Passed AI-conducted technical interview; certified by micro1 for demonstrating strong engineering fundamentals.</p>
-                  <span class="skill-tag">April 2026</span>
-                  <span class="skill-tag">AI Verified</span>
+              <!-- Claude Certified Developer - Foundations (Anthropic) -->
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                <div class="cert-card d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                      <img src="assets/img/claude-certified-developer-foundations.png" alt="Claude Certified Developer - Foundations Badge" width="60" height="60" class="rounded-3 flex-shrink-0" loading="lazy" style="object-fit: contain; background: rgba(255,255,255,0.04); padding: 4px; border: 1px solid rgba(255,255,255,0.1);" />
+                      <div>
+                        <span class="d-block text-uppercase fw-bold" style="font-size: 0.75rem; letter-spacing: 0.1em; color: var(--accent);">Anthropic</span>
+                        <span style="font-size: 0.8rem; color: rgba(255,255,255,0.5);"><i class="ph ph-calendar-blank"></i> Issued: Nov 04, 2026</span>
+                      </div>
+                    </div>
+                    <h4 class="text-white fw-semibold mb-2">Claude Certified Developer - Foundations</h4>
+                    <p class="mb-3" style="color: rgba(255,255,255,0.5); line-height: 1.7;">
+                      Earned while interning at Quartoloom Solutions. Comprehensive certification covering LLMs, prompt engineering, context engineering, tool use, integrations, evaluation, and debugging.
+                    </p>
+                    <div class="mb-3" style="font-size: 0.76rem; color: rgba(255,255,255,0.4); font-family: monospace; word-break: break-all;">
+                      Credential ID: be38643d-cac3-4b43-8d7b-5dd93eaacde0
+                    </div>
+                    <div class="mb-3">
+                      <span class="skill-tag">LLMs</span>
+                      <span class="skill-tag">Prompt Engineering</span>
+                      <span class="skill-tag">Tool Use</span>
+                      <span class="skill-tag">Context Engineering</span>
+                      <span class="skill-tag">Quartoloom Solutions</span>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2 pt-3 border-top border-white border-opacity-10 mt-auto">
+                    <a href="https://www.credly.com/badges/be38643d-cac3-4b43-8d7b-5dd93eaacde0" target="_blank" rel="noopener noreferrer" class="cert-btn-primary">
+                      <i class="ph ph-seal-check"></i> Verify Credential <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                    <a href="assets/docs/claude-certified-developer-foundations.pdf" target="_blank" rel="noopener noreferrer" class="cert-btn-outline">
+                      <i class="ph ph-file-pdf"></i> View Certificate <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                <div class="cert-card">
-                  <div class="cert-icon"><i class="ph ph-user-focus"></i></div>
-                  <h4 class="text-white fw-semibold mb-3">Enhancing Soft Skills and Personality</h4>
-                  <p class="mb-3" style="color: rgba(255,255,255,0.5); line-height: 1.7;">NPTEL certification covering communication, interpersonal skills, and professional personality development.</p>
-                  <span class="skill-tag">NPTEL</span>
-                  <span class="skill-tag">Soft Skills</span>
+
+              <!-- micro1 AI Interview Certified -->
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="cert-card d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="cert-icon"><i class="ph ph-robot"></i></div>
+                    <h4 class="text-white fw-semibold mb-3">micro1 AI Interview Certified</h4>
+                    <p class="mb-3" style="color: rgba(255,255,255,0.5); line-height: 1.7;">Passed AI-conducted technical interview; certified by micro1 for demonstrating strong engineering fundamentals.</p>
+                  </div>
+                  <div>
+                    <span class="skill-tag">April 2026</span>
+                    <span class="skill-tag">AI Verified</span>
+                    <span class="skill-tag">Technical Evaluation</span>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <div class="cert-card">
-                  <div class="cert-icon"><i class="ph ph-lightbulb"></i></div>
-                  <h4 class="text-white fw-semibold mb-3">Entrepreneurship Essentials</h4>
-                  <p class="mb-3" style="color: rgba(255,255,255,0.5); line-height: 1.7;">NPTEL course on entrepreneurship fundamentals — business models, innovation, and startup mindset.</p>
-                  <span class="skill-tag">NPTEL</span>
-                  <span class="skill-tag">Entrepreneurship</span>
+
+              <!-- Enhancing Soft Skills and Personality -->
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="cert-card d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="cert-icon"><i class="ph ph-user-focus"></i></div>
+                    <h4 class="text-white fw-semibold mb-3">Enhancing Soft Skills and Personality</h4>
+                    <p class="mb-3" style="color: rgba(255,255,255,0.5); line-height: 1.7;">NPTEL certification covering communication, interpersonal skills, and professional personality development.</p>
+                  </div>
+                  <div>
+                    <span class="skill-tag">NPTEL</span>
+                    <span class="skill-tag">Soft Skills</span>
+                    <span class="skill-tag">Professional Development</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Entrepreneurship Essentials -->
+              <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="cert-card d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="cert-icon"><i class="ph ph-lightbulb"></i></div>
+                    <h4 class="text-white fw-semibold mb-3">Entrepreneurship Essentials</h4>
+                    <p class="mb-3" style="color: rgba(255,255,255,0.5); line-height: 1.7;">NPTEL course on entrepreneurship fundamentals — business models, innovation, and startup mindset.</p>
+                  </div>
+                  <div>
+                    <span class="skill-tag">NPTEL</span>
+                    <span class="skill-tag">Entrepreneurship</span>
+                    <span class="skill-tag">Innovation</span>
+                  </div>
                 </div>
               </div>
             </div>

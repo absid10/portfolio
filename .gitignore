@@ -9,3 +9,4 @@ _parse_repos.py
 _resume_text.txt
 _profile_readme/
 *.pdf
+!assets/docs/*.pdf
