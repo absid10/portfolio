@@ -1,12 +1,33 @@
-# OS & Environment
+# OS & Environment files
 .DS_Store
 Thumbs.db
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & Secret files
 .env
 .env.local
+.env.*.local
+*.env
+*.pem
+*.key
+*.cert
+*.credentials
+id_rsa
+id_ed25519
 
-# Local tools & skill libraries
-antigravity-awesome-skills/
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary & Scratch files
+*.tmp
+*.bak
+*~
 
 # Documents & Certificates Whitelist
 *.pdf

@@ -2,5 +2,8 @@
 User-agent: *
 Allow: /
 
+# Prevent search engine crawlers from indexing raw document storage
+Disallow: /assets/docs/
+
 # Sitemap location
 Sitemap: https://absid10.vercel.app/sitemap.xml
